@@ -15,7 +15,8 @@ You do not need Git, Node.js or this repository to use the hosted editor.
 
 1. Open the editor and choose Pack or Troop.
 2. Replace the unit name, meeting details, costs and public links.
-3. Under **Page sections**, edit each section’s headings, descriptions, buttons
+3. Click a section or photo in the preview to open its controls, or use
+   **Choose a section**. Edit headings, descriptions, buttons
    and images. Choose library assets or upload permitted JPG, PNG or still WebP
    images. Add descriptions for uploaded images. Images can also be hidden.
 4. Create a unit-owned hosted form (the guide uses Formspree), verify the
@@ -51,27 +52,28 @@ The class examples and editor preview cannot send messages. The downloaded
 website uses a standard HTML POST to your configured form service. Automated
 tests simulate that service; you must verify actual inbox delivery yourself.
 
-## Hosting the downloaded website
+## Free and inexpensive hosting
 
-Any static host that serves HTML over HTTPS can serve `index.html`.
+The [hosting guide](HOSTING.md) compares **Netlify Drop**, **Cloudflare Pages**,
+**GitHub Pages**, and an existing host, with simple upload steps and the limits
+that matter. Netlify Drop is an easy first upload; GitHub Pages suits a helper
+who already uses GitHub. Free hosting still has plan limits, and a custom domain
+and unit email are separate services.
 
-For GitHub Pages: create a unit-owned repository, upload the downloaded file as
-`index.html`, then choose **Settings → Pages → Deploy from a branch**, `main`,
-and `/(root)`. Add your custom domain there if desired, then configure the
-records with your DNS provider. A helper can do this initial setup.
+Publish the **downloaded index.html** for the finished unit website. The release
+ZIP contains the whole toolkit and examples. Keep the saved settings file for
+future edits. Test the host’s supplied address and form delivery before a helper
+connects your domain. The [setup guide](https://scoutwebsites.cadresoftware.com/setup.html)
+covers form recipients and publishing checks.
 
-To reuse the whole toolkit, choose **Use this template** on this repository.
-Serve its root using GitHub Pages or another static host; no build is needed.
-The initial home page is the example chooser. Replace it with your downloaded
-`index.html` when you want the unit website at the root. You may remove editor,
-example and library files from the published copy; the download is self-contained.
+To host the whole toolkit, choose **Use this template** on GitHub and serve the
+repository root; no build is required. Replace its initial example-chooser
+index.html with your exported page when the unit website is ready. WordPress
+and Squarespace use their own editors; this download is not a native theme.
 
-This is HTML, not a native WordPress theme or Squarespace template. Those
-builders should use their own editing tools and native contact form.
-
-If your host sets a Content Security Policy, allow your form provider’s HTTPS
-address in `form-action`. The class-demo server deliberately blocks forms;
-its restrictive header is not a production-unit hosting configuration.
+If a host sets a Content Security Policy, allow your form service’s HTTPS
+address in `form-action`. The local toolkit server deliberately blocks forms;
+its restrictive header is for editing and classroom demonstrations.
 
 ## Running the toolkit on your computer
 

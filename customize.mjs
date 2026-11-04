@@ -1,14 +1,14 @@
 // Copyright 2026 Cadre Software. SPDX-License-Identifier: GPL-2.0-or-later
-import {CONTENT_SECTIONS,defaultContent,imageSlots} from './page-content.mjs?v=4';
-import {defaults,renderSite,validEmail,httpsURL} from './template.mjs?v=4';
-import {ASSETS} from './corpus.mjs?v=4';
-import {templateStyles,embeddedImages} from './export-assets.mjs?v=4';
-import {readSettings,writeSettings,SETTINGS_MAX_BYTES} from './configuration.mjs?v=4';
-import {checkImageSize,SAVED_IMAGE_PIXELS,ImageInputError,imageDimensions} from './image-limits.mjs?v=4';
+import {CONTENT_SECTIONS,defaultContent,imageSlots} from './page-content.mjs?v=5';
+import {defaults,renderSite,validEmail,httpsURL} from './template.mjs?v=5';
+import {ASSETS} from './corpus.mjs?v=5';
+import {templateStyles,embeddedImages} from './export-assets.mjs?v=5';
+import {readSettings,writeSettings,SETTINGS_MAX_BYTES} from './configuration.mjs?v=5';
+import {checkImageSize,SAVED_IMAGE_PIXELS,ImageInputError,imageDimensions} from './image-limits.mjs?v=5';
 const form=document.querySelector('#customize'),frame=document.querySelector('#preview'),status=document.querySelector('#status'),download=document.querySelector('#download');
 const params=new URLSearchParams(location.search),type=params.get('type')==='troop'?'troop':'pack';
 const media={logo:'',photo:'',images:{}},generation={logo:0,photo:0};
-let currentType=type,loading=0,exporting=false,css='',editGeneration=0;
+let currentType=type,loading=0,exporting=false,css='',editGeneration=0,previewToken='';
 function show(message,error=false){status.textContent=message;status.classList.toggle('error',error);}
 function busy(){download.disabled=loading>0||exporting||!css;document.querySelector('#save-settings').disabled=loading>0||exporting;}
 function values(){
@@ -84,7 +84,26 @@ function checkImageBudget(settings){
  if(pixels>24_000_000||characters>24*1024*1024)throw new ImageInputError('Your uploaded images exceed the total limit. Use smaller images or library images before continuing.');
 }
 
-function update(){if(css)frame.srcdoc=renderSite(values(),{demo:false,css,preview:true,previewSection:({families:'new-families',links:'contact'}[sectionSelect.value]||sectionSelect.value),runtimeURL:new URL('site-runtime.js?v=4',location.href).href});}
+function update(){
+ if(!css)return;
+ previewToken=[...crypto.getRandomValues(new Uint8Array(16))].map(n=>n.toString(16).padStart(2,'0')).join('');
+ frame.srcdoc=renderSite(values(),{demo:false,css,preview:true,previewToken,previewParent:location.origin,previewSelected:sectionSelect.value,previewSection:({families:'new-families',links:'contact'}[sectionSelect.value]||sectionSelect.value),runtimeURL:new URL('site-runtime.js?v=5',location.href).href,previewRuntimeURL:new URL('preview-runtime.js?v=5',location.href).href});
+}
+window.addEventListener('message',event=>{
+ const data=event.data;
+ if(event.source!==frame.contentWindow||event.origin!=='null'||!data||typeof data!=='object'||Array.isArray(data)||data.type!=='cadre-preview-select'||!previewToken||data.token!==previewToken)return;
+ if(typeof data.section!=='string'||![...sectionSelect.options].some(option=>option.value===data.section))return;
+ if(typeof data.field!=='string'||data.field.length>64)return;
+ let target=null;
+ if(data.field){
+  target=document.getElementById(data.field);
+  if(!target||!form.contains(target)||(target.closest('[data-section]')?.dataset.section||target.closest('[data-editor-panel]')?.dataset.editorPanel)!==data.section)return;
+ }
+ sectionSelect.value=data.section;chooseSection();
+ const panel=target?.closest('.image-control')||document.querySelector(`[data-section="${data.section}"]`)||document.querySelector(`[data-editor-panel="${data.section}"]`);
+ const heading=panel?.querySelector('h2,h3,legend')||panel;if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});}
+ show('Editing '+sectionSelect.selectedOptions[0].textContent+'. Changes stay in your local draft.');
+});
 function makeSelect(name,label,before){
  const title=document.createElement('label');title.htmlFor=name;title.textContent=label;
  const select=document.createElement('select');select.id=name;select.name=name;

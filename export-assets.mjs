@@ -1,4 +1,4 @@
-import {STYLE_FILES,ASSETS} from './corpus.mjs?v=4';
+import {STYLE_FILES,ASSETS} from './corpus.mjs?v=5';
 const cache=new Map();
 export async function dataURL(url){
  if(!cache.has(url))cache.set(url,(async()=>{
