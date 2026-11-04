@@ -1,0 +1,2852 @@
+/*
+Theme Name: Pack 39
+Theme URI: https://www.pack39nc.org
+Author: Brian Hueske
+Author URI: https://www.hueskemedia.com
+Description: Custom theme for Pack 39 Cub Scouts — Chapel Hill, NC
+Version: 2.1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pack39
+*/
+
+/* ==========================================================================
+   Design System — "Trail & Summit"
+   Organic/modern editorial. Photography-forward. Earthy warmth.
+   ========================================================================== */
+
+:root {
+  /* Shared palette (forest/gold/cream/bark/stone + --font-display) lives
+     in public/css/azimuth-tokens.css and is loaded BEFORE this file by
+     views/public/_head.ejs. This :root holds marketing-site-specific
+     tokens only — extra accent colors, body/UI fonts, the public
+     spacing scale, layout maxes, the grain SVG, and the small radius. */
+
+  /* Marketing-only accents */
+  --trail-gold-glow: #F5DEB3;
+  --ridge-blue: #3B6B8C;
+  --ridge-blue-dark: #2A4D66;
+  --pitch: #1A1612;
+
+  /* Typography — body + UI fonts are marketing-specific; --font-display
+     comes from azimuth-tokens.css */
+  --font-body: 'Source Serif 4', 'Georgia', serif;
+  --font-ui: 'Barlow', 'Helvetica Neue', sans-serif;
+
+  /* Spacing */
+  --sp-xs: 0.25rem;
+  --sp-sm: 0.5rem;
+  --sp-md: 1rem;
+  --sp-lg: 1.5rem;
+  --sp-xl: 2.5rem;
+  --sp-2xl: 4rem;
+  --sp-3xl: 6rem;
+  --sp-4xl: 8rem;
+
+  /* Layout */
+  --max-w: 1240px;
+  --max-w-narrow: 1000px;
+  --radius: 6px;
+  --radius-sm: 8px;
+  --radius-lg: 12px;
+
+  /* Grain overlay */
+  --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   Reset & Foundation
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--bark);
+  background: var(--cream);
+  line-height: 1.75;
+  overflow-x: hidden;
+  /* viewport-fit=cover (views/public/_head.ejs) drops the landscape
+     letterboxing on a notched iPhone in PLAIN Safari, not only standalone, so
+     in-flow content at x=0 runs under the notch. Spec: §10 step 1; kanban
+     ed1d5ff5. .site-header is position:fixed and escapes this padding box —
+     it carries its own insets below. */
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--forest-mid);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--trail-gold);
+}
+
+::selection {
+  background: var(--trail-gold-light);
+  color: var(--pitch);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--forest-deep);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+h4 { font-size: 1.2rem; }
+
+p {
+  margin-bottom: var(--sp-md);
+  color: var(--bark-light);
+}
+
+.page-content p,
+.entry-content p {
+  max-width: 65ch;
+}
+
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--trail-gold);
+  margin-bottom: var(--sp-sm);
+  display: block;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.wrap {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-xl);
+}
+
+.wrap--narrow {
+  max-width: var(--max-w-narrow);
+}
+
+/* ==========================================================================
+   Grain Overlay (applied to sections)
+   ========================================================================== */
+
+.has-grain {
+  position: relative;
+}
+
+.has-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grain);
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(27, 58, 45, 0.55);
+  backdrop-filter: blur(6px);
+  transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+  padding: var(--sp-md) 0;
+  /* position:fixed at top/left/right 0 under viewport-fit=cover puts the
+     brand and the menu toggle under the status bar and the notch. The header
+     has no fixed height, so padding grows it. Every rule that re-states the
+     `padding` shorthand for this selector has to restate the top inset too,
+     or the later shorthand silently resets it — see .scrolled directly below
+     and the <=900px block further down. Spec: §10 step 1; kanban ed1d5ff5. */
+  padding-top: calc(var(--sp-md) + env(safe-area-inset-top, 0px));
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+}
+
+.site-header.scrolled {
+  background: rgba(27, 58, 45, 0.97);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  /* Longhands, NOT `padding: var(--sp-sm) 0`: that shorthand is more specific
+     than the base rule and would reset padding-left/right to 0, throwing away
+     the horizontal insets above in the state the header spends most of its
+     life in. Vertical values are restated here; horizontal is inherited. */
+  padding-top: calc(var(--sp-sm) + env(safe-area-inset-top, 0px));
+  padding-bottom: var(--sp-sm);
+  backdrop-filter: blur(12px);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-md);
+  z-index: 2;
+}
+
+.site-branding img,
+.custom-logo {
+  height: 68px;
+  width: auto;
+}
+
+.site-title {
+  font-family: var(--font-ui);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--warm-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1;
+}
+
+.site-title a {
+  color: inherit;
+}
+
+.site-title a:hover {
+  color: var(--trail-gold);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.main-navigation ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-navigation a {
+  font-family: var(--font-ui);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.15rem var(--sp-sm);
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.main-navigation a:hover,
+.main-navigation .current-menu-item a {
+  color: var(--trail-gold);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--warm-white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: var(--sp-sm) var(--sp-md);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  border-color: var(--trail-gold);
+  color: var(--trail-gold);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--sp-4xl) 0 var(--sp-3xl);
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg,
+      rgba(26, 22, 18, 0.1) 0%,
+      rgba(26, 22, 18, 0.15) 40%,
+      rgba(27, 58, 45, 0.85) 75%,
+      rgba(27, 58, 45, 0.95) 100%
+    );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero__content .eyebrow {
+  color: var(--trail-gold-light);
+  font-size: 0.85rem;
+  margin-bottom: var(--sp-md);
+}
+
+.hero__content h1 {
+  color: var(--warm-white);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  margin-bottom: var(--sp-lg);
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero__content h1 .gold {
+  color: var(--trail-gold);
+}
+
+.hero__content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: var(--sp-xl);
+  max-width: 500px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--sp-md);
+  flex-wrap: wrap;
+}
+
+.hero__scroll-hint {
+  position: absolute;
+  bottom: var(--sp-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero__scroll-hint::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: var(--sp-sm) auto 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+@media (max-width: 640px) {
+  .hero__scroll-hint {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Diagonal Section Divider
+   ========================================================================== */
+
+.diagonal-top {
+  /* clip-path removed — straight edge */
+}
+
+.diagonal-bottom {
+  /* clip-path removed — straight edge */
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-sm);
+  font-family: var(--font-ui);
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--gold {
+  background: var(--trail-gold);
+  color: var(--pitch);
+  border-color: var(--trail-gold);
+}
+
+.btn--gold:hover {
+  background: var(--trail-gold-light);
+  border-color: var(--trail-gold-light);
+  color: var(--pitch);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(200, 150, 62, 0.35);
+}
+
+.btn--outline-light {
+  background: transparent;
+  color: var(--warm-white);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn--outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--warm-white);
+  color: var(--warm-white);
+  transform: translateY(-2px);
+}
+
+.btn--forest {
+  background: var(--forest-deep);
+  color: var(--warm-white);
+  border-color: var(--forest-deep);
+}
+
+.btn--forest:hover {
+  background: var(--forest-mid);
+  border-color: var(--forest-mid);
+  color: var(--warm-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(27, 58, 45, 0.35);
+}
+
+/* ==========================================================================
+   Section Base
+   ========================================================================== */
+
+.section {
+  padding: var(--sp-3xl) 0;
+  position: relative;
+}
+
+/* Two consecutive sections sharing the SAME background read as one band (e.g.
+   the home den badges + stats bar; stacked stone or warm sections on the troop
+   pages). Collapse the doubled section padding so they sit tight, not separated
+   by a ~12rem empty void. (:has is universally supported in current browsers.) */
+.section--forest + .section--forest,
+.section--stone + .section--stone,
+.section--warm + .section--warm {
+  padding-top: 0;
+}
+.section--forest:has(+ .section--forest),
+.section--stone:has(+ .section--stone),
+.section--warm:has(+ .section--warm) {
+  padding-bottom: var(--sp-md);
+}
+
+.section--forest {
+  background: var(--forest-deep);
+  color: var(--warm-white);
+}
+
+.section--forest h2,
+.section--forest h3 {
+  color: var(--warm-white);
+}
+
+.section--forest p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.section--stone {
+  background: var(--stone-light);
+}
+
+.section--warm {
+  background: var(--warm-white);
+}
+
+.section__header {
+  margin-bottom: var(--sp-2xl);
+}
+
+.section__header h2 {
+  margin-bottom: var(--sp-sm);
+}
+
+.section__header p {
+  font-size: 1.1rem;
+}
+
+/* Centered header variant */
+.section__header--center {
+  text-align: center;
+}
+
+.section__header--center p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Structured content embedded in a centered section header (e.g. a rich_text
+   block whose body inlines a .checklist, callout boxes, or lists) must NOT
+   inherit the centered alignment — only the eyebrow/heading/intro are centered.
+   Without this, list bullets sit at the far-left margin while their text is
+   centered, and checklist item copy reads awkwardly centered. */
+.section__header--center .checklist,
+.section__header--center .callout-block,
+.section__header--center ul,
+.section__header--center ol {
+  text-align: left;
+}
+
+/* Polymorphic block/card icons (FA glyph | emoji | brand image). FA/emoji
+   inherit a sized glyph; image icons render contained at a fixed box. */
+.section__header-icon { display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--sp-sm); font-size: 1.7rem; color: var(--trail-gold); }
+.section__header-icon__img { height: 2.4rem; width: auto; object-fit: contain; display: block; }
+.info-card__icon { display: inline-flex; align-items: center; justify-content: center; height: 48px; margin-bottom: var(--sp-sm); font-size: 1.7rem; color: var(--forest-mid); }
+.info-card__icon__img { height: 48px; width: 48px; object-fit: contain; }
+.step-card__icon { display: inline-flex; align-items: center; font-size: 1.15rem; color: var(--forest-mid); margin-right: 0.4em; }
+.step-card__icon__img { height: 1.3rem; width: auto; object-fit: contain; vertical-align: -0.2em; }
+
+/* ==========================================================================
+   Photo Strip — Horizontal scroll of images
+   ========================================================================== */
+
+.photo-strip {
+  display: flex;
+  gap: var(--sp-md);
+  overflow-x: auto;
+  padding: var(--sp-xl) var(--sp-xl);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.photo-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-strip__item {
+  flex: 0 0 auto;
+  width: 350px;
+  height: 260px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.photo-strip__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-strip__item:hover img {
+  transform: scale(1.08);
+}
+
+.photo-strip__item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(27, 58, 45, 0.6) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-strip__item:hover::after {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Activity Cards
+   ========================================================================== */
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-lg);
+}
+
+.activity-card {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--trail-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.activity-card:hover::before {
+  transform: scaleX(1);
+}
+
+.activity-card__icon {
+  font-size: 2rem;
+  margin-bottom: var(--sp-md);
+  display: block;
+}
+.activity-card__icon__img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.activity-card__title {
+  font-family: var(--font-ui);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: var(--forest-deep);
+  margin-bottom: var(--sp-sm);
+}
+
+.activity-card__text {
+  font-size: 0.95rem;
+  color: var(--bark-light);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Image + Text Block (alternating layout)
+   ========================================================================== */
+
+.split-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2xl);
+  align-items: center;
+}
+
+.split-block--reverse {
+  direction: rtl;
+}
+
+.split-block--reverse > * {
+  direction: ltr;
+}
+
+.split-block__image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.split-block__image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.split-block__image:hover img {
+  transform: scale(1.04);
+}
+
+/* Offset accent border */
+.split-block__image::after {
+  content: '';
+  position: absolute;
+  inset: var(--sp-md);
+  border: 2px solid var(--trail-gold);
+  border-radius: var(--radius);
+  opacity: 0;
+  transition: opacity 0.4s ease, inset 0.4s ease;
+}
+
+.split-block__image:hover::after {
+  opacity: 0.6;
+  inset: var(--sp-sm);
+}
+
+/* Logo variant: the image is an emblem/badge, not a photo. Show it whole
+   (contain), no fixed-height crop, no zoom-on-hover or accent frame. */
+.split-block--logo .split-block__image {
+  background: transparent;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.split-block--logo .split-block__image img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+}
+.split-block--logo .split-block__image::after { display: none; }
+.split-block--logo .split-block__image:hover img { transform: none; }
+
+.split-block__content h2 {
+  margin-bottom: var(--sp-md);
+}
+
+.split-block__content p {
+  margin-bottom: var(--sp-lg);
+}
+
+/* ==========================================================================
+   Den Ranks
+   ========================================================================== */
+
+.den-strip {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--sp-md);
+}
+
+/* Troop ranks are a 7-item band (Scout→Eagle) — keep them on one row so Eagle
+   isn't stranded alone on a second row (pack stays 6). */
+.den-strip--7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.den-badge {
+  text-align: center;
+  padding: var(--sp-xl) var(--sp-md);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.den-badge:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  border-color: var(--trail-gold);
+}
+
+.den-badge__emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--sp-sm);
+}
+
+.den-badge__img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto var(--sp-sm);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.den-badge:hover .den-badge__img {
+  transform: scale(1.1);
+}
+
+.den-badge__name {
+  font-family: var(--font-ui);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--trail-gold);
+  letter-spacing: 0.05em;
+}
+
+.den-badge__grade {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);   /* was 0.5 — below AA on forest for this meaningful subtitle */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: var(--sp-xs);
+}
+
+/* ==========================================================================
+   CTA Banner
+   ========================================================================== */
+
+.cta-banner {
+  position: relative;
+  padding: var(--sp-3xl) 0;
+  overflow: hidden;
+}
+
+.cta-banner__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.cta-banner__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-banner__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 58, 45, 0.88);
+}
+
+.cta-banner__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.cta-banner__content h2 {
+  color: var(--warm-white);
+  margin-bottom: var(--sp-md);
+}
+
+.cta-banner__content p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto var(--sp-xl);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Stats Bar
+   ========================================================================== */
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-lg);
+  text-align: center;
+  padding: var(--sp-xl) 0;
+}
+
+.stat {
+  padding: var(--sp-md);
+}
+
+.stat__number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--trail-gold);
+  line-height: 1;
+  margin-bottom: var(--sp-xs);
+}
+
+.stat__label {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================================================
+   Calendar Embed
+   ========================================================================== */
+
+.calendar-embed {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: var(--max-w-narrow);   /* agenda rows hug-left in the full 1240 wrap → cap + center */
+  margin-inline: auto;
+}
+
+.calendar-embed iframe {
+  border: 0;
+  width: 100%;
+  height: 450px;
+  display: block;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background: var(--pitch);
+  color: rgba(255, 255, 255, 0.7);
+  padding: var(--sp-3xl) 0 var(--sp-xl);
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--sp-2xl);
+  margin-bottom: var(--sp-2xl);
+}
+
+.footer-section h4 {
+  font-family: var(--font-ui);
+  color: var(--trail-gold);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--sp-lg);
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+}
+
+.footer-section a:hover {
+  color: var(--trail-gold);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: var(--sp-sm);
+}
+
+.footer-about {
+  max-width: 300px;
+}
+
+.footer-about .site-title {
+  font-size: 1.2rem;
+  margin-bottom: var(--sp-md);
+}
+
+.footer-bottom {
+  padding-top: var(--sp-xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   Page Content (inner pages)
+   ========================================================================== */
+
+.page-hero {
+  background: var(--forest-deep);
+  padding: calc(100px + var(--sp-2xl)) 0 var(--sp-2xl);
+  position: relative;
+}
+
+.page-hero h1 {
+  color: var(--warm-white);
+  margin: 0;
+}
+
+.page-hero .eyebrow {
+  color: var(--trail-gold-light);
+}
+
+.page-content {
+  padding: var(--sp-3xl) 0;
+}
+
+.page-content .wrap {
+  max-width: var(--max-w-narrow);
+}
+
+.page-content h2 {
+  margin-top: var(--sp-2xl);
+  margin-bottom: var(--sp-md);
+}
+
+.page-content h3 {
+  margin-top: var(--sp-xl);
+  margin-bottom: var(--sp-md);
+}
+
+.page-content ul, .page-content ol {
+  margin-bottom: var(--sp-lg);
+  padding-left: var(--sp-lg);
+}
+
+.page-content li {
+  margin-bottom: var(--sp-sm);
+  color: var(--bark-light);
+}
+
+.page-content a {
+  color: var(--forest-mid);
+  text-decoration: underline;
+  text-decoration-color: var(--trail-gold);
+  text-underline-offset: 3px;
+}
+
+.page-content a:hover {
+  color: var(--trail-gold);
+}
+
+/* ==========================================================================
+   Scroll Animations (CSS only — triggered by JS class)
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ==========================================================================
+   Gallery / Photo Sharing
+   ========================================================================== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--sp-sm);
+}
+
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Password gate */
+.password-gate {
+  max-width: 420px;
+  margin: var(--sp-3xl) auto;
+  text-align: center;
+  padding: var(--sp-2xl);
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: var(--sp-lg);
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--sp-xs);
+  color: var(--forest-deep);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem var(--sp-md);
+  border: 2px solid var(--stone);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--warm-white);
+  color: var(--bark);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--forest-mid);
+  box-shadow: 0 0 0 3px rgba(45, 95, 74, 0.12);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .split-block {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+  }
+
+  .split-block--reverse {
+    direction: ltr;
+  }
+
+  .den-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .den-strip--7 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+
+  .wrap {
+    padding: 0 var(--sp-md);
+  }
+
+  .site-header,
+  .site-header.scrolled {
+    background: var(--forest-deep);
+    backdrop-filter: none;
+    /* Longhands for the same reason as .site-header.scrolled above — and this
+       block is LATER in the file than the base rule, so a `padding` shorthand
+       here would reset all four sides on exactly the phone widths that have a
+       notch. */
+    padding-top: calc(var(--sp-sm) + env(safe-area-inset-top, 0px));
+    padding-bottom: var(--sp-sm);
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    position: relative;
+    z-index: 10000;
+  }
+
+  .main-navigation ul {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--forest-deep);
+    padding: 120px var(--sp-xl) var(--sp-xl);
+    /* The 120px clears .site-header and its .menu-toggle. That header now
+       grows by env(safe-area-inset-top), so this clearance has to as well or
+       the first link slides under the toggle. */
+    padding-top: calc(120px + env(safe-area-inset-top, 0px));
+    /* var(--sp-xl) is 2.5rem = 40px, narrower than the ~47px landscape notch
+       inset, and this <=900px block matches a landscape iPhone. */
+    padding-left: calc(var(--sp-xl) + env(safe-area-inset-left, 0px));
+    padding-right: calc(var(--sp-xl) + env(safe-area-inset-right, 0px));
+    gap: var(--sp-xs);
+    z-index: 9999;
+    overflow-y: auto;
+  }
+
+  .main-navigation.toggled ul {
+    display: flex;
+  }
+
+  .main-navigation a {
+    font-size: 1.2rem;
+    padding: var(--sp-sm);
+    line-height: 1;
+  }
+
+  .hero {
+    min-height: 90vh;
+    padding-bottom: var(--sp-2xl);
+  }
+
+  .hero__content h1 {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+
+  .den-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .den-strip--7 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-lg);
+    text-align: center;
+  }
+
+  .footer-about {
+    max-width: none;
+  }
+
+  .footer-section ul {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--sp-sm);
+    text-align: center;
+  }
+
+  .diagonal-top {
+    /* clip-path removed — straight edge */
+  }
+
+  .photo-strip__item {
+    width: 280px;
+    height: 200px;
+  }
+
+  .split-block__image img {
+    height: 280px;
+  }
+}
+
+/* ==========================================================================
+   Scout Oath / Quote Block
+   ========================================================================== */
+
+.scout-oath {
+  text-align: center;
+  padding: calc(var(--sp-2xl) * 0.75) 0;
+}
+
+.oath-quote {
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--forest-deep);
+  max-width: 650px;
+  margin: var(--sp-lg) auto 0;
+  position: relative;
+  padding: var(--sp-xl) 0;
+}
+
+.oath-quote::before {
+  content: '\201C';
+  font-family: var(--font-display);
+  font-size: 6rem;
+  color: var(--trail-gold-light);
+  position: absolute;
+  top: -0.3em;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  opacity: 0.4;
+}
+
+/* ==========================================================================
+   Callout Block
+   ========================================================================== */
+
+/* Callouts use the same card language as the rest of the site (cream fill,
+   hairline border, soft hover-lift) — NOT a bespoke white card with a gold
+   left-bar + permanent heavy shadow, which read as jarringly off-brand. The
+   gold accent now lives only in the FA heading icon. */
+.callout-block {
+  background: var(--cream);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl) var(--sp-2xl);
+  margin-bottom: var(--sp-lg);   /* stacked callouts must not touch each other */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.callout-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.callout-block:last-child {
+  margin-bottom: 0;
+}
+
+.callout-block h3 {
+  margin-bottom: var(--sp-sm);
+  color: var(--forest-deep);
+}
+
+.callout-block p {
+  margin-bottom: var(--sp-sm);
+  max-width: none;
+}
+
+.callout-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Info Cards (time commitment, cold weather, etc.)
+   ========================================================================== */
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--sp-lg);
+}
+
+.info-cards--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 600px) {
+  .info-cards--2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card__body {
+  flex: 1;                 /* grow to equalize card heights (was .info-card p:last-of-type) */
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--sp-sm);
+  color: var(--forest-deep);
+  text-align: center;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  max-width: none;
+  text-align: center;
+}
+
+.info-card .btn {
+  margin-top: auto;
+  align-self: center;
+}
+
+.callout-banner {
+  background: var(--forest-deep);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--sp-lg) var(--sp-xl);
+  margin-bottom: var(--sp-xl);
+  text-align: center;
+}
+
+.callout-banner p {
+  font-size: 1.05rem;
+  max-width: none;
+  margin: 0;
+  color: #fff;
+}
+
+.callout-banner strong {
+  color: var(--trail-gold-light);
+}
+
+.gear-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-lg);
+}
+
+.gear-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.gear-card h3 {
+  font-size: 1.2rem;
+  color: var(--forest-deep);
+  margin-bottom: var(--sp-sm);
+}
+
+.gear-card > p {
+  font-size: 0.95rem;
+  max-width: none;
+  margin-bottom: var(--sp-md);
+}
+
+.gear-card__recs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--sp-sm);
+}
+
+.gear-card__rec {
+  display: inline-block;
+  background: var(--warm-white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.gear-card__tip {
+  margin-top: var(--sp-md);
+  padding: var(--sp-sm) var(--sp-md);
+  background: rgba(0, 0, 0, 0.03);
+  border-left: 3px solid var(--trail-gold);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+.gear-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-sm) 0;
+  font-size: 0.9rem;
+}
+
+.gear-list li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.gear-list li:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   Leadership Cards (patch-based, 3-wide grid)
+   ========================================================================== */
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-lg);
+}
+
+.leadership-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl) var(--sp-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.leadership-card:last-child:nth-child(3n + 1) {
+  grid-column: 2;
+}
+
+.leadership-card--featured {
+  background: var(--forest-deep);
+  color: #fff;
+  border: 2px solid var(--trail-gold);
+}
+
+.leadership-card.leadership-card--featured h3 {
+  color: var(--trail-gold);
+  font-size: 1.25rem;
+}
+
+.leadership-card--featured p {
+  color: #fff;   /* was 0.9 — keep body copy ≥AA on the themed forest card */
+}
+
+.leadership-card--featured .leadership-card__email {
+  color: var(--trail-gold-light);
+}
+
+.leadership-card--featured .leadership-card__email:hover {
+  border-bottom-color: var(--trail-gold-light);
+}
+
+.leadership-card--featured .leadership-card__patch {
+  width: 140px;
+  height: 140px;
+}
+
+.leadership-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.leadership-card__patch {
+  width: 120px;
+  height: 120px;
+  margin-bottom: var(--sp-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leadership-card__patch img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+}
+
+.leadership-card__patch--double {
+  width: 180px;
+  gap: var(--sp-xs);
+}
+
+.leadership-card__patch--double img {
+  width: 80px;
+  height: 80px;
+}
+
+.leadership-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: var(--sp-xs);
+  color: var(--forest-deep);
+}
+
+.leadership-card p {
+  font-size: 0.92rem;
+  max-width: none;
+  flex: 1;
+}
+
+.leadership-card__email {
+  display: inline-block;
+  margin-top: var(--sp-sm);
+  font-size: 0.85rem;
+  color: var(--forest-deep);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.leadership-card__email:hover {
+  border-bottom-color: var(--forest-deep);
+}
+
+@media (max-width: 900px) {
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  .leadership-card__patch--double {
+    width: 160px;
+  }
+}
+
+/* ==========================================================================
+   Leadership Roster (dynamic from Google Sheets)
+   ========================================================================== */
+
+.leadership-roster__loading {
+  text-align: center;
+  color: var(--bark-light);
+  font-style: italic;
+  padding: var(--sp-xl) 0;
+}
+
+.leadership-roster__section {
+  font-family: var(--font-ui);
+  font-size: 1.3rem;
+  color: var(--forest-deep);
+  margin: var(--sp-lg) 0 var(--sp-sm);
+  padding-bottom: var(--sp-xs);
+  border-bottom: 2px solid var(--trail-gold);
+}
+
+.leadership-roster__table {
+  overflow-x: auto;
+  margin-bottom: var(--sp-lg);
+}
+
+.leadership-roster__table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.leadership-roster__table thead th {
+  background: var(--forest-deep);
+  color: #fff;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.leadership-roster__table tbody td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.leadership-roster__table tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--forest-deep) 4%, transparent);
+}
+
+.leadership-roster__table tbody tr:hover {
+  background: color-mix(in srgb, var(--trail-gold) 12%, transparent);
+}
+
+/* ==========================================================================
+   Step Cards (numbered steps — join page)
+   ========================================================================== */
+
+.step-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-lg);
+}
+
+.step-card {
+  display: flex;
+  gap: var(--sp-xl);
+  align-items: flex-start;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.step-card__number {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--forest-deep);
+  color: var(--trail-gold);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.step-card__body h3 {
+  margin-bottom: var(--sp-xs);
+  font-size: 1.3rem;
+}
+
+.step-card__body p {
+  max-width: none;
+  margin-bottom: var(--sp-sm);
+}
+
+.step-card__body .btn {
+  margin-top: var(--sp-sm);
+}
+
+/* ==========================================================================
+   Checklist (camping prep)
+   ========================================================================== */
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-md);
+}
+
+.checklist__item {
+  display: flex;
+  gap: var(--sp-md);
+  align-items: flex-start;
+  background: var(--cream);
+  border-radius: var(--radius-lg);   /* match the site card language (was --radius) */
+  padding: var(--sp-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checklist__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.checklist__icon__img {
+  height: 1.6rem;
+  width: auto;
+  max-width: 32px;
+  object-fit: contain;
+  margin-top: 2px;
+}
+
+.checklist__icon {
+  font-size: 1.5rem;
+  flex: 0 0 auto;
+  color: var(--forest-mid);   /* was unset → inherited body --bark; align with info-card icons */
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.checklist__item strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: var(--forest-deep);
+  margin-bottom: var(--sp-xs);
+}
+
+.checklist__item p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* ==========================================================================
+   Timeline (service page)
+   ========================================================================== */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-lg);
+  position: relative;
+  padding-left: var(--sp-2xl);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--trail-gold-light);
+}
+
+.timeline__item {
+  display: flex;
+  gap: var(--sp-md);
+  align-items: flex-start;
+  position: relative;
+}
+
+.timeline__icon {
+  font-size: 1.3rem;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  background: var(--warm-white);
+  border: 2px solid var(--trail-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(-1 * var(--sp-2xl) - 1px);
+  z-index: 1;
+}
+
+.timeline__content h4 {
+  font-family: var(--font-ui);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--forest-deep);
+  margin-bottom: var(--sp-xs);
+}
+
+.timeline__content p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* ==========================================================================
+   Payment Cards
+   ========================================================================== */
+
+.payment-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--sp-lg);
+}
+
+.payment-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.payment-card__header {
+  background: var(--forest-deep);
+  padding: var(--sp-lg) var(--sp-xl);
+  color: var(--warm-white);
+}
+
+.payment-card__header h3 {
+  color: var(--warm-white);
+  font-size: 1.1rem;
+  margin-bottom: var(--sp-xs);
+}
+
+.payment-card__amount {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--trail-gold);
+  line-height: 1;
+}
+
+.payment-card__amount span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.payment-card__body {
+  padding: var(--sp-xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-card__body p {
+  font-size: 0.95rem;
+  max-width: none;
+  margin-bottom: var(--sp-md);
+}
+
+.payment-card__body .btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   Document Embed (Google Docs)
+   ========================================================================== */
+
+.doc-embed {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.doc-embed iframe {
+  border: 0;
+  width: 100%;
+  height: 600px;
+  display: block;
+}
+
+/* Calendar embed full-page variant */
+.calendar-embed--full iframe {
+  height: 650px;
+}
+
+/* ==========================================================================
+   Den list (about page)
+   ========================================================================== */
+
+.den-list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--sp-md);
+}
+
+.den-list li {
+  padding: var(--sp-xs) 0;
+  font-size: 0.95rem;
+  color: var(--bark-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.den-list li:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   Responsive — New Components
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .step-card {
+    flex-direction: column;
+    gap: var(--sp-md);
+  }
+
+  .step-card__number {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .timeline {
+    padding-left: var(--sp-xl);
+  }
+
+  .timeline__icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    margin-left: calc(-1 * var(--sp-xl) - 1px);
+  }
+
+  .callout-block {
+    padding: var(--sp-lg);
+  }
+
+  .doc-embed iframe {
+    height: 400px;
+  }
+
+  .calendar-embed--full iframe {
+    height: 450px;
+  }
+
+  .payment-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   WordPress Admin Bar Offset
+   ========================================================================== */
+
+.admin-bar .site-header {
+  top: 32px;
+}
+
+@media (max-width: 782px) {
+  .admin-bar .site-header {
+    top: 46px;
+  }
+}
+
+/* ==========================================================================
+   Photos — Password Gate
+   ========================================================================== */
+
+.photos-gate {
+  text-align: center;
+  padding: var(--sp-2xl) 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.photos-gate p {
+  max-width: none;
+  text-align: center;
+}
+
+.photos-gate__icon {
+  font-size: 3rem;
+  margin-bottom: var(--sp-md);
+}
+
+.photos-gate h2 {
+  margin-bottom: var(--sp-sm);
+}
+
+.photos-gate__form {
+  display: flex;
+  gap: var(--sp-sm);
+  justify-content: center;
+  margin: var(--sp-lg) 0;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photos-gate__form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--stone);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+}
+
+.photos-gate__form input:focus {
+  outline: none;
+  border-color: var(--forest-mid);
+}
+
+.photos-gate__hint {
+  font-size: 0.85rem;
+  color: var(--bark-light);
+}
+
+.photos-empty {
+  text-align: center;
+  padding: var(--sp-2xl) 0;
+  color: var(--bark-light);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Photos — Gallery Grid (listing page)
+   ========================================================================== */
+
+.gallery-create {
+  margin-bottom: var(--sp-xl);
+}
+
+.gallery-create__form {
+  display: flex;
+  gap: var(--sp-sm);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery-create__form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--stone);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+}
+
+.gallery-create__form input:focus {
+  outline: none;
+  border-color: var(--forest-mid);
+}
+
+.gallery-create__msg {
+  text-align: center;
+  color: #c0392b;
+  font-size: 0.9rem;
+  margin-top: var(--sp-sm);
+}
+
+@media (max-width: 600px) {
+  .gallery-create__form {
+    flex-direction: column;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: var(--sp-lg);
+}
+
+.gallery-card {
+  display: block;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.gallery-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-card__image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--stone-light);
+}
+
+.gallery-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-card__image img {
+  transform: scale(1.05);
+}
+
+.gallery-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.gallery-card__info {
+  padding: var(--sp-md) var(--sp-lg);
+}
+
+.gallery-card__info h3 {
+  font-size: 1.1rem;
+  color: var(--forest-deep);
+  margin-bottom: 0.25rem;
+}
+
+.gallery-card__count,
+.gallery-card__date {
+  font-size: 0.8rem;
+  color: var(--bark-light);
+}
+
+.gallery-card__count::after {
+  content: ' · ';
+}
+
+/* ==========================================================================
+   Photos — Photo Grid (single gallery)
+   ========================================================================== */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-2xl);
+}
+
+.photo-grid__item-wrap {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.gallery-actions {
+  text-align: center;
+  margin-bottom: var(--sp-lg);
+}
+
+.photo-grid__download {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 0.85rem;
+  line-height: 28px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+
+.photo-grid__item-wrap:hover .photo-grid__download {
+  opacity: 1;
+}
+
+.photo-grid__download:hover {
+  background: var(--forest-mid);
+  color: #fff;
+}
+
+.photo-grid__delete {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+
+.photo-grid__item-wrap:hover .photo-grid__delete {
+  opacity: 1;
+}
+
+.photo-grid__delete:hover {
+  background: #c0392b;
+}
+
+.photo-grid__item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.photo-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-grid__item:hover img {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   Photos — Upload Form
+   ========================================================================== */
+
+.photo-upload {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-xl);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: var(--sp-xl);
+  text-align: center;
+}
+
+.photo-upload * {
+  max-width: none;
+}
+
+.photo-upload h3 {
+  margin-bottom: var(--sp-xs);
+  color: var(--forest-deep);
+  text-align: center;
+}
+
+.photo-upload > p {
+  margin-bottom: var(--sp-md);
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: none;
+}
+
+.photo-upload__dropzone {
+  border: 2px dashed var(--stone);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-2xl) var(--sp-xl);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.photo-upload__dropzone:hover,
+.photo-upload__dropzone--active {
+  border-color: var(--forest-mid);
+  background: rgba(45, 95, 74, 0.04);
+}
+
+.photo-upload__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--sp-sm);
+}
+
+.photo-upload__browse {
+  color: var(--forest-mid);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.photo-upload__hint {
+  font-size: 0.8rem;
+  color: var(--bark-light);
+  margin-top: var(--sp-xs);
+}
+
+.photo-upload__progress {
+  margin-top: var(--sp-md);
+}
+
+.photo-upload__bar {
+  height: 6px;
+  background: var(--stone-light);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.photo-upload__bar-fill {
+  height: 100%;
+  background: var(--forest-mid);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  width: 0%;
+}
+
+.photo-upload__progress p {
+  font-size: 0.85rem;
+  color: var(--bark-light);
+  margin-top: var(--sp-xs);
+  text-align: center;
+}
+
+/* ==========================================================================
+   Lightbox
+   ========================================================================== */
+
+/* ==========================================================================
+   Registration Form
+   ========================================================================== */
+
+.reg-form__section {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  background: var(--cream);
+  min-width: 0;
+}
+
+.reg-form__section legend {
+  font-family: var(--font-ui);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--forest-deep);
+  padding: 0 var(--sp-sm);
+}
+
+.reg-form__section legend .optional {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--bark-light);
+}
+
+.reg-form__row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.reg-form__row--2col > .reg-form__field {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.reg-form__field--grade {
+  max-width: 180px;
+}
+
+.reg-form__field label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--bark);
+  margin-bottom: 3px;
+}
+
+.reg-form__field label .req {
+  color: #c0392b;
+}
+
+.reg-form__field input,
+.reg-form__field select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 2px solid var(--stone);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.reg-form__field input:focus,
+.reg-form__field select:focus {
+  outline: none;
+  border-color: var(--forest-mid);
+}
+
+.reg-form__den-display {
+  font-size: 0.85rem;
+  color: var(--forest-mid);
+  font-weight: 600;
+  margin-top: -0.5rem;
+  margin-bottom: var(--sp-xs);
+}
+
+.btn--outline-forest {
+  background: transparent;
+  border: 2px solid var(--forest-mid);
+  color: var(--forest-mid);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn--outline-forest:hover {
+  background: var(--forest-mid);
+  color: #fff;
+}
+
+.btn--lg {
+  padding: 0.85rem 2.5rem;
+  font-size: 1.05rem;
+}
+
+.reg-form__submit {
+  text-align: center;
+  margin-top: var(--sp-lg);
+}
+
+.reg-form__message {
+  margin-top: var(--sp-lg);
+  padding: var(--sp-2xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reg-form__message--success {
+  background: rgba(45, 95, 74, 0.08);
+  border: 1px solid var(--forest-mid);
+  color: var(--forest-deep);
+}
+
+.reg-form__message--success h3,
+.reg-form__message--success p {
+  margin-bottom: var(--sp-xs);
+  text-align: center !important;
+}
+
+.reg-form__message--error {
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid #c0392b;
+  color: #c0392b;
+}
+
+@media (max-width: 600px) {
+  .reg-form__row,
+  .reg-form__row--2col {
+    flex-direction: column;
+  }
+  .reg-form__field--grade {
+    max-width: none;
+  }
+}
+
+/* ==========================================================================
+   Lightbox
+   ========================================================================== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* viewport-fit=cover: this box's padding box is what bounds the dialog inside
+     it (a flex/grid item) AND any absolutely-positioned control in it, because
+     an absolute child resolves against the nearest positioned ancestor's PADDING
+     edge. box-sizing is border-box globally, so the backdrop still paints edge
+     to edge; only its contents move inside the safe area.
+     Spec: §10 step 1, §9 UI verification; kanban ed1d5ff5. */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.lightbox__close:hover { opacity: 1; }
+
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lightbox__prev:hover,
+.lightbox__next:hover { opacity: 1; }
+
+.lightbox__prev { left: 1rem; }
+.lightbox__next { right: 1rem; }
+
+/* ==========================================================================
+   Contact modal (Join page "Reach Out")
+   ========================================================================== */
+.contact-modal[hidden] { display: none; }
+.contact-modal { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center;
+  /* viewport-fit=cover: this box's padding box is what bounds the dialog inside
+     it (a flex/grid item) AND any absolutely-positioned control in it, because
+     an absolute child resolves against the nearest positioned ancestor's PADDING
+     edge. box-sizing is border-box globally, so the backdrop still paints edge
+     to edge; only its contents move inside the safe area.
+     Spec: §10 step 1, §9 UI verification; kanban ed1d5ff5. */
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+}
+/* fixed, not absolute: .contact-modal now carries the safe-area insets as
+   padding, and an ABSOLUTE child resolves inset: 0 against the padding box —
+   which would leave the notch and status-bar strips undimmed and unblurred.
+   Fixed resolves against the viewport, so the scrim still covers the screen.
+   .contact-modal has no transform/filter, so there is no other containing
+   block for it to pick up. Spec: §10 step 1, §9 UI verification; kanban ed1d5ff5. */
+.contact-modal__overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(3px); }
+.contact-modal__dialog { position: relative; background: var(--warm-white); border-radius: var(--radius-lg); width: min(600px, calc(100% - 32px)); max-height: calc(100vh - 48px); overflow-y: auto; padding: var(--sp-2xl); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+.contact-modal__x { position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 1.8rem; line-height: 1; color: var(--bark-light); cursor: pointer; }
+.contact-modal__title { color: var(--forest-deep); margin: 0 0 var(--sp-xs); }
+.contact-modal__sub { color: var(--bark-light); margin: 0 0 var(--sp-lg); font-size: 0.95rem; }
+.contact-modal__form label { display: block; font-family: var(--font-ui); font-size: 0.85rem; font-weight: 600; color: var(--forest-deep); margin-bottom: var(--sp-md); }
+.contact-modal__form input, .contact-modal__form select, .contact-modal__form textarea { display: block; width: 100%; margin-top: 4px; padding: 10px 12px; border: 1px solid var(--stone); border-radius: var(--radius); font: inherit; font-weight: 400; background: var(--warm-white); }
+.contact-modal__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--sp-md); }
+.contact-modal__section { margin: var(--sp-sm) 0 var(--sp-md); color: var(--bark-light); font-size: .88rem; }
+.contact-modal__opt { color: var(--bark-light); font-weight: 400; }
+.contact-modal__hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; }
+.contact-modal__status { min-height: 1.2em; font-size: 0.9rem; color: var(--bark-light); margin-bottom: var(--sp-sm); }
+.contact-modal__submit { width: 100%; }
+.contact-modal__done { text-align: center; color: var(--forest-deep); font-size: 1.05rem; padding: var(--sp-lg) 0; }
+.contact-modal__done i { color: var(--trail-gold); margin-right: 6px; }
+@media (max-width: 560px) { .contact-modal__grid { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   Family-portal magic-link card (static /portal page) — themed via tokens so
+   it follows the tenant accent (was hardcoded hex that stayed forest-green).
+   ========================================================================== */
+.portal-card {
+  text-align: center;
+  background: var(--forest-deep);
+  color: var(--warm-white);
+  padding: var(--sp-2xl);
+  border-radius: var(--radius-lg);
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+.portal-card h3 { color: var(--trail-gold-light); margin-bottom: var(--sp-md); }
+.portal-card__lead { color: var(--stone); max-width: 520px; margin: 0 auto var(--sp-sm); font-size: 0.95rem; }
+.portal-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--sp-md);
+  max-width: 600px;
+  margin: 0 auto var(--sp-lg);
+}
+.portal-feature__icon { font-size: 1.6rem; color: var(--trail-gold-light); margin-bottom: var(--sp-xs); }
+.portal-feature__label { font-size: 0.85rem; color: var(--stone); }
+.portal-form { max-width: 400px; margin: var(--sp-md) auto 0; }
+.portal-form__row { display: flex; gap: var(--sp-sm); flex-wrap: wrap; justify-content: center; }
+.portal-form__input { flex: 1; min-width: 180px; padding: 12px 16px; border: 2px solid var(--forest-mid); border-radius: var(--radius); font-size: 15px; background: var(--warm-white); color: var(--pitch); }
+.portal-form__msg { margin-top: var(--sp-sm); font-size: 0.85rem; color: var(--trail-gold-light); display: none; }
+
+/* Empty-state card for an unpublished calendar (unconfigured tenants / demo) —
+   uses the shared cream-card language instead of leaving a void. */
+.calendar-empty {
+  max-width: var(--max-w-narrow);
+  margin: 0 auto;
+  text-align: center;
+  background: var(--cream);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-2xl) var(--sp-xl);
+}
+.calendar-empty__icon { display: inline-flex; font-size: 2rem; color: var(--forest-mid); margin-bottom: var(--sp-sm); }
+.calendar-empty p { color: var(--bark-light); margin: 0; max-width: 46ch; margin-inline: auto; }
+
+/* ==========================================================================
+   Design-audit P1: readable measure + accessibility (reduced-motion, focus)
+   ========================================================================== */
+
+/* Cap centered prose to a readable line length (it already auto-centers as a
+   block). Long-form bodies were running to ~1000px+ when centered. */
+.section__header--center p { max-width: 65ch; }
+
+/* Lists inside an info card read left-aligned, not centered with bullets
+   hanging at the far edge (e.g. New Families "Class A" uniform list). */
+.info-card ul, .info-card ol { text-align: left; }
+
+/* Respect prefers-reduced-motion: neutralize the reveal-on-scroll, hover
+   transforms, hero scroll-hint float, and confetti for users who opt out. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus ring (was missing site-wide — inputs only had a
+   border-color nudge). Token-driven so it follows the tenant accent. */
+a:focus-visible,
+.btn:focus-visible,
+button:focus-visible,
+.menu-toggle:focus-visible,
+.den-badge:focus-visible,
+[tabindex]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--trail-gold);
+  outline-offset: 2px;
+}
+/* Brighter gold on dark/forest surfaces for contrast. */
+.site-header a:focus-visible,
+.hero a:focus-visible,
+.section--forest a:focus-visible,
+.section--forest .den-badge:focus-visible,
+.portal-card a:focus-visible,
+.portal-card .btn:focus-visible {
+  outline-color: var(--trail-gold-light);
+}
+
+/* Calendar agenda is shorter on phones — trim the iframe height (the base
+   .calendar-embed iframe is 450px; only --full was in the responsive pass). */
+@media (max-width: 640px) {
+  .calendar-embed iframe { height: 380px; }
+}
+
+/* ─── Launcher — the "/" page for a unit that runs its own website ───
+   Its own classes rather than borrowed portal ones. The first version reused
+   .portal-feature__label, which is color: var(--stone) (#D4CEC4) because it was
+   written for the DARK .portal-card; on .section--warm (#FEFCF9) that is about
+   1.5:1 and the tiles were effectively unreadable. Follows .info-card, which is
+   the established light-background card. */
+.launcher-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: var(--sp-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.launcher-tile {
+  display: block;
+  background: var(--cream);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-lg);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.launcher-tile:hover,
+.launcher-tile:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--forest-light);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+/* Dark on cream, not the portal card's light-on-dark. */
+.launcher-tile__title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--forest-deep);
+  margin-bottom: 4px;
+}
+.launcher-tile__desc {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--bark);
+  line-height: 1.45;
+}
+
+/* Mailbox names can be longer than a mobile viewport. */
+.parents-list-page { overflow-wrap: anywhere; }
+
+/* Shared status components must respect the native visibility attribute. */
+.reg-form__message[hidden] { display: none; }
+
+.reg-form__message--compact { padding: var(--sp-md); }

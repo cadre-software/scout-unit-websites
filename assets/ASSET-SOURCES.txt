@@ -1,0 +1,11 @@
+Azimuth public-site corpus
+
+Imported from its bundled public assets at f8504cd5b277714fb6d618ef60655d7f68fe809e.
+Pack 39 styling and the public-site photography are included at Brian's explicit direction.
+The original public.css GPL-2.0-or-later notice is preserved; COPYING-GPL-2.txt is supplied.
+Fonts retain their included SIL Open Font License notices; Font Awesome retains its own notice.
+Scouting marks, badges, uniform references, and photographs retain their original rights and usage terms. A software license does not relicense them.
+The Cub Scout blue-shirt placement guide is tagged Pack only; it is not a Scouts BSA tan-shirt guide.
+No Pack 39 unit mark, private tenant uploads, member records, or application services are included.
+Full-resolution JPEG downloads have EXIF/XMP/IPTC/comment metadata removed without re-encoding; source hashes record provenance. Display and thumbnail WebP derivatives are resized and metadata stripped.
+See corpus-manifest.json for exact asset origins, transformations, and hashes.

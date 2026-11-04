@@ -1,0 +1,19 @@
+{
+  "name": "scout-unit-websites",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Editable static Pack and Troop website templates from Cadre Software",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "start": "python3 scripts/serve.py . --port 8080",
+    "build": "node scripts/build-scout-demo.mjs",
+    "test": "bash scripts/check-template.sh",
+    "test:release": "SCOUT_VERIFY_RELEASE=1 bash scripts/check-template.sh"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}

@@ -1,0 +1,136 @@
+/**
+ * Azimuth design tokens — single source of truth for values that appear
+ * identically across the admin app (style.css + companions) AND the
+ * public marketing site (public.css). Loaded BEFORE any other stylesheet
+ * in views/partials/_head.ejs and views/public/_head.ejs so downstream
+ * sheets can reference these via var().
+ *
+ * Scope rule: a token belongs here only if (a) it has the same value in
+ * BOTH style.css and public.css today, and (b) drift between the two
+ * would be a bug. File-specific scales (admin's --radius=12 vs public's
+ * --radius=6, public's --sp-* spacing scale, marketing-only --grain /
+ * --pitch / --ridge-blue*) stay in their respective files — they
+ * encode different design contexts on purpose.
+ *
+ * Onboarding (public/css/onboarding.css) and the family wizard
+ * (public/css/family-wizard.css) are intentionally separate brand
+ * palettes per their header comments. Not unified here.
+ *
+ * To add a new token: first check that BOTH surfaces want the same
+ * value. If yes, add here and remove the duplicates. If no, leave
+ * per-file. See docs/design-system.md.
+ */
+:root {
+  /* ── Forest greens — primary brand palette ── */
+  --forest-deep:  #1B3A2D;
+  --forest-mid:   #2D5F4A;
+  --forest-light: #4A7C68;
+
+  /* Brand green as a FILL (button/badge/header backgrounds). Identical to
+     --forest-deep in light, but stays green on dark where --forest-deep is
+     remapped to neutral cream for TEXT. Repoint forest fills to this so dark
+     mode keeps green buttons/headers instead of cream-on-white. */
+  /* Foreground on solid forest fills; never remapped to a dark surface. */
+  --on-forest:         #FEFCF9;
+  --forest-fill:       #1B3A2D;
+  --forest-fill-hover: #2D5F4A;
+
+  /* Fill counterpart of --forest-light. Exists because --forest-fill-hover is
+     #2D5F4A in light, so routing the four --forest-light BACKGROUNDS through it
+     would change light mode — including two resting states (.export-btn, the
+     checked toggle). This keeps light byte-identical and re-greens dark. */
+  --forest-fill-light: #4A7C68;
+
+  /* ── Trail gold — accent / call-to-action ── */
+  --trail-gold:       #C8963E;
+  --trail-gold-light: #E4BC73;
+  /* Stable dark forest foreground on gold fills in either theme. */
+  --on-gold:          #1B3A2D;
+
+  /* ── Stone — neutral borders, dividers, muted bg ── */
+  --stone:       #D4CEC4;
+  --stone-light: #E8E2D8;
+
+  /* ── Bark — body text colors ── */
+  --bark:       #4A3728;
+  --bark-light: #6B5344;
+
+  /* ── Cream / warm white — page + card backgrounds ── */
+  --cream:      #FAF7F2;
+  --warm-white: #FEFCF9;
+
+  /* ── Typography ── */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  /* The condensed face is for display sizes only — 24px and up. Below that it
+     reads thin and cramped (Brian, 2026-08-05: "a lot of the ones I have a
+     problem with are in the 18-23px range. 24px is the smallest I'd want
+     Barlow"). Everything under the floor uses this, including buttons and tabs.
+     It is the same Inter stack the body already used, promoted from a hardcoded
+     declaration in style.css so headings and the paragraphs beside them cannot
+     drift apart. */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Shared portal-shell contract. Content pages may choose their own density;
+     shell furniture and mobile controls use these values everywhere. */
+  --shell-gutter: 32px;
+  --shell-gutter-mobile: 16px;
+  --shell-breakpoint: 720px;
+  --touch-target: 44px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --focus-ring: 0 0 0 3px rgba(200, 150, 62, 0.28);
+
+  /* ── Platform admin — semantic tokens ── */
+  /* Status badge: active (green tint) */
+  --badge-active-bg:   #E0EBD8;
+  --badge-active-text: #1B3A2D;   /* --forest-deep */
+
+  /* Status badge: pending/provisioning (amber tint) */
+  --badge-pending-bg:   #FBE9C4;
+  --badge-pending-text: #6B4A0B;
+
+  /* Status badge: warn/test (orange tint) */
+  --badge-warn-bg:   #F5D9B4;
+  --badge-warn-text: #6B4416;
+
+  /* Danger zone card */
+  --danger-zone-bg:      #FBEEEB;
+  --danger-zone-border:  #C56565;
+  --danger-zone-heading: #8B2D2A;
+
+  /* Danger button */
+  --btn-danger-bg:    #B53A3A;
+  --btn-danger-hover: #8B2D2A;
+
+  /* Mobile tab bar (public/css/bottom-nav.css) — a floating pill.
+     Geometry lives here, not in bottom-nav.css, because surfaces that must
+     clear the bar (messaging.css, my-family.css, toasts) are loaded on pages
+     that may not load bottom-nav.css first, and an undefined var() there
+     silently drops the whole declaration.
+     --bottom-nav-clearance is the ONLY number anything should use to stay
+     out from under the bar: the pill (h), the gap beneath it, one more gap
+     above it, and the home-indicator inset. --test-safe-area is a seam for
+     browser tests (headless Chrome reports a 0 inset); production never
+     sets it, so env() decides. */
+  --bottom-nav-h: var(--touch-target, 44px);
+  --bottom-nav-gap: 12px;
+  --bottom-nav-clearance: calc(var(--bottom-nav-h) + var(--bottom-nav-gap) * 2 + var(--test-safe-area, env(safe-area-inset-bottom, 0px)));
+
+  /* Light: warm-white frosted glass with a forest hairline; the active tab
+     sits in an inner forest-tinted pill. Dark overrides in style.css.
+     The glass alpha is set by CONTRAST, not looks: blur hides letterforms
+     but not luminance, so a 10px --nav-fg label must reach 4.5:1 with the
+     glass composited over black (photos) and the forest footer. 0.74 gave
+     3.70 over black; 0.86 gives ~5.0 (bottom-nav-height.spec.js computes it). */
+  --nav-glass-bg:     rgba(254, 252, 249, 0.86);
+  --nav-glass-border: rgba(27, 58, 45, 0.10);
+  --nav-glass-shadow: 0 10px 28px rgba(27, 58, 45, 0.16), 0 1px 3px rgba(27, 58, 45, 0.10);
+  --nav-solid-bg:     #FEFCF9;
+  --nav-fg:           #6B5344;  /* --bark-light */
+  --nav-active-bg:    rgba(45, 95, 74, 0.13);
+  --nav-active-fg:    #1B3A2D;  /* --forest-deep */
+}

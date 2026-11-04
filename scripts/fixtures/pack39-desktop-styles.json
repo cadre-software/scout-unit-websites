@@ -1,0 +1,92 @@
+{
+  "body": {
+    "fontFamily": "\"Source Serif 4\", Georgia, serif",
+    "fontSize": "17px",
+    "lineHeight": "29.75px",
+    "color": "rgb(74, 55, 40)",
+    "background": "rgb(250, 247, 242)",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "display": "block"
+  },
+  ".hero": {
+    "fontFamily": "\"Source Serif 4\", Georgia, serif",
+    "fontSize": "17px",
+    "lineHeight": "29.75px",
+    "color": "rgb(74, 55, 40)",
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "padding": "136px 0px 102px",
+    "display": "flex"
+  },
+  ".hero__content h1": {
+    "fontFamily": "Barlow, \"Helvetica Neue\", sans-serif",
+    "fontSize": "89.6px",
+    "lineHeight": "85.12px",
+    "color": "rgb(254, 252, 249)",
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "display": "block"
+  },
+  ".hero__content p": {
+    "fontFamily": "\"Source Serif 4\", Georgia, serif",
+    "fontSize": "19.55px",
+    "lineHeight": "33.235px",
+    "color": "rgba(255, 255, 255, 0.85)",
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "display": "block"
+  },
+  ".site-header": {
+    "fontFamily": "\"Source Serif 4\", Georgia, serif",
+    "fontSize": "17px",
+    "lineHeight": "29.75px",
+    "color": "rgb(74, 55, 40)",
+    "background": "rgba(27, 58, 45, 0.55)",
+    "borderRadius": "0px",
+    "padding": "17px 0px",
+    "display": "block"
+  },
+  ".btn--gold": {
+    "fontFamily": "Barlow, \"Helvetica Neue\", sans-serif",
+    "fontSize": "14.45px",
+    "lineHeight": "25.2875px",
+    "color": "rgb(26, 22, 18)",
+    "background": "rgb(200, 150, 62)",
+    "borderRadius": "6px",
+    "padding": "14.45px 34px",
+    "display": "flex"
+  },
+  ".photo-strip": {
+    "fontFamily": "\"Source Serif 4\", Georgia, serif",
+    "fontSize": "17px",
+    "lineHeight": "29.75px",
+    "color": "rgb(74, 55, 40)",
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "padding": "42.5px",
+    "display": "flex"
+  },
+  ".activity-card": {
+    "fontFamily": "\"Source Serif 4\", Georgia, serif",
+    "fontSize": "17px",
+    "lineHeight": "29.75px",
+    "color": "rgb(74, 55, 40)",
+    "background": "rgb(254, 252, 249)",
+    "borderRadius": "12px",
+    "padding": "42.5px",
+    "display": "block"
+  },
+  ".split-block__image img": {
+    "fontFamily": "\"Source Serif 4\", Georgia, serif",
+    "fontSize": "17px",
+    "lineHeight": "29.75px",
+    "color": "rgb(74, 55, 40)",
+    "background": "rgba(0, 0, 0, 0)",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "display": "block"
+  }
+}

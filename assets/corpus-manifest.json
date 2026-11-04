@@ -1,0 +1,3294 @@
+{
+  "sourceRepository": "Azimuth bundled public website",
+  "sourceRevision": "f8504cd5b277714fb6d618ef60655d7f68fe809e",
+  "assets": [
+    {
+      "id": "ranks/scout.png",
+      "src": "assets/display/ranks/scout.png.webp",
+      "thumb": "assets/thumbs/ranks/scout.png.webp",
+      "original": "assets/corpus/ranks/scout.png",
+      "label": "Scout",
+      "alt": "Scout",
+      "group": "Rank badges",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/ranks/scout.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "ranks/tenderfoot.png",
+      "src": "assets/display/ranks/tenderfoot.png.webp",
+      "thumb": "assets/thumbs/ranks/tenderfoot.png.webp",
+      "original": "assets/corpus/ranks/tenderfoot.png",
+      "label": "Tenderfoot",
+      "alt": "Tenderfoot",
+      "group": "Rank badges",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/ranks/tenderfoot.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "ranks/second-class.png",
+      "src": "assets/display/ranks/second-class.png.webp",
+      "thumb": "assets/thumbs/ranks/second-class.png.webp",
+      "original": "assets/corpus/ranks/second-class.png",
+      "label": "Second Class",
+      "alt": "Second Class",
+      "group": "Rank badges",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/ranks/second-class.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "ranks/first-class.png",
+      "src": "assets/display/ranks/first-class.png.webp",
+      "thumb": "assets/thumbs/ranks/first-class.png.webp",
+      "original": "assets/corpus/ranks/first-class.png",
+      "label": "First Class",
+      "alt": "First Class",
+      "group": "Rank badges",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/ranks/first-class.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "ranks/star.png",
+      "src": "assets/display/ranks/star.png.webp",
+      "thumb": "assets/thumbs/ranks/star.png.webp",
+      "original": "assets/corpus/ranks/star.png",
+      "label": "Star",
+      "alt": "Star",
+      "group": "Rank badges",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/ranks/star.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "ranks/life.png",
+      "src": "assets/display/ranks/life.png.webp",
+      "thumb": "assets/thumbs/ranks/life.png.webp",
+      "original": "assets/corpus/ranks/life.png",
+      "label": "Life",
+      "alt": "Life",
+      "group": "Rank badges",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/ranks/life.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "ranks/eagle.png",
+      "src": "assets/display/ranks/eagle.png.webp",
+      "thumb": "assets/thumbs/ranks/eagle.png.webp",
+      "original": "assets/corpus/ranks/eagle.png",
+      "label": "Eagle",
+      "alt": "Eagle",
+      "group": "Rank badges",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/ranks/eagle.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "rank-lion.png",
+      "src": "assets/display/rank-lion.png.webp",
+      "thumb": "assets/thumbs/rank-lion.png.webp",
+      "original": "assets/corpus/rank-lion.png",
+      "label": "Lion",
+      "alt": "Lion",
+      "group": "Rank badges",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/rank-lion.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "rank-tiger.png",
+      "src": "assets/display/rank-tiger.png.webp",
+      "thumb": "assets/thumbs/rank-tiger.png.webp",
+      "original": "assets/corpus/rank-tiger.png",
+      "label": "Tiger",
+      "alt": "Tiger",
+      "group": "Rank badges",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/rank-tiger.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "rank-wolf.png",
+      "src": "assets/display/rank-wolf.png.webp",
+      "thumb": "assets/thumbs/rank-wolf.png.webp",
+      "original": "assets/corpus/rank-wolf.png",
+      "label": "Wolf",
+      "alt": "Wolf",
+      "group": "Rank badges",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/rank-wolf.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "rank-bear.png",
+      "src": "assets/display/rank-bear.png.webp",
+      "thumb": "assets/thumbs/rank-bear.png.webp",
+      "original": "assets/corpus/rank-bear.png",
+      "label": "Bear",
+      "alt": "Bear",
+      "group": "Rank badges",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/rank-bear.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "rank-webelos.png",
+      "src": "assets/display/rank-webelos.png.webp",
+      "thumb": "assets/thumbs/rank-webelos.png.webp",
+      "original": "assets/corpus/rank-webelos.png",
+      "label": "Webelos",
+      "alt": "Webelos",
+      "group": "Rank badges",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/rank-webelos.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "rank-aol.png",
+      "src": "assets/display/rank-aol.png.webp",
+      "thumb": "assets/thumbs/rank-aol.png.webp",
+      "original": "assets/corpus/rank-aol.png",
+      "label": "Arrow of Light",
+      "alt": "Arrow of Light",
+      "group": "Rank badges",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/rank-aol.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "bsa-fleur-de-lis-color.png",
+      "src": "assets/display/bsa-fleur-de-lis-color.png.webp",
+      "thumb": "assets/thumbs/bsa-fleur-de-lis-color.png.webp",
+      "original": "assets/corpus/bsa-fleur-de-lis-color.png",
+      "label": "Scouts BSA emblem",
+      "alt": "Scouts BSA emblem",
+      "group": "Scouting emblems",
+      "unitTypes": [
+        "pack",
+        "troop"
+      ],
+      "source": "public/images/bsa-fleur-de-lis-color.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "eagle-scout-badge.png",
+      "src": "assets/display/eagle-scout-badge.png.webp",
+      "thumb": "assets/thumbs/eagle-scout-badge.png.webp",
+      "original": "assets/corpus/eagle-scout-badge.png",
+      "label": "Eagle Scout",
+      "alt": "Eagle Scout",
+      "group": "Scouting emblems",
+      "unitTypes": [
+        "pack",
+        "troop"
+      ],
+      "source": "public/images/eagle-scout-badge.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "cub-scouts-logo.png",
+      "src": "assets/display/cub-scouts-logo.png.webp",
+      "thumb": "assets/thumbs/cub-scouts-logo.png.webp",
+      "original": "assets/corpus/cub-scouts-logo.png",
+      "label": "Cub Scouts",
+      "alt": "Cub Scouts",
+      "group": "Scouting emblems",
+      "unitTypes": [
+        "pack",
+        "troop"
+      ],
+      "source": "public/images/cub-scouts-logo.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "baloo-badge.png",
+      "src": "assets/display/baloo-badge.png.webp",
+      "thumb": "assets/thumbs/baloo-badge.png.webp",
+      "original": "assets/corpus/baloo-badge.png",
+      "label": "BALOO",
+      "alt": "BALOO",
+      "group": "Scouting emblems",
+      "unitTypes": [
+        "pack",
+        "troop"
+      ],
+      "source": "public/images/baloo-badge.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "wood-badge.png",
+      "src": "assets/display/wood-badge.png.webp",
+      "thumb": "assets/thumbs/wood-badge.png.webp",
+      "original": "assets/corpus/wood-badge.png",
+      "label": "Wood Badge",
+      "alt": "Wood Badge",
+      "group": "Scouting emblems",
+      "unitTypes": [
+        "pack",
+        "troop"
+      ],
+      "source": "public/images/wood-badge.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/scoutmaster.png",
+      "src": "assets/display/positions/scoutmaster.png.webp",
+      "thumb": "assets/thumbs/positions/scoutmaster.png.webp",
+      "original": "assets/corpus/positions/scoutmaster.png",
+      "label": "Scoutmaster",
+      "alt": "Scoutmaster",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/scoutmaster.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/assistant-scoutmaster.png",
+      "src": "assets/display/positions/assistant-scoutmaster.png.webp",
+      "thumb": "assets/thumbs/positions/assistant-scoutmaster.png.webp",
+      "original": "assets/corpus/positions/assistant-scoutmaster.png",
+      "label": "Assistant Scoutmaster",
+      "alt": "Assistant Scoutmaster",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/assistant-scoutmaster.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/senior-patrol-leader.png",
+      "src": "assets/display/positions/senior-patrol-leader.png.webp",
+      "thumb": "assets/thumbs/positions/senior-patrol-leader.png.webp",
+      "original": "assets/corpus/positions/senior-patrol-leader.png",
+      "label": "Senior Patrol Leader",
+      "alt": "Senior Patrol Leader",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/senior-patrol-leader.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/assistant-senior-patrol-leader.png",
+      "src": "assets/display/positions/assistant-senior-patrol-leader.png.webp",
+      "thumb": "assets/thumbs/positions/assistant-senior-patrol-leader.png.webp",
+      "original": "assets/corpus/positions/assistant-senior-patrol-leader.png",
+      "label": "Assistant Senior Patrol Leader",
+      "alt": "Assistant Senior Patrol Leader",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/assistant-senior-patrol-leader.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/patrol-leader.png",
+      "src": "assets/display/positions/patrol-leader.png.webp",
+      "thumb": "assets/thumbs/positions/patrol-leader.png.webp",
+      "original": "assets/corpus/positions/patrol-leader.png",
+      "label": "Patrol Leader",
+      "alt": "Patrol Leader",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/patrol-leader.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/assistant-patrol-leader.png",
+      "src": "assets/display/positions/assistant-patrol-leader.png.webp",
+      "thumb": "assets/thumbs/positions/assistant-patrol-leader.png.webp",
+      "original": "assets/corpus/positions/assistant-patrol-leader.png",
+      "label": "Assistant Patrol Leader",
+      "alt": "Assistant Patrol Leader",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/assistant-patrol-leader.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/troop-guide.png",
+      "src": "assets/display/positions/troop-guide.png.webp",
+      "thumb": "assets/thumbs/positions/troop-guide.png.webp",
+      "original": "assets/corpus/positions/troop-guide.png",
+      "label": "Troop Guide",
+      "alt": "Troop Guide",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/troop-guide.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/quartermaster.png",
+      "src": "assets/display/positions/quartermaster.png.webp",
+      "thumb": "assets/thumbs/positions/quartermaster.png.webp",
+      "original": "assets/corpus/positions/quartermaster.png",
+      "label": "Quartermaster",
+      "alt": "Quartermaster",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/quartermaster.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/scribe.png",
+      "src": "assets/display/positions/scribe.png.webp",
+      "thumb": "assets/thumbs/positions/scribe.png.webp",
+      "original": "assets/corpus/positions/scribe.png",
+      "label": "Scribe",
+      "alt": "Scribe",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/scribe.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/librarian.png",
+      "src": "assets/display/positions/librarian.png.webp",
+      "thumb": "assets/thumbs/positions/librarian.png.webp",
+      "original": "assets/corpus/positions/librarian.png",
+      "label": "Librarian",
+      "alt": "Librarian",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/librarian.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/troop-historian.png",
+      "src": "assets/display/positions/troop-historian.png.webp",
+      "thumb": "assets/thumbs/positions/troop-historian.png.webp",
+      "original": "assets/corpus/positions/troop-historian.png",
+      "label": "Historian",
+      "alt": "Historian",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/troop-historian.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/chaplain-aide.png",
+      "src": "assets/display/positions/chaplain-aide.png.webp",
+      "thumb": "assets/thumbs/positions/chaplain-aide.png.webp",
+      "original": "assets/corpus/positions/chaplain-aide.png",
+      "label": "Chaplain Aide",
+      "alt": "Chaplain Aide",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/chaplain-aide.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/bugler.png",
+      "src": "assets/display/positions/bugler.png.webp",
+      "thumb": "assets/thumbs/positions/bugler.png.webp",
+      "original": "assets/corpus/positions/bugler.png",
+      "label": "Bugler",
+      "alt": "Bugler",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/bugler.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/den-chief.png",
+      "src": "assets/display/positions/den-chief.png.webp",
+      "thumb": "assets/thumbs/positions/den-chief.png.webp",
+      "original": "assets/corpus/positions/den-chief.png",
+      "label": "Den Chief",
+      "alt": "Den Chief",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/den-chief.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/webmaster.png",
+      "src": "assets/display/positions/webmaster.png.webp",
+      "thumb": "assets/thumbs/positions/webmaster.png.webp",
+      "original": "assets/corpus/positions/webmaster.png",
+      "label": "Webmaster",
+      "alt": "Webmaster",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/webmaster.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/junior-assistant-scoutmaster.png",
+      "src": "assets/display/positions/junior-assistant-scoutmaster.png.webp",
+      "thumb": "assets/thumbs/positions/junior-assistant-scoutmaster.png.webp",
+      "original": "assets/corpus/positions/junior-assistant-scoutmaster.png",
+      "label": "Junior Assistant Scoutmaster",
+      "alt": "Junior Assistant Scoutmaster",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/junior-assistant-scoutmaster.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/troop-committee-chair.png",
+      "src": "assets/display/positions/troop-committee-chair.png.webp",
+      "thumb": "assets/thumbs/positions/troop-committee-chair.png.webp",
+      "original": "assets/corpus/positions/troop-committee-chair.png",
+      "label": "Committee Chair",
+      "alt": "Committee Chair",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/troop-committee-chair.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/troop-committee.png",
+      "src": "assets/display/positions/troop-committee.png.webp",
+      "thumb": "assets/thumbs/positions/troop-committee.png.webp",
+      "original": "assets/corpus/positions/troop-committee.png",
+      "label": "Troop Committee",
+      "alt": "Troop Committee",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/troop-committee.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "positions/charter-org-rep.png",
+      "src": "assets/display/positions/charter-org-rep.png.webp",
+      "thumb": "assets/thumbs/positions/charter-org-rep.png.webp",
+      "original": "assets/corpus/positions/charter-org-rep.png",
+      "label": "Chartered Org Rep",
+      "alt": "Chartered Org Rep",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/positions/charter-org-rep.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-cubmaster.png",
+      "src": "assets/display/patch-cubmaster.png.webp",
+      "thumb": "assets/thumbs/patch-cubmaster.png.webp",
+      "original": "assets/corpus/patch-cubmaster.png",
+      "label": "Cubmaster",
+      "alt": "Cubmaster",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-cubmaster.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-assistant-cubmaster.png",
+      "src": "assets/display/patch-assistant-cubmaster.png.webp",
+      "thumb": "assets/thumbs/patch-assistant-cubmaster.png.webp",
+      "original": "assets/corpus/patch-assistant-cubmaster.png",
+      "label": "Assistant Cubmaster",
+      "alt": "Assistant Cubmaster",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-assistant-cubmaster.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-den-leader.png",
+      "src": "assets/display/patch-den-leader.png.webp",
+      "thumb": "assets/thumbs/patch-den-leader.png.webp",
+      "original": "assets/corpus/patch-den-leader.png",
+      "label": "Den Leader",
+      "alt": "Den Leader",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-den-leader.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-assistant-den-leader.png",
+      "src": "assets/display/patch-assistant-den-leader.png.webp",
+      "thumb": "assets/thumbs/patch-assistant-den-leader.png.webp",
+      "original": "assets/corpus/patch-assistant-den-leader.png",
+      "label": "Assistant Den Leader",
+      "alt": "Assistant Den Leader",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-assistant-den-leader.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-committee-chair.png",
+      "src": "assets/display/patch-committee-chair.png.webp",
+      "thumb": "assets/thumbs/patch-committee-chair.png.webp",
+      "original": "assets/corpus/patch-committee-chair.png",
+      "label": "Committee Chair",
+      "alt": "Committee Chair",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-committee-chair.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-committee-member.png",
+      "src": "assets/display/patch-committee-member.png.webp",
+      "thumb": "assets/thumbs/patch-committee-member.png.webp",
+      "original": "assets/corpus/patch-committee-member.png",
+      "label": "Committee Member",
+      "alt": "Committee Member",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-committee-member.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-chartered-org-rep.png",
+      "src": "assets/display/patch-chartered-org-rep.png.webp",
+      "thumb": "assets/thumbs/patch-chartered-org-rep.png.webp",
+      "original": "assets/corpus/patch-chartered-org-rep.png",
+      "label": "Chartered Org Rep",
+      "alt": "Chartered Org Rep",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-chartered-org-rep.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-den-chief.png",
+      "src": "assets/display/patch-den-chief.png.webp",
+      "thumb": "assets/thumbs/patch-den-chief.png.webp",
+      "original": "assets/corpus/patch-den-chief.png",
+      "label": "Den Chief",
+      "alt": "Den Chief",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-den-chief.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-pack-committee.png",
+      "src": "assets/display/patch-pack-committee.png.webp",
+      "thumb": "assets/thumbs/patch-pack-committee.png.webp",
+      "original": "assets/corpus/patch-pack-committee.png",
+      "label": "Pack Committee",
+      "alt": "Pack Committee",
+      "group": "Leadership patches",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-pack-committee.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "platform/photos/ridge-summit.jpg",
+      "src": "assets/display/platform/photos/ridge-summit.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/ridge-summit.jpg.webp",
+      "original": "assets/corpus/platform/photos/ridge-summit.jpg",
+      "label": "Mountain ridge",
+      "alt": "Mountain ridge",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/ridge-summit.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/golden-vista.jpg",
+      "src": "assets/display/platform/photos/golden-vista.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/golden-vista.jpg.webp",
+      "original": "assets/corpus/platform/photos/golden-vista.jpg",
+      "label": "Mountain vista",
+      "alt": "Mountain vista",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/golden-vista.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/whitewater-rafting.jpg",
+      "src": "assets/display/platform/photos/whitewater-rafting.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/whitewater-rafting.jpg.webp",
+      "original": "assets/corpus/platform/photos/whitewater-rafting.jpg",
+      "label": "Whitewater rafting",
+      "alt": "Whitewater rafting",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/whitewater-rafting.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/tent-sunrise.jpg",
+      "src": "assets/display/platform/photos/tent-sunrise.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/tent-sunrise.jpg.webp",
+      "original": "assets/corpus/platform/photos/tent-sunrise.jpg",
+      "label": "Camp at sunrise",
+      "alt": "Camp at sunrise",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/tent-sunrise.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/campfire-night.jpg",
+      "src": "assets/display/platform/photos/campfire-night.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/campfire-night.jpg.webp",
+      "original": "assets/corpus/platform/photos/campfire-night.jpg",
+      "label": "Campfire",
+      "alt": "Campfire",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/campfire-night.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/sea-kayaking.jpg",
+      "src": "assets/display/platform/photos/sea-kayaking.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/sea-kayaking.jpg.webp",
+      "original": "assets/corpus/platform/photos/sea-kayaking.jpg",
+      "label": "Sea kayaking",
+      "alt": "Sea kayaking",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/sea-kayaking.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/paddling-crew.jpg",
+      "src": "assets/display/platform/photos/paddling-crew.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/paddling-crew.jpg.webp",
+      "original": "assets/corpus/platform/photos/paddling-crew.jpg",
+      "label": "Paddling",
+      "alt": "Paddling",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/paddling-crew.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/bouldering.jpg",
+      "src": "assets/display/platform/photos/bouldering.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/bouldering.jpg.webp",
+      "original": "assets/corpus/platform/photos/bouldering.jpg",
+      "label": "Bouldering",
+      "alt": "Bouldering",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/bouldering.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/archery.jpg",
+      "src": "assets/display/platform/photos/archery.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/archery.jpg.webp",
+      "original": "assets/corpus/platform/photos/archery.jpg",
+      "label": "Archery",
+      "alt": "Archery",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/archery.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/caving.jpg",
+      "src": "assets/display/platform/photos/caving.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/caving.jpg.webp",
+      "original": "assets/corpus/platform/photos/caving.jpg",
+      "label": "Caving",
+      "alt": "Caving",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/caving.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/rock-climbing.jpg",
+      "src": "assets/display/platform/photos/rock-climbing.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/rock-climbing.jpg.webp",
+      "original": "assets/corpus/platform/photos/rock-climbing.jpg",
+      "label": "Rock climbing",
+      "alt": "Rock climbing",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/rock-climbing.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/knot-tying.jpg",
+      "src": "assets/display/platform/photos/knot-tying.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/knot-tying.jpg.webp",
+      "original": "assets/corpus/platform/photos/knot-tying.jpg",
+      "label": "Knot tying",
+      "alt": "Knot tying",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/knot-tying.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/horseback-riding.jpg",
+      "src": "assets/display/platform/photos/horseback-riding.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/horseback-riding.jpg.webp",
+      "original": "assets/corpus/platform/photos/horseback-riding.jpg",
+      "label": "Horseback riding",
+      "alt": "Horseback riding",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/horseback-riding.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/sequoia-trail.jpg",
+      "src": "assets/display/platform/photos/sequoia-trail.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/sequoia-trail.jpg.webp",
+      "original": "assets/corpus/platform/photos/sequoia-trail.jpg",
+      "label": "Sequoia trail",
+      "alt": "Sequoia trail",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/sequoia-trail.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/canyon-hike.jpg",
+      "src": "assets/display/platform/photos/canyon-hike.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/canyon-hike.jpg.webp",
+      "original": "assets/corpus/platform/photos/canyon-hike.jpg",
+      "label": "Canyon hike",
+      "alt": "Canyon hike",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/canyon-hike.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/giant-sequoia.jpg",
+      "src": "assets/display/platform/photos/giant-sequoia.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/giant-sequoia.jpg.webp",
+      "original": "assets/corpus/platform/photos/giant-sequoia.jpg",
+      "label": "Giant sequoia",
+      "alt": "Giant sequoia",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/giant-sequoia.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/trail-friends.jpg",
+      "src": "assets/display/platform/photos/trail-friends.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/trail-friends.jpg.webp",
+      "original": "assets/corpus/platform/photos/trail-friends.jpg",
+      "label": "Trail friends",
+      "alt": "Trail friends",
+      "group": "Photos",
+      "unitTypes": [
+        "troop"
+      ],
+      "source": "public/images/platform/photos/trail-friends.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-pack-hike.jpg",
+      "src": "assets/display/platform/photos/cub-pack-hike.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-pack-hike.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-pack-hike.jpg",
+      "label": "Cub Scouts",
+      "alt": "Cub Scouts",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-pack-hike.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-lakeside.jpg",
+      "src": "assets/display/platform/photos/cub-lakeside.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-lakeside.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-lakeside.jpg",
+      "label": "Lakeside",
+      "alt": "Lakeside",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-lakeside.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-forest-trail.jpg",
+      "src": "assets/display/platform/photos/cub-forest-trail.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-forest-trail.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-forest-trail.jpg",
+      "label": "Forest hike",
+      "alt": "Forest hike",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-forest-trail.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-fishing-walk.jpg",
+      "src": "assets/display/platform/photos/cub-fishing-walk.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-fishing-walk.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-fishing-walk.jpg",
+      "label": "Fishing",
+      "alt": "Fishing",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-fishing-walk.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-fishing-catch.jpg",
+      "src": "assets/display/platform/photos/cub-fishing-catch.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-fishing-catch.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-fishing-catch.jpg",
+      "label": "First catch",
+      "alt": "First catch",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-fishing-catch.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-pinewood-derby.jpg",
+      "src": "assets/display/platform/photos/cub-pinewood-derby.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-pinewood-derby.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-pinewood-derby.jpg",
+      "label": "Pinewood Derby",
+      "alt": "Pinewood Derby",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-pinewood-derby.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-derby-cars.jpg",
+      "src": "assets/display/platform/photos/cub-derby-cars.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-derby-cars.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-derby-cars.jpg",
+      "label": "Derby cars",
+      "alt": "Derby cars",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-derby-cars.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-archery.jpg",
+      "src": "assets/display/platform/photos/cub-archery.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-archery.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-archery.jpg",
+      "label": "Archery",
+      "alt": "Archery",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-archery.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-gardening.jpg",
+      "src": "assets/display/platform/photos/cub-gardening.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-gardening.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-gardening.jpg",
+      "label": "Gardening",
+      "alt": "Gardening",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-gardening.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-navigation.jpg",
+      "src": "assets/display/platform/photos/cub-navigation.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-navigation.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-navigation.jpg",
+      "label": "Navigation",
+      "alt": "Navigation",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-navigation.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-campfire.jpg",
+      "src": "assets/display/platform/photos/cub-campfire.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-campfire.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-campfire.jpg",
+      "label": "Campfire",
+      "alt": "Campfire",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-campfire.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-nature.jpg",
+      "src": "assets/display/platform/photos/cub-nature.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-nature.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-nature.jpg",
+      "label": "Nature",
+      "alt": "Nature",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-nature.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-den-friends.jpg",
+      "src": "assets/display/platform/photos/cub-den-friends.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-den-friends.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-den-friends.jpg",
+      "label": "Den friends",
+      "alt": "Den friends",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-den-friends.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-campout-fun.jpg",
+      "src": "assets/display/platform/photos/cub-campout-fun.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-campout-fun.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-campout-fun.jpg",
+      "label": "Campout",
+      "alt": "Campout",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-campout-fun.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "platform/photos/cub-camp-cooking.jpg",
+      "src": "assets/display/platform/photos/cub-camp-cooking.jpg.webp",
+      "thumb": "assets/thumbs/platform/photos/cub-camp-cooking.jpg.webp",
+      "original": "assets/corpus/platform/photos/cub-camp-cooking.jpg",
+      "label": "Camp cooking",
+      "alt": "Camp cooking",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/platform/photos/cub-camp-cooking.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "hero-mountain.jpg",
+      "src": "assets/display/hero-mountain.jpg.webp",
+      "thumb": "assets/thumbs/hero-mountain.jpg.webp",
+      "original": "assets/corpus/hero-mountain.jpg",
+      "label": "Pack 39 mountain hero",
+      "alt": "Pack 39 mountain hero",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/hero-mountain.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "camping-cookout.jpg",
+      "src": "assets/display/camping-cookout.jpg.webp",
+      "thumb": "assets/thumbs/camping-cookout.jpg.webp",
+      "original": "assets/corpus/camping-cookout.jpg",
+      "label": "Families cooking at camp",
+      "alt": "Families cooking at camp",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/camping-cookout.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "pinewood-derby.jpg",
+      "src": "assets/display/pinewood-derby.jpg.webp",
+      "thumb": "assets/thumbs/pinewood-derby.jpg.webp",
+      "original": "assets/corpus/pinewood-derby.jpg",
+      "label": "Pinewood Derby race",
+      "alt": "Pinewood Derby race",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/pinewood-derby.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "hiking-trail.jpg",
+      "src": "assets/display/hiking-trail.jpg.webp",
+      "thumb": "assets/thumbs/hiking-trail.jpg.webp",
+      "original": "assets/corpus/hiking-trail.jpg",
+      "label": "Scouts on a forest hike",
+      "alt": "Scouts on a forest hike",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/hiking-trail.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "ridge-hike.jpg",
+      "src": "assets/display/ridge-hike.jpg.webp",
+      "thumb": "assets/thumbs/ridge-hike.jpg.webp",
+      "original": "assets/corpus/ridge-hike.jpg",
+      "label": "Hiking along a ridge",
+      "alt": "Hiking along a ridge",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/ridge-hike.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "creek-play.jpg",
+      "src": "assets/display/creek-play.jpg.webp",
+      "thumb": "assets/thumbs/creek-play.jpg.webp",
+      "original": "assets/corpus/creek-play.jpg",
+      "label": "Exploring a creek",
+      "alt": "Exploring a creek",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/creek-play.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "group-battleship.jpg",
+      "src": "assets/display/group-battleship.jpg.webp",
+      "thumb": "assets/thumbs/group-battleship.jpg.webp",
+      "original": "assets/corpus/group-battleship.jpg",
+      "label": "Scouts playing together",
+      "alt": "Scouts playing together",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/group-battleship.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "lakeside-explore.jpg",
+      "src": "assets/display/lakeside-explore.jpg.webp",
+      "thumb": "assets/thumbs/lakeside-explore.jpg.webp",
+      "original": "assets/corpus/lakeside-explore.jpg",
+      "label": "Exploring by the lake",
+      "alt": "Exploring by the lake",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/lakeside-explore.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "christmas-parade.jpg",
+      "src": "assets/display/christmas-parade.jpg.webp",
+      "thumb": "assets/thumbs/christmas-parade.jpg.webp",
+      "original": "assets/corpus/christmas-parade.jpg",
+      "label": "Scouts at a community parade",
+      "alt": "Scouts at a community parade",
+      "group": "Photos",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/christmas-parade.jpg",
+      "usage": "Scouting unit website photography supplied from Azimuth; retain original permissions."
+    },
+    {
+      "id": "patch-placement.png",
+      "src": "assets/display/patch-placement.png.webp",
+      "thumb": "assets/thumbs/patch-placement.png.webp",
+      "original": "assets/corpus/patch-placement.png",
+      "label": "Cub Scout uniform patch-placement guide",
+      "alt": "Cub Scout uniform patch-placement guide",
+      "group": "Uniform guides",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-placement.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "patch-placement.webp",
+      "src": "assets/display/patch-placement.webp.webp",
+      "thumb": "assets/thumbs/patch-placement.webp.webp",
+      "original": "assets/corpus/patch-placement.webp",
+      "label": "Cub Scout patch-placement guide, WebP",
+      "alt": "Cub Scout patch-placement guide, WebP",
+      "group": "Uniform guides",
+      "unitTypes": [
+        "pack"
+      ],
+      "source": "public/images/patch-placement.webp",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "uniform-icon.png",
+      "src": "assets/display/uniform-icon.png.webp",
+      "thumb": "assets/thumbs/uniform-icon.png.webp",
+      "original": "assets/corpus/uniform-icon.png",
+      "label": "Uniform reference icon",
+      "alt": "Uniform reference icon",
+      "group": "Uniform guides",
+      "unitTypes": [
+        "pack",
+        "troop"
+      ],
+      "source": "public/images/uniform-icon.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    },
+    {
+      "id": "bsa-fleur-de-lis.png",
+      "src": "assets/display/bsa-fleur-de-lis.png.webp",
+      "thumb": "assets/thumbs/bsa-fleur-de-lis.png.webp",
+      "original": "assets/corpus/bsa-fleur-de-lis.png",
+      "label": "Scouting fleur-de-lis",
+      "alt": "Scouting fleur-de-lis",
+      "group": "Scouting emblems",
+      "unitTypes": [
+        "pack",
+        "troop"
+      ],
+      "source": "public/images/bsa-fleur-de-lis.png",
+      "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
+    }
+  ],
+  "files": [
+    {
+      "source": "public/images/ranks/scout.png",
+      "file": "assets/corpus/ranks/scout.png",
+      "sha256": "186a07d78ba4109f95a539b73eecfeb0491ac458886c177fd752ae3d67987a08"
+    },
+    {
+      "source": "public/images/ranks/scout.png",
+      "file": "assets/display/ranks/scout.png.webp",
+      "sha256": "7ae1c538bff5ff366a2994324baef4d9c4552188c4e8af9e9ce800ef40135ae5",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/scout.png",
+      "file": "assets/thumbs/ranks/scout.png.webp",
+      "sha256": "137b4e737c78c687ff993adbc7874242ea085a2dfa7e6f8a888a6106a021aecd",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/tenderfoot.png",
+      "file": "assets/corpus/ranks/tenderfoot.png",
+      "sha256": "0ced40214ad5f1d1a3b10299edf96c1332aee7729c6730377d8af4bcb1d471c4"
+    },
+    {
+      "source": "public/images/ranks/tenderfoot.png",
+      "file": "assets/display/ranks/tenderfoot.png.webp",
+      "sha256": "16715f56719ecba456ed88837c85cc7a817856042e532dd20e8fcafde9d29d82",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/tenderfoot.png",
+      "file": "assets/thumbs/ranks/tenderfoot.png.webp",
+      "sha256": "2d5bc8afff846b22cb2c93d937590b1acbb5ab1fb6145f2190054996afb1ace3",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/second-class.png",
+      "file": "assets/corpus/ranks/second-class.png",
+      "sha256": "5e9d44f394e7cab8c3194800af7b73fd598450778aae8a1d78c46f00e18e2bee"
+    },
+    {
+      "source": "public/images/ranks/second-class.png",
+      "file": "assets/display/ranks/second-class.png.webp",
+      "sha256": "80e696455a5c735c9b48f2e35c87675086b82d0248095caf41de11d03669b3d9",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/second-class.png",
+      "file": "assets/thumbs/ranks/second-class.png.webp",
+      "sha256": "fd5dbfe5a798bfb389fb0d36e438ae000429abbac03bf95dfe53d5de9cf52b66",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/first-class.png",
+      "file": "assets/corpus/ranks/first-class.png",
+      "sha256": "90f1a862cd559763806883c9d0e111f06142f43fb1422a231fd296d25b2ab29e"
+    },
+    {
+      "source": "public/images/ranks/first-class.png",
+      "file": "assets/display/ranks/first-class.png.webp",
+      "sha256": "7fb1ed529adda1759b7ae6b5506cbb6acaf78ec0985e65968c6c870cff3ca13d",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/first-class.png",
+      "file": "assets/thumbs/ranks/first-class.png.webp",
+      "sha256": "9957e2b820b2cc75380a56633d5074b7158420cd46965604686c5951912489e4",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/star.png",
+      "file": "assets/corpus/ranks/star.png",
+      "sha256": "5766e3696dffec721719365786572961a28c861cd78a56e9c87f77c4278ad1a9"
+    },
+    {
+      "source": "public/images/ranks/star.png",
+      "file": "assets/display/ranks/star.png.webp",
+      "sha256": "5dcd94625845938c558bb3814865a9d5932f1f34620a6a37823084e7d3c20f86",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/star.png",
+      "file": "assets/thumbs/ranks/star.png.webp",
+      "sha256": "ecdb9ecf2f7f488b2cf579c2820c261da1eaa14112843cbad059600e3efdc885",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/life.png",
+      "file": "assets/corpus/ranks/life.png",
+      "sha256": "89c811b8018a4ce9bd2f7a60a3ff1145a0b9cbd1c84bdc991317a0c306522a87"
+    },
+    {
+      "source": "public/images/ranks/life.png",
+      "file": "assets/display/ranks/life.png.webp",
+      "sha256": "1284ba30ee0d3ffb05a71b1dc2dc962ca2aaa4f93649090947977d491446fd82",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/life.png",
+      "file": "assets/thumbs/ranks/life.png.webp",
+      "sha256": "d0ef0d2e58b401784e826b2ef4f9ab53ef343df2f8fe0c509db2463c12a9f9bb",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/eagle.png",
+      "file": "assets/corpus/ranks/eagle.png",
+      "sha256": "98f57df4dca8e04f86768cb8b19babfa4493ca019a3f164ce6a8e851d8413b03"
+    },
+    {
+      "source": "public/images/ranks/eagle.png",
+      "file": "assets/display/ranks/eagle.png.webp",
+      "sha256": "94c3256eb825193219b678f28a38eea63cf9a78845e85de2403241174eec45da",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/ranks/eagle.png",
+      "file": "assets/thumbs/ranks/eagle.png.webp",
+      "sha256": "61982f285c726e74ae01814557481640c7138a9ca54fb448dae4ed53a38d33e0",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-lion.png",
+      "file": "assets/corpus/rank-lion.png",
+      "sha256": "0a13db037fb6b58ee9976a4cbc99bb17f1a570624d5123b5c1c57e5860d09a4c"
+    },
+    {
+      "source": "public/images/rank-lion.png",
+      "file": "assets/display/rank-lion.png.webp",
+      "sha256": "b5095b7df21d4a025f73fa03153cd8a4c93ffe71742db902e0a6c12f51ee9b5e",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-lion.png",
+      "file": "assets/thumbs/rank-lion.png.webp",
+      "sha256": "6fe67c5f9a6420b38e01a68a7f9e8dec13bb8999ad52e852cbadd5589dd48697",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-tiger.png",
+      "file": "assets/corpus/rank-tiger.png",
+      "sha256": "b88ef237ef84abc1cf7dfc2a7e643735fccf67713e5faa7e8b726e43bbe8e3c2"
+    },
+    {
+      "source": "public/images/rank-tiger.png",
+      "file": "assets/display/rank-tiger.png.webp",
+      "sha256": "5ae4062e0df3ea60e3fb3a5634ec03f4464af11fda8fa7d207020774aafcbac6",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-tiger.png",
+      "file": "assets/thumbs/rank-tiger.png.webp",
+      "sha256": "c5dacc50461659103a3e0095c2b59828d1570c2c2a16e4c914cc81665e5e3ee7",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-wolf.png",
+      "file": "assets/corpus/rank-wolf.png",
+      "sha256": "7858833d338d63d7fd7760c30681f14893f19d666b23d5fa0d0ab1defab11e64"
+    },
+    {
+      "source": "public/images/rank-wolf.png",
+      "file": "assets/display/rank-wolf.png.webp",
+      "sha256": "5eff4d55f1f6ccf789c22ce4c1b06878ba85024bbec5e009f9f24d7aff5feede",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-wolf.png",
+      "file": "assets/thumbs/rank-wolf.png.webp",
+      "sha256": "b40de6d965f3fd08934174a0d9b331eda9a757b84d08265506495eca24878ae5",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-bear.png",
+      "file": "assets/corpus/rank-bear.png",
+      "sha256": "cf68123443d1b9462d79b1c41bb89f29a0b22dfbf0b9fd3ec99b47198a72b085"
+    },
+    {
+      "source": "public/images/rank-bear.png",
+      "file": "assets/display/rank-bear.png.webp",
+      "sha256": "49884b9c41a12ec5a0daed42b2aee4a18bfd0f247044c4ae3b64de6f3c5666e7",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-bear.png",
+      "file": "assets/thumbs/rank-bear.png.webp",
+      "sha256": "7698a0294dc257d80d92ea9e3668b21bf44038b1cc55d7975a9d567777933c19",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-webelos.png",
+      "file": "assets/corpus/rank-webelos.png",
+      "sha256": "b7b0c3777519cbda44cd2f0070b0c0cb3a4cb641c2be0fcc33393899fbb58959"
+    },
+    {
+      "source": "public/images/rank-webelos.png",
+      "file": "assets/display/rank-webelos.png.webp",
+      "sha256": "d22686d05184059c1fa59a6de6fdf6555ccbefc7e4bc1deafbc487b53877ce2a",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-webelos.png",
+      "file": "assets/thumbs/rank-webelos.png.webp",
+      "sha256": "a3a1768d8c892d6bdd46503dc290d53560f745be996e9a2ccfb1513c49201e11",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-aol.png",
+      "file": "assets/corpus/rank-aol.png",
+      "sha256": "1d8d3b6b52129ced509ff179adca60b592401dd4dde79cc850f02151d6075a53"
+    },
+    {
+      "source": "public/images/rank-aol.png",
+      "file": "assets/display/rank-aol.png.webp",
+      "sha256": "3ef6968b19082501de78c9913a19f0b24f9cd293e1081db1c55003cba948e2a5",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/rank-aol.png",
+      "file": "assets/thumbs/rank-aol.png.webp",
+      "sha256": "b474f22d8d58f86cc08d7c94a24e3a9defead7bab15bc4a85aee7651582ae0e2",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/bsa-fleur-de-lis-color.png",
+      "file": "assets/corpus/bsa-fleur-de-lis-color.png",
+      "sha256": "b5b4dc5d9a9297c32bfa246b812810b1ac37de3a63ee8b87a361125a879ee51b"
+    },
+    {
+      "source": "public/images/bsa-fleur-de-lis-color.png",
+      "file": "assets/display/bsa-fleur-de-lis-color.png.webp",
+      "sha256": "366a53224a6662db105e2b61c53cb8924063417bf4ef54f763f991db12432061",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/bsa-fleur-de-lis-color.png",
+      "file": "assets/thumbs/bsa-fleur-de-lis-color.png.webp",
+      "sha256": "ec8f5335818601474ce879cf7bd3ff5c4333fae44824a24b0fe9d2e37b2de754",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/eagle-scout-badge.png",
+      "file": "assets/corpus/eagle-scout-badge.png",
+      "sha256": "a56d8b9220651fb9d503eb24314d41588bfa6e90e35d89766fcfad3597a1434e"
+    },
+    {
+      "source": "public/images/eagle-scout-badge.png",
+      "file": "assets/display/eagle-scout-badge.png.webp",
+      "sha256": "39db56e24b28919be3ae524d51b32fbe099b43302b1e7162b56a51e255f2db84",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/eagle-scout-badge.png",
+      "file": "assets/thumbs/eagle-scout-badge.png.webp",
+      "sha256": "ae7f148ed5a44fd4f03b112ab7ef56c155127bae2b05402630920e7e20f1b272",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/cub-scouts-logo.png",
+      "file": "assets/corpus/cub-scouts-logo.png",
+      "sha256": "bd925237f896a7b2d234c313850c2943ebadc8d62815adbd177c05a554ddb0ce"
+    },
+    {
+      "source": "public/images/cub-scouts-logo.png",
+      "file": "assets/display/cub-scouts-logo.png.webp",
+      "sha256": "72b8fdaaf2aac3fa0122299b75713054d72f0dc52d7ae9dace371c4457959714",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/cub-scouts-logo.png",
+      "file": "assets/thumbs/cub-scouts-logo.png.webp",
+      "sha256": "82f4709ccb298844530733e0dbf48d40afcf381cb5f30a042775ed6db8e0ce49",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/baloo-badge.png",
+      "file": "assets/corpus/baloo-badge.png",
+      "sha256": "044a3214dabe3ea0db5a13d77b6490039b6a6fe708c0d2ed52b8100c34dab94d"
+    },
+    {
+      "source": "public/images/baloo-badge.png",
+      "file": "assets/display/baloo-badge.png.webp",
+      "sha256": "eb6352f498334c6869c148f5619a1652fce1e2fdb7f46d818af92963b2012604",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/baloo-badge.png",
+      "file": "assets/thumbs/baloo-badge.png.webp",
+      "sha256": "ec899d57e75da5963007174c288b864898b94fee043a4d472189c71a2601fbae",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/wood-badge.png",
+      "file": "assets/corpus/wood-badge.png",
+      "sha256": "75679ebb6290d5577158cfa8bb8eeb432c5df9b19e861e3f4bc251c3088a8c87"
+    },
+    {
+      "source": "public/images/wood-badge.png",
+      "file": "assets/display/wood-badge.png.webp",
+      "sha256": "986ee3af8836e57e11c63c297704b2a3ebc78cfc4ac640c929b9d145075e340b",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/wood-badge.png",
+      "file": "assets/thumbs/wood-badge.png.webp",
+      "sha256": "986ee3af8836e57e11c63c297704b2a3ebc78cfc4ac640c929b9d145075e340b",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/scoutmaster.png",
+      "file": "assets/corpus/positions/scoutmaster.png",
+      "sha256": "34ff0ccd9e781b5cf6a54d2e32e44a6adbce7d2602cb9cc173ed6f897186b4f9"
+    },
+    {
+      "source": "public/images/positions/scoutmaster.png",
+      "file": "assets/display/positions/scoutmaster.png.webp",
+      "sha256": "c4c7ae5f65d8ff8a734cd15eecd888e7a00bc9d75f51073ad85c9911d4d3feff",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/scoutmaster.png",
+      "file": "assets/thumbs/positions/scoutmaster.png.webp",
+      "sha256": "c4c7ae5f65d8ff8a734cd15eecd888e7a00bc9d75f51073ad85c9911d4d3feff",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/assistant-scoutmaster.png",
+      "file": "assets/corpus/positions/assistant-scoutmaster.png",
+      "sha256": "6ad81655c68bf4517b5acefd58eed97e2959da015063bf285af1a16d9a83b6ba"
+    },
+    {
+      "source": "public/images/positions/assistant-scoutmaster.png",
+      "file": "assets/display/positions/assistant-scoutmaster.png.webp",
+      "sha256": "b8ffd95abe8c7a87ff55af42806e07444419a286c6edd3aa460ba8ef77a60b4d",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/assistant-scoutmaster.png",
+      "file": "assets/thumbs/positions/assistant-scoutmaster.png.webp",
+      "sha256": "b8ffd95abe8c7a87ff55af42806e07444419a286c6edd3aa460ba8ef77a60b4d",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/senior-patrol-leader.png",
+      "file": "assets/corpus/positions/senior-patrol-leader.png",
+      "sha256": "4086dfdcdc2e383aa2700eca74154bc5dcb069c89e49eb3546ab45954a95c671"
+    },
+    {
+      "source": "public/images/positions/senior-patrol-leader.png",
+      "file": "assets/display/positions/senior-patrol-leader.png.webp",
+      "sha256": "87d3072659f57b5fcf3eca1234e23f5c1b5f5158e3434fd0f8bb60ac9dfd3205",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/senior-patrol-leader.png",
+      "file": "assets/thumbs/positions/senior-patrol-leader.png.webp",
+      "sha256": "87d3072659f57b5fcf3eca1234e23f5c1b5f5158e3434fd0f8bb60ac9dfd3205",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/assistant-senior-patrol-leader.png",
+      "file": "assets/corpus/positions/assistant-senior-patrol-leader.png",
+      "sha256": "e1cd37becd454c6262b21aef13865d58a113111881dbec2d094c8b1ca55860fa"
+    },
+    {
+      "source": "public/images/positions/assistant-senior-patrol-leader.png",
+      "file": "assets/display/positions/assistant-senior-patrol-leader.png.webp",
+      "sha256": "8a8dea4271cc923abdce0a921c033f4afcf39620d0ccb0cf0ada69186ab862cb",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/assistant-senior-patrol-leader.png",
+      "file": "assets/thumbs/positions/assistant-senior-patrol-leader.png.webp",
+      "sha256": "8a8dea4271cc923abdce0a921c033f4afcf39620d0ccb0cf0ada69186ab862cb",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/patrol-leader.png",
+      "file": "assets/corpus/positions/patrol-leader.png",
+      "sha256": "23427e367d28812d2d1ad82b2be3ad175b4bdf290ccf5e992be7366cf8f59f1f"
+    },
+    {
+      "source": "public/images/positions/patrol-leader.png",
+      "file": "assets/display/positions/patrol-leader.png.webp",
+      "sha256": "3fe9d9498e078fa06469688eeeaaa17f8cf7e3fbb10fde6e8a71aa9c300d624c",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/patrol-leader.png",
+      "file": "assets/thumbs/positions/patrol-leader.png.webp",
+      "sha256": "3fe9d9498e078fa06469688eeeaaa17f8cf7e3fbb10fde6e8a71aa9c300d624c",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/assistant-patrol-leader.png",
+      "file": "assets/corpus/positions/assistant-patrol-leader.png",
+      "sha256": "b29ee102cd9558f182fd97f87cface8e4b711c2788b6130db3231187f8b1a45f"
+    },
+    {
+      "source": "public/images/positions/assistant-patrol-leader.png",
+      "file": "assets/display/positions/assistant-patrol-leader.png.webp",
+      "sha256": "097177f89dbbe094e7cc9fcd477022c87df86b7b8acdc7e42dce18c950697b3a",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/assistant-patrol-leader.png",
+      "file": "assets/thumbs/positions/assistant-patrol-leader.png.webp",
+      "sha256": "097177f89dbbe094e7cc9fcd477022c87df86b7b8acdc7e42dce18c950697b3a",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/troop-guide.png",
+      "file": "assets/corpus/positions/troop-guide.png",
+      "sha256": "251007b33708093f8a553b79f0b6d24ab426b565f135b65f5efb3d9bf5a76fc4"
+    },
+    {
+      "source": "public/images/positions/troop-guide.png",
+      "file": "assets/display/positions/troop-guide.png.webp",
+      "sha256": "0ac08f60f5f3c2918450341630e7552d1e80b13e076cdad5a7a1efb28e01a7fc",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/troop-guide.png",
+      "file": "assets/thumbs/positions/troop-guide.png.webp",
+      "sha256": "0ac08f60f5f3c2918450341630e7552d1e80b13e076cdad5a7a1efb28e01a7fc",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/quartermaster.png",
+      "file": "assets/corpus/positions/quartermaster.png",
+      "sha256": "78809cf09aa15b62477dd0677252848de51da5d170c010e39f010aa2a96791ad"
+    },
+    {
+      "source": "public/images/positions/quartermaster.png",
+      "file": "assets/display/positions/quartermaster.png.webp",
+      "sha256": "6c0f8c0ec77debe336c12d8581a40c0623447cd755b36cb76eb54d908f3fbf73",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/quartermaster.png",
+      "file": "assets/thumbs/positions/quartermaster.png.webp",
+      "sha256": "6c0f8c0ec77debe336c12d8581a40c0623447cd755b36cb76eb54d908f3fbf73",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/scribe.png",
+      "file": "assets/corpus/positions/scribe.png",
+      "sha256": "9e5f5c2f590cb8896cf6385023faa22562a438409ae4661bfe7a4284254fb415"
+    },
+    {
+      "source": "public/images/positions/scribe.png",
+      "file": "assets/display/positions/scribe.png.webp",
+      "sha256": "b74d493303d3708b1d8811a103adbf1e13269208fbb4a5a10aff86b9bf40c4e6",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/scribe.png",
+      "file": "assets/thumbs/positions/scribe.png.webp",
+      "sha256": "b74d493303d3708b1d8811a103adbf1e13269208fbb4a5a10aff86b9bf40c4e6",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/librarian.png",
+      "file": "assets/corpus/positions/librarian.png",
+      "sha256": "88e09132de09d5424468a70ff893bfea9386736d04e884ea0cade8f42da27be3"
+    },
+    {
+      "source": "public/images/positions/librarian.png",
+      "file": "assets/display/positions/librarian.png.webp",
+      "sha256": "4e82bb3feafc3b45249a835ec13d29accf5583ac73ca18e13cf291b03c849748",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/librarian.png",
+      "file": "assets/thumbs/positions/librarian.png.webp",
+      "sha256": "4e82bb3feafc3b45249a835ec13d29accf5583ac73ca18e13cf291b03c849748",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/troop-historian.png",
+      "file": "assets/corpus/positions/troop-historian.png",
+      "sha256": "4ac0c277ec4c49b699ad957f849f557b3e25e2df41b2ed9127f81e75aa4a85a4"
+    },
+    {
+      "source": "public/images/positions/troop-historian.png",
+      "file": "assets/display/positions/troop-historian.png.webp",
+      "sha256": "b6f2c7d2dbdbb60ca764bbdc42b418931514e8cb31ef5c17076ce2c805465af2",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/troop-historian.png",
+      "file": "assets/thumbs/positions/troop-historian.png.webp",
+      "sha256": "b6f2c7d2dbdbb60ca764bbdc42b418931514e8cb31ef5c17076ce2c805465af2",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/chaplain-aide.png",
+      "file": "assets/corpus/positions/chaplain-aide.png",
+      "sha256": "a694252b7330208abaf3e84aecc83d9505fc0a6d2fcc3f0d1a591383d359b61d"
+    },
+    {
+      "source": "public/images/positions/chaplain-aide.png",
+      "file": "assets/display/positions/chaplain-aide.png.webp",
+      "sha256": "72b5b7d4f474aadb31b14079039cf42f15a662434a23a2306ffeae7bea5342f8",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/chaplain-aide.png",
+      "file": "assets/thumbs/positions/chaplain-aide.png.webp",
+      "sha256": "72b5b7d4f474aadb31b14079039cf42f15a662434a23a2306ffeae7bea5342f8",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/bugler.png",
+      "file": "assets/corpus/positions/bugler.png",
+      "sha256": "d61f82fa8541e537ac33af786fa7d304968b38037bbfd1b3155e5bd7ce110075"
+    },
+    {
+      "source": "public/images/positions/bugler.png",
+      "file": "assets/display/positions/bugler.png.webp",
+      "sha256": "e6135a0f38df6b95bca2fff21ee4efbac2dd2412ef9b770ae27a13737e1e4537",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/bugler.png",
+      "file": "assets/thumbs/positions/bugler.png.webp",
+      "sha256": "e6135a0f38df6b95bca2fff21ee4efbac2dd2412ef9b770ae27a13737e1e4537",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/den-chief.png",
+      "file": "assets/corpus/positions/den-chief.png",
+      "sha256": "64368e1968059df8aab64a7e9d4d1ea18c4047641f651b05fd20a1f494d4fc68"
+    },
+    {
+      "source": "public/images/positions/den-chief.png",
+      "file": "assets/display/positions/den-chief.png.webp",
+      "sha256": "0219a96ce3ee55476196e2eadbae6d7e5e1c6da3283eef478dfe5e7fb8daafa0",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/den-chief.png",
+      "file": "assets/thumbs/positions/den-chief.png.webp",
+      "sha256": "0219a96ce3ee55476196e2eadbae6d7e5e1c6da3283eef478dfe5e7fb8daafa0",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/webmaster.png",
+      "file": "assets/corpus/positions/webmaster.png",
+      "sha256": "eb475d4f479a19457bce3fcd32f92cc574cae55b915788e175c0a526b0d69a5c"
+    },
+    {
+      "source": "public/images/positions/webmaster.png",
+      "file": "assets/display/positions/webmaster.png.webp",
+      "sha256": "2e9179af6dca684cf63163e7ff84e1802f0dd25b067e0d9368981ee768d1352f",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/webmaster.png",
+      "file": "assets/thumbs/positions/webmaster.png.webp",
+      "sha256": "2e9179af6dca684cf63163e7ff84e1802f0dd25b067e0d9368981ee768d1352f",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/junior-assistant-scoutmaster.png",
+      "file": "assets/corpus/positions/junior-assistant-scoutmaster.png",
+      "sha256": "551769a8bffd3956ada9799c28013e92ce389fd11622810be72134e8fc90c861"
+    },
+    {
+      "source": "public/images/positions/junior-assistant-scoutmaster.png",
+      "file": "assets/display/positions/junior-assistant-scoutmaster.png.webp",
+      "sha256": "607d0221c512f51b8bf474d4bd9e62f1277575481171386795ff53fea398d6fc",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/junior-assistant-scoutmaster.png",
+      "file": "assets/thumbs/positions/junior-assistant-scoutmaster.png.webp",
+      "sha256": "607d0221c512f51b8bf474d4bd9e62f1277575481171386795ff53fea398d6fc",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/troop-committee-chair.png",
+      "file": "assets/corpus/positions/troop-committee-chair.png",
+      "sha256": "32a2d70c633b6627de133c794950dd27407f2bd0eed88d2ae24b9064413ca925"
+    },
+    {
+      "source": "public/images/positions/troop-committee-chair.png",
+      "file": "assets/display/positions/troop-committee-chair.png.webp",
+      "sha256": "2bc0d2e81606feb214b92b89e931d6489d8aab0eb23268bcaa496f48051cbd55",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/troop-committee-chair.png",
+      "file": "assets/thumbs/positions/troop-committee-chair.png.webp",
+      "sha256": "2bc0d2e81606feb214b92b89e931d6489d8aab0eb23268bcaa496f48051cbd55",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/troop-committee.png",
+      "file": "assets/corpus/positions/troop-committee.png",
+      "sha256": "ca385a19ba7b42d1809e9dace88860ecf94b045d993125838b1184b73fd21043"
+    },
+    {
+      "source": "public/images/positions/troop-committee.png",
+      "file": "assets/display/positions/troop-committee.png.webp",
+      "sha256": "efc8c113016df60d8d89fe65a881df8e2c6de7b67f3d6cf39d67465cbadc801d",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/troop-committee.png",
+      "file": "assets/thumbs/positions/troop-committee.png.webp",
+      "sha256": "efc8c113016df60d8d89fe65a881df8e2c6de7b67f3d6cf39d67465cbadc801d",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/charter-org-rep.png",
+      "file": "assets/corpus/positions/charter-org-rep.png",
+      "sha256": "62cba2480ecf0b5a20bdb3f07d6cdae04002b0ad2ef4426eadb1cd7313eba384"
+    },
+    {
+      "source": "public/images/positions/charter-org-rep.png",
+      "file": "assets/display/positions/charter-org-rep.png.webp",
+      "sha256": "6fdf1f9baffab231fd484a12fc202935c78feb4f612c35b8c4b80ca8482c8270",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/positions/charter-org-rep.png",
+      "file": "assets/thumbs/positions/charter-org-rep.png.webp",
+      "sha256": "6fdf1f9baffab231fd484a12fc202935c78feb4f612c35b8c4b80ca8482c8270",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-cubmaster.png",
+      "file": "assets/corpus/patch-cubmaster.png",
+      "sha256": "f5968954c99d16894d7785d34ffd82ac82737fdb7ee28644483d8b2c927aa648"
+    },
+    {
+      "source": "public/images/patch-cubmaster.png",
+      "file": "assets/display/patch-cubmaster.png.webp",
+      "sha256": "dc25195f3ac5aab5308e9bbecf63d94700971f086f6d183058bff8e8e178278b",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-cubmaster.png",
+      "file": "assets/thumbs/patch-cubmaster.png.webp",
+      "sha256": "ab8db98794173dffbaa449ba30c76869d9deb1b62735d4957e703571aa2a7030",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-assistant-cubmaster.png",
+      "file": "assets/corpus/patch-assistant-cubmaster.png",
+      "sha256": "9eb64cbdc30b2581de8ceef294fdbddb5095febbad58919cfb5eae418eea1139"
+    },
+    {
+      "source": "public/images/patch-assistant-cubmaster.png",
+      "file": "assets/display/patch-assistant-cubmaster.png.webp",
+      "sha256": "f784d671534e34c5c582f41d2b398357e6f101809ed366ade553c0c0bbdd5004",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-assistant-cubmaster.png",
+      "file": "assets/thumbs/patch-assistant-cubmaster.png.webp",
+      "sha256": "8271f9e7a5c529c803254fdfcdb77aa3a7d12afa65dbc1879dff41a5ac999c9b",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-den-leader.png",
+      "file": "assets/corpus/patch-den-leader.png",
+      "sha256": "6af936fc999f9f906e00097424b3f86e02563797a1c59b087660d9ead0744ebd"
+    },
+    {
+      "source": "public/images/patch-den-leader.png",
+      "file": "assets/display/patch-den-leader.png.webp",
+      "sha256": "eabde90fcf1048a4ec010d35c910222fa5ac53dbd4af6440c6b0c4f0caed4a0d",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-den-leader.png",
+      "file": "assets/thumbs/patch-den-leader.png.webp",
+      "sha256": "e907ae2a5f6c1c73baed749570a7372e1146cd6ac70fcdc5e904dcd912b65fcc",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-assistant-den-leader.png",
+      "file": "assets/corpus/patch-assistant-den-leader.png",
+      "sha256": "15cbead86478daacc0ab822872b505e28e6cb152ffb1ca10e6686d44eb4a43d8"
+    },
+    {
+      "source": "public/images/patch-assistant-den-leader.png",
+      "file": "assets/display/patch-assistant-den-leader.png.webp",
+      "sha256": "a40158cb30600d5b3de564722329ff30b07ee1d15d0f4020a6db63330acfce4f",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-assistant-den-leader.png",
+      "file": "assets/thumbs/patch-assistant-den-leader.png.webp",
+      "sha256": "3fcb620a4894b87403734aede9a93f90b36c97c85b650088299dec5dde305599",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-committee-chair.png",
+      "file": "assets/corpus/patch-committee-chair.png",
+      "sha256": "5ec832a1c939c47fc8a05bfeddf81d90c944832059efa44c180c86c3efd84609"
+    },
+    {
+      "source": "public/images/patch-committee-chair.png",
+      "file": "assets/display/patch-committee-chair.png.webp",
+      "sha256": "78ca5648fa05a91725303affafbb397ed970caec2ce5b582465e2e6d0e3655b6",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-committee-chair.png",
+      "file": "assets/thumbs/patch-committee-chair.png.webp",
+      "sha256": "62d6474012f216f6a78aff341fb178f0858ce3309f1793a8f33054e1cdf4f0ed",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-committee-member.png",
+      "file": "assets/corpus/patch-committee-member.png",
+      "sha256": "4de1a3954e7a566d9367bbc4d9b7e91b743257479e39602346e6b886ba743ea1"
+    },
+    {
+      "source": "public/images/patch-committee-member.png",
+      "file": "assets/display/patch-committee-member.png.webp",
+      "sha256": "7d9102fa34f50dc5878237db7e5d32c68da377b8faf71ff2ff72424c2f183963",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-committee-member.png",
+      "file": "assets/thumbs/patch-committee-member.png.webp",
+      "sha256": "0df22b21e9dda5f0517c90c74b39f816ff5a17ef6c3d6b2486ab1cc18a9e495c",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-chartered-org-rep.png",
+      "file": "assets/corpus/patch-chartered-org-rep.png",
+      "sha256": "d8fdffdde3c60712a547f6dfcdb3fb57d34b08cfabe0e25ffcd8da1f2dd8e7dd"
+    },
+    {
+      "source": "public/images/patch-chartered-org-rep.png",
+      "file": "assets/display/patch-chartered-org-rep.png.webp",
+      "sha256": "540a81a52dc38e1eefcbe74c3a84b546558378b7129ddd0a39ce1210679c9a78",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-chartered-org-rep.png",
+      "file": "assets/thumbs/patch-chartered-org-rep.png.webp",
+      "sha256": "57da756988dbb4fb3cfc0cddc35d7cb238915f5563a82ea65495bf5b34a77676",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-den-chief.png",
+      "file": "assets/corpus/patch-den-chief.png",
+      "sha256": "6a2f4bf8bba51aa8e08fa688919a304d6816623946d3095c81c279238c4c2873"
+    },
+    {
+      "source": "public/images/patch-den-chief.png",
+      "file": "assets/display/patch-den-chief.png.webp",
+      "sha256": "13a62ff5600146a3a8a9afbd3758748a6e65fb7e37ddb3b2e50a61ed76c20b31",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-den-chief.png",
+      "file": "assets/thumbs/patch-den-chief.png.webp",
+      "sha256": "80fbf01f91c04d9b01e39ae4c428b0d8c5a4d8e300c80eccd7c8ead9126e0445",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-pack-committee.png",
+      "file": "assets/corpus/patch-pack-committee.png",
+      "sha256": "4de1a3954e7a566d9367bbc4d9b7e91b743257479e39602346e6b886ba743ea1"
+    },
+    {
+      "source": "public/images/patch-pack-committee.png",
+      "file": "assets/display/patch-pack-committee.png.webp",
+      "sha256": "7d9102fa34f50dc5878237db7e5d32c68da377b8faf71ff2ff72424c2f183963",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-pack-committee.png",
+      "file": "assets/thumbs/patch-pack-committee.png.webp",
+      "sha256": "0df22b21e9dda5f0517c90c74b39f816ff5a17ef6c3d6b2486ab1cc18a9e495c",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/ridge-summit.jpg",
+      "file": "assets/corpus/platform/photos/ridge-summit.jpg",
+      "sha256": "0c209fa05dedfb366e2a5003a1704d08cf235fd11b11fac355881ca84ef98b6f"
+    },
+    {
+      "source": "public/images/platform/photos/ridge-summit-thumb.jpg",
+      "file": "assets/corpus/platform/photos/ridge-summit-thumb.jpg",
+      "sha256": "16de75b84823464ad5cd0c22c7b8c8019a36fc8fe8a374baf1f798896da1b1c9"
+    },
+    {
+      "source": "public/images/platform/photos/ridge-summit.jpg",
+      "file": "assets/display/platform/photos/ridge-summit.jpg.webp",
+      "sha256": "a17b57637b22cc0d96908adad8e8daec3ef94fbdc3e17839d2676f6dd2658b6a",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/ridge-summit.jpg",
+      "file": "assets/thumbs/platform/photos/ridge-summit.jpg.webp",
+      "sha256": "fc7d4ee1370e276c5eb5d199af1fdb63c387458511e9282f0507d2ecbcb90589",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/golden-vista.jpg",
+      "file": "assets/corpus/platform/photos/golden-vista.jpg",
+      "sha256": "d9eb5e84c70d712a9da9b60e2ac72b28613c64b7a482b0d87db3696dbab35359"
+    },
+    {
+      "source": "public/images/platform/photos/golden-vista-thumb.jpg",
+      "file": "assets/corpus/platform/photos/golden-vista-thumb.jpg",
+      "sha256": "7932c77e3c8ecf1988b6578d6dc7bcdb460a57f21f5e0aff51f10f05b4ddb157"
+    },
+    {
+      "source": "public/images/platform/photos/golden-vista.jpg",
+      "file": "assets/display/platform/photos/golden-vista.jpg.webp",
+      "sha256": "4ea65f9ced5723ff9555dd420ea925fac2e96c486722ec0d65c82c33b175e0eb",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/golden-vista.jpg",
+      "file": "assets/thumbs/platform/photos/golden-vista.jpg.webp",
+      "sha256": "aa2fd8aaffb15a5387d8bb48c641f408aa4979332254f05ff4ebf38f3f71d3cb",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/whitewater-rafting.jpg",
+      "file": "assets/corpus/platform/photos/whitewater-rafting.jpg",
+      "sha256": "014ca12b4423e042be40792e11277eaf55c9bb9754489777faa0f6cbea763675"
+    },
+    {
+      "source": "public/images/platform/photos/whitewater-rafting-thumb.jpg",
+      "file": "assets/corpus/platform/photos/whitewater-rafting-thumb.jpg",
+      "sha256": "dbcad283e4a655679eeb2d1414e9a5d09e38c816605644018411bd5956af7d87"
+    },
+    {
+      "source": "public/images/platform/photos/whitewater-rafting.jpg",
+      "file": "assets/display/platform/photos/whitewater-rafting.jpg.webp",
+      "sha256": "96980ceda73969efed391bd526517a83e4594be37249a779bccce6207d2bf80c",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/whitewater-rafting.jpg",
+      "file": "assets/thumbs/platform/photos/whitewater-rafting.jpg.webp",
+      "sha256": "0a6d64d38d0e599527cc36a226a9e1389b7df34b0a59c89c0401582959faad12",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/tent-sunrise.jpg",
+      "file": "assets/corpus/platform/photos/tent-sunrise.jpg",
+      "sha256": "b02ffe94f2f673d336ad583b0dd8eec407179da63de6dc2a67a5afdcb1760d92"
+    },
+    {
+      "source": "public/images/platform/photos/tent-sunrise-thumb.jpg",
+      "file": "assets/corpus/platform/photos/tent-sunrise-thumb.jpg",
+      "sha256": "3c929ba4b0a609ffa6528e594fd2c0a2cc32a1c3643fd3501bb55df2fa1d7c1f"
+    },
+    {
+      "source": "public/images/platform/photos/tent-sunrise.jpg",
+      "file": "assets/display/platform/photos/tent-sunrise.jpg.webp",
+      "sha256": "48391c8a0de021f5d818dd82f8331c2275b4746ddf79325d61be2497a55858f9",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/tent-sunrise.jpg",
+      "file": "assets/thumbs/platform/photos/tent-sunrise.jpg.webp",
+      "sha256": "7f5ceaaa321038d5382874f639fa4ee573d5bf63e464a20af1b173fa8eac94a5",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/campfire-night.jpg",
+      "file": "assets/corpus/platform/photos/campfire-night.jpg",
+      "sha256": "29b2fbab0d02be9fb2298fd1e01d998f943118f4f26a602aca93b4dcc5ba4281"
+    },
+    {
+      "source": "public/images/platform/photos/campfire-night-thumb.jpg",
+      "file": "assets/corpus/platform/photos/campfire-night-thumb.jpg",
+      "sha256": "a2311dbd3a1ee86a8999324b1bd0bf1c32ef6424e4a88f73a973396effb6e98d"
+    },
+    {
+      "source": "public/images/platform/photos/campfire-night.jpg",
+      "file": "assets/display/platform/photos/campfire-night.jpg.webp",
+      "sha256": "ec0b7b9709ecee49a646af9418218946a67bb7b761c887112d81e20b91984ed7",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/campfire-night.jpg",
+      "file": "assets/thumbs/platform/photos/campfire-night.jpg.webp",
+      "sha256": "16f271e288b5c635ad2994eb962c6f5b91212f0f726c5688f31ad2c5ac028582",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/sea-kayaking.jpg",
+      "file": "assets/corpus/platform/photos/sea-kayaking.jpg",
+      "sha256": "7a7f540a73131d9db14c760ccef1b145f3e9a26acf3db8f16b5fb28570c8eecf"
+    },
+    {
+      "source": "public/images/platform/photos/sea-kayaking-thumb.jpg",
+      "file": "assets/corpus/platform/photos/sea-kayaking-thumb.jpg",
+      "sha256": "31a8ef7d1bb3c1b1e82fdcc041a709d3537b9157e0de0872e5994887cb74fd1d"
+    },
+    {
+      "source": "public/images/platform/photos/sea-kayaking.jpg",
+      "file": "assets/display/platform/photos/sea-kayaking.jpg.webp",
+      "sha256": "550a5e5aa42a900e707b1e385f34265314014a8315f8c355e372f2102a1103a0",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/sea-kayaking.jpg",
+      "file": "assets/thumbs/platform/photos/sea-kayaking.jpg.webp",
+      "sha256": "024959d568a3bae862ad1dfb8ae664945e61e5e81a94688c8cb165a99f49872d",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/paddling-crew.jpg",
+      "file": "assets/corpus/platform/photos/paddling-crew.jpg",
+      "sha256": "b12ed1accb02eea520bce48091f8d5d138f84a644ceff4d3e5f385268a66910e"
+    },
+    {
+      "source": "public/images/platform/photos/paddling-crew-thumb.jpg",
+      "file": "assets/corpus/platform/photos/paddling-crew-thumb.jpg",
+      "sha256": "2da690a88457112502be7b43a303c8374e1ffed7b2caf1cf773b973dce24398e"
+    },
+    {
+      "source": "public/images/platform/photos/paddling-crew.jpg",
+      "file": "assets/display/platform/photos/paddling-crew.jpg.webp",
+      "sha256": "2e43acc575d7ea20d33815aa3f03763f5ee001121870e7a8ac749c9db404cf35",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/paddling-crew.jpg",
+      "file": "assets/thumbs/platform/photos/paddling-crew.jpg.webp",
+      "sha256": "5c6685a83d8750b80c31d0e75329031b9668c9bf771d7dea6fd778ce4f4e5a6b",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/bouldering.jpg",
+      "file": "assets/corpus/platform/photos/bouldering.jpg",
+      "sha256": "5ff62b619997bdf05c6fa13b73650981447184ffd124db5bf9ebfcb43cd59163"
+    },
+    {
+      "source": "public/images/platform/photos/bouldering-thumb.jpg",
+      "file": "assets/corpus/platform/photos/bouldering-thumb.jpg",
+      "sha256": "84051264b40d06505256b0d3d68f9a967888e695aad7a21401f03ca8f52912c1"
+    },
+    {
+      "source": "public/images/platform/photos/bouldering.jpg",
+      "file": "assets/display/platform/photos/bouldering.jpg.webp",
+      "sha256": "353a202945e627f0f0a3015c7b88adb2899c1754782dd2a24f204230d904a2a9",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/bouldering.jpg",
+      "file": "assets/thumbs/platform/photos/bouldering.jpg.webp",
+      "sha256": "cef3424ab65570d4dac9874b7d5c677c485b31a3b75c2590dbdb46e802320598",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/archery.jpg",
+      "file": "assets/corpus/platform/photos/archery.jpg",
+      "sha256": "eb4d530115c58cae108c3dce046c399c628569ebda1e5f88b1b4d0b0c4307d0e"
+    },
+    {
+      "source": "public/images/platform/photos/archery-thumb.jpg",
+      "file": "assets/corpus/platform/photos/archery-thumb.jpg",
+      "sha256": "48352a5dfd1e609ea1173e9ba27e1a5eb3e4fc4ab7ccdab895afb72e2bae0b46"
+    },
+    {
+      "source": "public/images/platform/photos/archery.jpg",
+      "file": "assets/display/platform/photos/archery.jpg.webp",
+      "sha256": "43cb13b9a7aa38de03a58cf27166970d1951058d92fdb04c876448961523fe82",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/archery.jpg",
+      "file": "assets/thumbs/platform/photos/archery.jpg.webp",
+      "sha256": "6c6937a65abb05d3f3eeeb784e0e2bda0eec73ef6d4b7fe2d3206b2d003716ae",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/caving.jpg",
+      "file": "assets/corpus/platform/photos/caving.jpg",
+      "sha256": "219cf0d58b055c7c57dba8b40e601c7d18927b8de07b0a19898a9deb1b00fd03"
+    },
+    {
+      "source": "public/images/platform/photos/caving-thumb.jpg",
+      "file": "assets/corpus/platform/photos/caving-thumb.jpg",
+      "sha256": "c07357ae5754a8ecaecb066757b23407b5bd7b7bbd91e744c14dea47cd58edc3"
+    },
+    {
+      "source": "public/images/platform/photos/caving.jpg",
+      "file": "assets/display/platform/photos/caving.jpg.webp",
+      "sha256": "478b14465a1840b829f9cc788e5025f4317af35783e588d531cacceb6b011ebd",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/caving.jpg",
+      "file": "assets/thumbs/platform/photos/caving.jpg.webp",
+      "sha256": "09ae2c20f508440dd91076efdaeacc49f150097c844b9cbd45d2a9f337ed1cb3",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/rock-climbing.jpg",
+      "file": "assets/corpus/platform/photos/rock-climbing.jpg",
+      "sha256": "35d7e04a617ac7d172f8d33f1159582f9bf64235a4157b3972c64961aca0959e"
+    },
+    {
+      "source": "public/images/platform/photos/rock-climbing-thumb.jpg",
+      "file": "assets/corpus/platform/photos/rock-climbing-thumb.jpg",
+      "sha256": "03d3c97b258eb8dfd579f6194bd4dd68e8c874f2a7310678b673673a5bd51828"
+    },
+    {
+      "source": "public/images/platform/photos/rock-climbing.jpg",
+      "file": "assets/display/platform/photos/rock-climbing.jpg.webp",
+      "sha256": "133fc9c3bfa8950845c4c3c532d68ba87cfd5a75d3220deb57c276e33826f271",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/rock-climbing.jpg",
+      "file": "assets/thumbs/platform/photos/rock-climbing.jpg.webp",
+      "sha256": "872ae51823f3676da143db90d3902ae881668e76b365f94e0a80b7eaeef60bd0",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/knot-tying.jpg",
+      "file": "assets/corpus/platform/photos/knot-tying.jpg",
+      "sha256": "8110f0c0098a6ae1205bcd09c72a5bf65eca5e339061db91dd7f3cb72ea680b7"
+    },
+    {
+      "source": "public/images/platform/photos/knot-tying-thumb.jpg",
+      "file": "assets/corpus/platform/photos/knot-tying-thumb.jpg",
+      "sha256": "56b1700ae07a7c7a80de3f666412a0490741c88dd3b3bd71c15a099f3b6ae536"
+    },
+    {
+      "source": "public/images/platform/photos/knot-tying.jpg",
+      "file": "assets/display/platform/photos/knot-tying.jpg.webp",
+      "sha256": "53acd76416ea34acd8ee8dee0deac1f54e2c494b28727800b790eaab056bbcd5",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/knot-tying.jpg",
+      "file": "assets/thumbs/platform/photos/knot-tying.jpg.webp",
+      "sha256": "6fcfd5a95410579c22986663f28f2e742aa387287d8e4d24508f036da2f04b3d",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/horseback-riding.jpg",
+      "file": "assets/corpus/platform/photos/horseback-riding.jpg",
+      "sha256": "e48d714daab8d1157bf98105efb0133b0eeeb5d4162ac261e72f5b4841d2960e"
+    },
+    {
+      "source": "public/images/platform/photos/horseback-riding-thumb.jpg",
+      "file": "assets/corpus/platform/photos/horseback-riding-thumb.jpg",
+      "sha256": "af892f21d51cb8e619f15872ad732a2b4afe45b1e8af245489b5174e91c770c3"
+    },
+    {
+      "source": "public/images/platform/photos/horseback-riding.jpg",
+      "file": "assets/display/platform/photos/horseback-riding.jpg.webp",
+      "sha256": "0b8ce5a4e3dda7cf5b1466626afabd28287ac24133cc94423de19f12cf0e77cf",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/horseback-riding.jpg",
+      "file": "assets/thumbs/platform/photos/horseback-riding.jpg.webp",
+      "sha256": "95166e54382fcedeb2f601f4bb14a5bef57c0ef2c67e64d5ad669f41ec108f5e",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/sequoia-trail.jpg",
+      "file": "assets/corpus/platform/photos/sequoia-trail.jpg",
+      "sha256": "ab9118cb9e89363e8d54121becdf8be5b2b7df0de59a14a5ba3e33d66b1d46b3"
+    },
+    {
+      "source": "public/images/platform/photos/sequoia-trail-thumb.jpg",
+      "file": "assets/corpus/platform/photos/sequoia-trail-thumb.jpg",
+      "sha256": "7e29858a018b5ac915b3a1838b3a9459b8bf081f1c2cee809859a2d8940cbeb3"
+    },
+    {
+      "source": "public/images/platform/photos/sequoia-trail.jpg",
+      "file": "assets/display/platform/photos/sequoia-trail.jpg.webp",
+      "sha256": "e132d93c7e44a25a5bd25d5717f762a42d1f61b071034585a1d7c8351df1acf6",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/sequoia-trail.jpg",
+      "file": "assets/thumbs/platform/photos/sequoia-trail.jpg.webp",
+      "sha256": "1b196344be31a55fa73495eeb014519c01e7838431ec37c1bb96e39ed882b200",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/canyon-hike.jpg",
+      "file": "assets/corpus/platform/photos/canyon-hike.jpg",
+      "sha256": "ab8f5ff564edcabbec0c4ba2009267cdaaed915081f8e71d0b5e4277c0af531c"
+    },
+    {
+      "source": "public/images/platform/photos/canyon-hike-thumb.jpg",
+      "file": "assets/corpus/platform/photos/canyon-hike-thumb.jpg",
+      "sha256": "310cc69e455929ad84d81373e971929df1853bd40d5b97ec4c7a71c9e70f3256"
+    },
+    {
+      "source": "public/images/platform/photos/canyon-hike.jpg",
+      "file": "assets/display/platform/photos/canyon-hike.jpg.webp",
+      "sha256": "1ca82d48f1588383182a7f79e7862f7ead4fe3c22ca6736c16bbfda446227602",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/canyon-hike.jpg",
+      "file": "assets/thumbs/platform/photos/canyon-hike.jpg.webp",
+      "sha256": "74564ecc6612cbec9768d677678eaefc7975a59ebcb0d541008d4aafcfec005f",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/giant-sequoia.jpg",
+      "file": "assets/corpus/platform/photos/giant-sequoia.jpg",
+      "sha256": "32c6f4bd6cd0ee9ac648c726d630c55d087388e4e31ae237432946412d3a8d98"
+    },
+    {
+      "source": "public/images/platform/photos/giant-sequoia-thumb.jpg",
+      "file": "assets/corpus/platform/photos/giant-sequoia-thumb.jpg",
+      "sha256": "c99937fff6cc8fc5e3c27e37c7672ffef48bb6c4bc6cc403b06ff3d541e173db"
+    },
+    {
+      "source": "public/images/platform/photos/giant-sequoia.jpg",
+      "file": "assets/display/platform/photos/giant-sequoia.jpg.webp",
+      "sha256": "2b5019fbc03160ce25fae76cc57ada6d5cd6ac3a31421f2f9f9c98a95108547d",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/giant-sequoia.jpg",
+      "file": "assets/thumbs/platform/photos/giant-sequoia.jpg.webp",
+      "sha256": "a12076e612b7fe489c816e479dff8ce0810edc217e88cefff6efcebd1ee58a2a",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/trail-friends.jpg",
+      "file": "assets/corpus/platform/photos/trail-friends.jpg",
+      "sha256": "9ab5c9163607ada6447c7343a85a115b5c1fef26eef0b7a084e0fb7c0bdd6ce6"
+    },
+    {
+      "source": "public/images/platform/photos/trail-friends-thumb.jpg",
+      "file": "assets/corpus/platform/photos/trail-friends-thumb.jpg",
+      "sha256": "ce4b36cca8a50fa7611491eaf2cdbe000ebf2a2f94757d77088efab4f9b4a6bb"
+    },
+    {
+      "source": "public/images/platform/photos/trail-friends.jpg",
+      "file": "assets/display/platform/photos/trail-friends.jpg.webp",
+      "sha256": "3487c59389292b8bcf10c22cbd2e94ca10005f2407d16c2f62e077963a056550",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/trail-friends.jpg",
+      "file": "assets/thumbs/platform/photos/trail-friends.jpg.webp",
+      "sha256": "6df86829480aaf3c95ed48773d94f2ded2b244965a56e6e1f187fa9d350c053b",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-pack-hike.jpg",
+      "file": "assets/corpus/platform/photos/cub-pack-hike.jpg",
+      "sha256": "d87cad6266ee3b874990389806b81aacc26b9190de3323ad821b3f57479afacd"
+    },
+    {
+      "source": "public/images/platform/photos/cub-pack-hike-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-pack-hike-thumb.jpg",
+      "sha256": "cea8d15cdad033fd55510193aa3773144e3d5f1686fe0d064ad1f913964e8552"
+    },
+    {
+      "source": "public/images/platform/photos/cub-pack-hike.jpg",
+      "file": "assets/display/platform/photos/cub-pack-hike.jpg.webp",
+      "sha256": "a02ffdbc4f2933929416aa978a5761aad44461e2a2ba516f4b50a8a676b65a59",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-pack-hike.jpg",
+      "file": "assets/thumbs/platform/photos/cub-pack-hike.jpg.webp",
+      "sha256": "c72a1181ad74b18f290537094f3a7180e6f6fe1e561a9cbb45a28b6e884bde5a",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-lakeside.jpg",
+      "file": "assets/corpus/platform/photos/cub-lakeside.jpg",
+      "sha256": "a332e84fc49cafec76259c621b407a32cea55d165a6f995842fd7f73598857b4"
+    },
+    {
+      "source": "public/images/platform/photos/cub-lakeside-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-lakeside-thumb.jpg",
+      "sha256": "0e401c031239a9ea0959af188351f9e28ea871ae99c58ed08d39259f47006984"
+    },
+    {
+      "source": "public/images/platform/photos/cub-lakeside.jpg",
+      "file": "assets/display/platform/photos/cub-lakeside.jpg.webp",
+      "sha256": "8d967d8d6b44ae8d1e7db70d9a69dc1774c114708fd2ede2b0cc1b907b5e1a9c",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-lakeside.jpg",
+      "file": "assets/thumbs/platform/photos/cub-lakeside.jpg.webp",
+      "sha256": "dc21b0f69b318f4b40b074db87117a0e98188f322fa72c3c13eba4ff99bcf6d2",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-forest-trail.jpg",
+      "file": "assets/corpus/platform/photos/cub-forest-trail.jpg",
+      "sha256": "b70592c6a1cd43a4b42e4b8a9d45f1bdb7e1b1aa8459969d512e144711fa3a32"
+    },
+    {
+      "source": "public/images/platform/photos/cub-forest-trail-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-forest-trail-thumb.jpg",
+      "sha256": "d0f5df0aabbd45bd804f9817e5688d1cdcef6f2024593492cf11160a1c7af54c"
+    },
+    {
+      "source": "public/images/platform/photos/cub-forest-trail.jpg",
+      "file": "assets/display/platform/photos/cub-forest-trail.jpg.webp",
+      "sha256": "c3e6c4725dbacd4c5e75c231f0b8c49dd663a9b511e399006a8c1fb816dff0ad",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-forest-trail.jpg",
+      "file": "assets/thumbs/platform/photos/cub-forest-trail.jpg.webp",
+      "sha256": "71047c9270f99288bbcb1f5a6b9f110cfd5c930c713ba43824b760ed89b974b3",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-fishing-walk.jpg",
+      "file": "assets/corpus/platform/photos/cub-fishing-walk.jpg",
+      "sha256": "ac34e6d37e71ee3de7989bcbf65f603acb777213a6af892c3f358f55cf236680"
+    },
+    {
+      "source": "public/images/platform/photos/cub-fishing-walk-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-fishing-walk-thumb.jpg",
+      "sha256": "80cbd130720c3bdaac374e63307b2070d58d25844b8abfcad29e970edfb0a0af"
+    },
+    {
+      "source": "public/images/platform/photos/cub-fishing-walk.jpg",
+      "file": "assets/display/platform/photos/cub-fishing-walk.jpg.webp",
+      "sha256": "4d9ee70c2912b9edde34a15b1b8a2ffd885d161625803d3613f3b633f540d16f",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-fishing-walk.jpg",
+      "file": "assets/thumbs/platform/photos/cub-fishing-walk.jpg.webp",
+      "sha256": "6c5c357384425ce024f08e0c07851675bf4bd670aa5d85a880b85b686e9480b0",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-fishing-catch.jpg",
+      "file": "assets/corpus/platform/photos/cub-fishing-catch.jpg",
+      "sha256": "01bb35f875391e8d5e01d979ee31e9db346f5f395557dba41a015307d003948a"
+    },
+    {
+      "source": "public/images/platform/photos/cub-fishing-catch-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-fishing-catch-thumb.jpg",
+      "sha256": "dbd36f75807cb8a4621b1c3e197840253f4468997ca33163be6519a1dc3ffe40"
+    },
+    {
+      "source": "public/images/platform/photos/cub-fishing-catch.jpg",
+      "file": "assets/display/platform/photos/cub-fishing-catch.jpg.webp",
+      "sha256": "b677cd3e40be9dc2bad20be748a128b4dbd80783011066f955dede586fa88afa",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-fishing-catch.jpg",
+      "file": "assets/thumbs/platform/photos/cub-fishing-catch.jpg.webp",
+      "sha256": "db846c6fe70c8c8257d79e1f90b53b522df9caf8d42a9b69e58bf422c0a8b356",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-pinewood-derby.jpg",
+      "file": "assets/corpus/platform/photos/cub-pinewood-derby.jpg",
+      "sha256": "66821f0fd9e0364f93c3d9520bd17c33438265e3697ae2b072d7cb944c142c0d"
+    },
+    {
+      "source": "public/images/platform/photos/cub-pinewood-derby-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-pinewood-derby-thumb.jpg",
+      "sha256": "79b302ed62536aeb01b8e98123f727adc7f044c145463f9ccfd01c162ad72f42"
+    },
+    {
+      "source": "public/images/platform/photos/cub-pinewood-derby.jpg",
+      "file": "assets/display/platform/photos/cub-pinewood-derby.jpg.webp",
+      "sha256": "95612bbc3db17c4714e26c39928602f3f59a66d95f2fc5f46088fb92df212f79",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-pinewood-derby.jpg",
+      "file": "assets/thumbs/platform/photos/cub-pinewood-derby.jpg.webp",
+      "sha256": "6c102c8f5e5160c222dbcada8938aa345fb479e1e9944b7b420beef7e65163db",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-derby-cars.jpg",
+      "file": "assets/corpus/platform/photos/cub-derby-cars.jpg",
+      "sha256": "811734a0ec6f15ba6374dd31851918826194d900b5e76cf524727e13ad7cd4b3"
+    },
+    {
+      "source": "public/images/platform/photos/cub-derby-cars-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-derby-cars-thumb.jpg",
+      "sha256": "68475c082f739846ad021ff151a76b995d07561f3420ebe5a53a48850ba5096e"
+    },
+    {
+      "source": "public/images/platform/photos/cub-derby-cars.jpg",
+      "file": "assets/display/platform/photos/cub-derby-cars.jpg.webp",
+      "sha256": "3487722779768df4770ef0a7e52423a326f7188924c58e6110bf8473c06fe0ef",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-derby-cars.jpg",
+      "file": "assets/thumbs/platform/photos/cub-derby-cars.jpg.webp",
+      "sha256": "2cf697a078019236a831343d710fc8efc17b9847343d1fbc2f071d8502f40f61",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-archery.jpg",
+      "file": "assets/corpus/platform/photos/cub-archery.jpg",
+      "sha256": "120a0c756c11c6c1e5a3978762097702db38b548e6a8d0cc57d41a453098a486"
+    },
+    {
+      "source": "public/images/platform/photos/cub-archery-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-archery-thumb.jpg",
+      "sha256": "35efb3d7860788cc73efdab16e3be3548429f2c2da734667b46d568e810eda1e"
+    },
+    {
+      "source": "public/images/platform/photos/cub-archery.jpg",
+      "file": "assets/display/platform/photos/cub-archery.jpg.webp",
+      "sha256": "848724f45e0eab013c0d64695385641f29a79ae0cf26b85f9c60009a95ecd98f",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-archery.jpg",
+      "file": "assets/thumbs/platform/photos/cub-archery.jpg.webp",
+      "sha256": "1b6d25d5c707ba187a7f5c4ef3f35013d186051aef0220e15f477e200566ad39",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-gardening.jpg",
+      "file": "assets/corpus/platform/photos/cub-gardening.jpg",
+      "sha256": "91c9f775173111663560e676f1804b1a45ba1accf34a3bc22238c6ecf361c3b4"
+    },
+    {
+      "source": "public/images/platform/photos/cub-gardening-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-gardening-thumb.jpg",
+      "sha256": "a14f5a125110ba5a94c1a61a4109f46ecad1cc2a4638900cf7b42a3e8c88adba"
+    },
+    {
+      "source": "public/images/platform/photos/cub-gardening.jpg",
+      "file": "assets/display/platform/photos/cub-gardening.jpg.webp",
+      "sha256": "4eb1fc0ad3fce05af798509449d811cb4d8ea10a17a9e8ab1f801c951ca9f50c",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-gardening.jpg",
+      "file": "assets/thumbs/platform/photos/cub-gardening.jpg.webp",
+      "sha256": "339f1e18d2ef9e9c29cbfa300d1406a77c0c32391250f22a1c656add7c0ad7ee",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-navigation.jpg",
+      "file": "assets/corpus/platform/photos/cub-navigation.jpg",
+      "sha256": "b60ad52034651b03430ce9899d12303dbdadbaed6fe35566113b974fb9cea524"
+    },
+    {
+      "source": "public/images/platform/photos/cub-navigation-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-navigation-thumb.jpg",
+      "sha256": "db3227201ee1153a4ed5044208b1412650b260a5b62ff6ab47f4ac123ae4cbe0"
+    },
+    {
+      "source": "public/images/platform/photos/cub-navigation.jpg",
+      "file": "assets/display/platform/photos/cub-navigation.jpg.webp",
+      "sha256": "ac584c7c9f1c95f6cc06dcaaa7b2a30d7bb2bbf6accff53995e6dc30384eb9f9",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-navigation.jpg",
+      "file": "assets/thumbs/platform/photos/cub-navigation.jpg.webp",
+      "sha256": "5773dd36f5c6f0b1d3a050f7baa101085b02d3da2817b11fb2e4158c80ba4658",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-campfire.jpg",
+      "file": "assets/corpus/platform/photos/cub-campfire.jpg",
+      "sha256": "8e966cdf39b75f693cdc6a93855184e8ddfdff48899f82c2c9d4432f5143b39c"
+    },
+    {
+      "source": "public/images/platform/photos/cub-campfire-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-campfire-thumb.jpg",
+      "sha256": "3eab535697aef0085a391b842d5c8dbce6b1d6d6f021247ed62578b095a79201"
+    },
+    {
+      "source": "public/images/platform/photos/cub-campfire.jpg",
+      "file": "assets/display/platform/photos/cub-campfire.jpg.webp",
+      "sha256": "856b627e05298b1f40e8ba9b634d1917a38b58483280419f0ddb4124a8285064",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-campfire.jpg",
+      "file": "assets/thumbs/platform/photos/cub-campfire.jpg.webp",
+      "sha256": "959c026992bb3f3d810eebfae3c869042413371028974ba232de447cb2ec714d",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-nature.jpg",
+      "file": "assets/corpus/platform/photos/cub-nature.jpg",
+      "sha256": "fdc658598f07d0e50b7fb021bcf2dfc17867f89914b4b1cb841c7fef3ee670a2"
+    },
+    {
+      "source": "public/images/platform/photos/cub-nature-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-nature-thumb.jpg",
+      "sha256": "8a710ca9c485ed47b03e7d7981ff1b4b2c96dea1b698c82fff4ec7b16086c59e"
+    },
+    {
+      "source": "public/images/platform/photos/cub-nature.jpg",
+      "file": "assets/display/platform/photos/cub-nature.jpg.webp",
+      "sha256": "3cde4fb90f64d5ee9a12b4825963602dc8143edd9ca95817c0e48d805be59a23",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-nature.jpg",
+      "file": "assets/thumbs/platform/photos/cub-nature.jpg.webp",
+      "sha256": "e57d6abe3a95ec3c8e2c09e53a5a1d0145c17f2fba7a96f52e946101ef73118e",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-den-friends.jpg",
+      "file": "assets/corpus/platform/photos/cub-den-friends.jpg",
+      "sha256": "24351748e0cf1f65b5d9fc243cd1e843bb3a99cb96b9f07494d240c375b5b673"
+    },
+    {
+      "source": "public/images/platform/photos/cub-den-friends-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-den-friends-thumb.jpg",
+      "sha256": "df55562d76c556a4ef5cc5d5272c86a2e514fb68a183c6869b25c64d6a8da35d"
+    },
+    {
+      "source": "public/images/platform/photos/cub-den-friends.jpg",
+      "file": "assets/display/platform/photos/cub-den-friends.jpg.webp",
+      "sha256": "2fff49fe28911157a51e2c575981f81bdab60696ae2a921e4e41caed810b0eb5",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-den-friends.jpg",
+      "file": "assets/thumbs/platform/photos/cub-den-friends.jpg.webp",
+      "sha256": "721750cca1abe99f7681fed8e159b9f7667aa3067667f01d23795521b594cc2c",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-campout-fun.jpg",
+      "file": "assets/corpus/platform/photos/cub-campout-fun.jpg",
+      "sha256": "41ea94ee0983ef3fbc5cd573d16fab7bd2f116a1acbf5dcd29cd49084a0ba652"
+    },
+    {
+      "source": "public/images/platform/photos/cub-campout-fun-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-campout-fun-thumb.jpg",
+      "sha256": "26551f4c06695847c280d3e02a2a9764d1501e3a72e5c267e9711f050c033ce3"
+    },
+    {
+      "source": "public/images/platform/photos/cub-campout-fun.jpg",
+      "file": "assets/display/platform/photos/cub-campout-fun.jpg.webp",
+      "sha256": "5cb45e25dba7456050422c8215d7a88220dcaa81d398d7cd0fac7f5b1cb9e961",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-campout-fun.jpg",
+      "file": "assets/thumbs/platform/photos/cub-campout-fun.jpg.webp",
+      "sha256": "b8562b60efa0dfb75aaaf1d976f485ead4c384a49eaaec9b2475edecd005a5bc",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-camp-cooking.jpg",
+      "file": "assets/corpus/platform/photos/cub-camp-cooking.jpg",
+      "sha256": "a9881ff0d8b8018b6deaa2732cb8758b9105bdc29bc84128d408e09a94823b36"
+    },
+    {
+      "source": "public/images/platform/photos/cub-camp-cooking-thumb.jpg",
+      "file": "assets/corpus/platform/photos/cub-camp-cooking-thumb.jpg",
+      "sha256": "2f660a5d702b7dac61371ea4d89bb5e49116b43330bfef5c060c58d365af67b9"
+    },
+    {
+      "source": "public/images/platform/photos/cub-camp-cooking.jpg",
+      "file": "assets/display/platform/photos/cub-camp-cooking.jpg.webp",
+      "sha256": "41d88c7e4383d7e0abc317f6af9c996ffcc2bec28967e73284c21a5880e0590d",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/platform/photos/cub-camp-cooking.jpg",
+      "file": "assets/thumbs/platform/photos/cub-camp-cooking.jpg.webp",
+      "sha256": "d5d02274f9b11e59d5b83ccf649be10fa8df46fd482198046bb3d3cec567b47e",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/hero-mountain.jpg",
+      "file": "assets/corpus/hero-mountain.jpg",
+      "sha256": "b96994fe05e509b3a64bd9c206edb2e4eb49f78ae170e70f58370f8dcdfd25e1",
+      "sourceSha256": "b152e9519e9774acc33eb937fd659ba25b0a613b0579de68cffc9cdac93f374d",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/hero-mountain.jpg",
+      "file": "assets/display/hero-mountain.jpg.webp",
+      "sha256": "d6fbf110257d7a3bec9133666f49b905eb9d44c0204d6701a961103306de92f6",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/hero-mountain.jpg",
+      "file": "assets/thumbs/hero-mountain.jpg.webp",
+      "sha256": "125976c57710446d168cb1523830473a9aad25066718455b36fb9199b9e59ef4",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/camping-cookout.jpg",
+      "file": "assets/corpus/camping-cookout.jpg",
+      "sha256": "11525c35a4c1e48b63dd1ad11f83bb34f7ca813d28db9fbe908dfc0eb83f4e64",
+      "sourceSha256": "1282b8b35f4611933380592d552c71329e8b73b7973a9b8fb0bc6efdeafc3c01",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/camping-cookout.jpg",
+      "file": "assets/display/camping-cookout.jpg.webp",
+      "sha256": "039a86f6cda996c8c791cefe4c09823fd70b309e81e4e3a0fdd752156fe46a09",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/camping-cookout.jpg",
+      "file": "assets/thumbs/camping-cookout.jpg.webp",
+      "sha256": "4112d847674270a854f066adacb3d1990ad5cc897f550159a14a064e6be86230",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/pinewood-derby.jpg",
+      "file": "assets/corpus/pinewood-derby.jpg",
+      "sha256": "e6d751224aa775bf9fbac487fb256f0a81bb359b788ee2453d45b54053a84174",
+      "sourceSha256": "a33f1f907e6fe588965e5e6f6ffcb3d86a9e4ab9451fb048656d7e42b6ec13df",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/pinewood-derby.jpg",
+      "file": "assets/display/pinewood-derby.jpg.webp",
+      "sha256": "c452c8b13c8843c5e5b2967fb8813ecb2a5d872d6c10574c595ebd14f6c1428f",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/pinewood-derby.jpg",
+      "file": "assets/thumbs/pinewood-derby.jpg.webp",
+      "sha256": "6c18fd32c321efc1caa2b6b2cf045b2fde91524e457dfdf7915c0942d64722e1",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/hiking-trail.jpg",
+      "file": "assets/corpus/hiking-trail.jpg",
+      "sha256": "d45d3f106f589e545496d70eefe634fc2b31d6dda00a184d77dab344e8acce23",
+      "sourceSha256": "d22ae67e2f863ea6bd0d94a28638c2fd3162bde68fdbefd6ad2e65360d31a7ed",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/hiking-trail.jpg",
+      "file": "assets/display/hiking-trail.jpg.webp",
+      "sha256": "64627c73b915a4305ebb196a75d6fa12137942578e814f4fe6e79c9cde4c5c44",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/hiking-trail.jpg",
+      "file": "assets/thumbs/hiking-trail.jpg.webp",
+      "sha256": "6964d66422d891b3607bd082933db7dc114eb37aa03b3bcea7db3ad852706cd6",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/ridge-hike.jpg",
+      "file": "assets/corpus/ridge-hike.jpg",
+      "sha256": "adfb3b3714c2ee2fd6a26d774c7f864e92d2167a1b09823c99c62832e8a2103e",
+      "sourceSha256": "0d74ca6d09804a9834a4dc899bfb3abddb0d46b4269277e100f42ff1793c407d",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/ridge-hike.jpg",
+      "file": "assets/display/ridge-hike.jpg.webp",
+      "sha256": "3904ff22541b83748cf084d401aa8cffcfaa95cff8a26b0ee9aeecab0d76dacd",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/ridge-hike.jpg",
+      "file": "assets/thumbs/ridge-hike.jpg.webp",
+      "sha256": "bd8d66e8261b7761c0824f3afabbae67d99b0b641d75892e428ff1d3414d41c4",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/creek-play.jpg",
+      "file": "assets/corpus/creek-play.jpg",
+      "sha256": "55f8adb34a346d078ccad5f4021a118dda0a2ec6d765180f8fd945c7b4322db1",
+      "sourceSha256": "3ba5aa3d8b00082b17639454ae7fe2c82d9e973d8adaa73f7cd2afdc542bdb28",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/creek-play.jpg",
+      "file": "assets/display/creek-play.jpg.webp",
+      "sha256": "c7e5aa5a0afc6b25e70cfe5ea84c50af9b05ee18499d7cfc0db01522429a77da",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/creek-play.jpg",
+      "file": "assets/thumbs/creek-play.jpg.webp",
+      "sha256": "6f879f7b3cc7cd3e2ff34cea19343e22bf795bf2b6212750c9ffd29d518aabf8",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/group-battleship.jpg",
+      "file": "assets/corpus/group-battleship.jpg",
+      "sha256": "3d9266befbfb3ad660a99dc868c06fd47830507d70fde3fedf1dba849a258550",
+      "sourceSha256": "d6c794999e5db79045f3f62eeefe968853c765dc1d37537a435607fc725f486c",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/group-battleship.jpg",
+      "file": "assets/display/group-battleship.jpg.webp",
+      "sha256": "51b03cf00fcf26b7e5ba3b2bba08be42bd515121325ec165f981c36335b15dfd",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/group-battleship.jpg",
+      "file": "assets/thumbs/group-battleship.jpg.webp",
+      "sha256": "8cceeb56ba2959a5bf3bd509ac2200ee545cd34cc98de5de53817e44d6bbe9cc",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/lakeside-explore.jpg",
+      "file": "assets/corpus/lakeside-explore.jpg",
+      "sha256": "cd1c6d95d8e9c7a2218abba7ab0121dd49aa85d4c975183eb3467027494e4576",
+      "sourceSha256": "9b7eba2308a703c31472d9acc9ee9337a76d195462fdb2b5278973e2fbd57f7f",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/lakeside-explore.jpg",
+      "file": "assets/display/lakeside-explore.jpg.webp",
+      "sha256": "cc8c3bad58c5d8c9bba581920ec9f9cc1c00995171e9b3607609662663e3717d",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/lakeside-explore.jpg",
+      "file": "assets/thumbs/lakeside-explore.jpg.webp",
+      "sha256": "a12103b1051f0a19e9d833167fa8b82ef8e93d7a21c1b15a3603f8a2edb31f90",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/christmas-parade.jpg",
+      "file": "assets/corpus/christmas-parade.jpg",
+      "sha256": "420cb3465dc1f9be989f26ad675371ec3cb63fd354426e4b2e94e2489779b93c",
+      "sourceSha256": "3bc0ab65e6e673cd1e1ff009faa312790a74e5d55530d6743d4c33f687479bd5",
+      "transform": "JPEG EXIF/XMP/IPTC/comments removed without re-encoding; compressed image data unchanged."
+    },
+    {
+      "source": "public/images/christmas-parade.jpg",
+      "file": "assets/display/christmas-parade.jpg.webp",
+      "sha256": "da5f1148defec9b0119fb68741611bd9e05338b5d84f3db3fcfae7cd86519f16",
+      "transform": "Auto-oriented, metadata stripped, fit within 1600×1600; WebP quality 80."
+    },
+    {
+      "source": "public/images/christmas-parade.jpg",
+      "file": "assets/thumbs/christmas-parade.jpg.webp",
+      "sha256": "4094a9c3ae880bab6f826a57502881ac576713e240e767ab43d94bb70ea15140",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-placement.png",
+      "file": "assets/corpus/patch-placement.png",
+      "sha256": "212459c4656cdbefd13a786f22191bbbacfca30bd06535f4b4e7de6d11ebfea0"
+    },
+    {
+      "source": "public/images/patch-placement.png",
+      "file": "assets/display/patch-placement.png.webp",
+      "sha256": "f3cbdb2b15e43c02c5ba0e04d13f6fcac288bdb2617a86b4e4527b0623e1ceea",
+      "transform": "Auto-oriented, metadata stripped, fit within 1400×1400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-placement.png",
+      "file": "assets/thumbs/patch-placement.png.webp",
+      "sha256": "20ee8ab61234965399dedc8783bdd3077fb07ca0d64d56214f47a34c3f5b8ba2",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-placement.webp",
+      "file": "assets/corpus/patch-placement.webp",
+      "sha256": "e2b2c7beb3c204600b05e1ce32bba3376e36539b248f60e9c6895b8bad799086"
+    },
+    {
+      "source": "public/images/patch-placement.webp",
+      "file": "assets/display/patch-placement.webp.webp",
+      "sha256": "f3cbdb2b15e43c02c5ba0e04d13f6fcac288bdb2617a86b4e4527b0623e1ceea",
+      "transform": "Auto-oriented, metadata stripped, fit within 1400×1400; WebP quality 80."
+    },
+    {
+      "source": "public/images/patch-placement.webp",
+      "file": "assets/thumbs/patch-placement.webp.webp",
+      "sha256": "48e0fd67eac96590533fe2ea91341c400f75108e8467bdea3f4347e2460c0f1b",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/uniform-icon.png",
+      "file": "assets/corpus/uniform-icon.png",
+      "sha256": "c4b658dfdfe333af681bbf9ce09f6f024a4a0212a86e1349454334a24e73a7ff"
+    },
+    {
+      "source": "public/images/uniform-icon.png",
+      "file": "assets/display/uniform-icon.png.webp",
+      "sha256": "8687ab528f3775dd5a1917c520f61e6a8d276ac5515cba6d953a30c7a9b6a850",
+      "transform": "Auto-oriented, metadata stripped, fit within 1400×1400; WebP quality 80."
+    },
+    {
+      "source": "public/images/uniform-icon.png",
+      "file": "assets/thumbs/uniform-icon.png.webp",
+      "sha256": "8687ab528f3775dd5a1917c520f61e6a8d276ac5515cba6d953a30c7a9b6a850",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/images/bsa-fleur-de-lis.png",
+      "file": "assets/corpus/bsa-fleur-de-lis.png",
+      "sha256": "1506e7e4df51ef14609734d86ae0b0b2936f2aaa7ffa88bb9048008e069a8a80"
+    },
+    {
+      "source": "public/images/bsa-fleur-de-lis.png",
+      "file": "assets/display/bsa-fleur-de-lis.png.webp",
+      "sha256": "73358eea1ce1910633950e2b0efa604ddffb7429a1b4020daf843b61ca417fc3",
+      "transform": "Auto-oriented, metadata stripped, fit within 480×480; WebP quality 80."
+    },
+    {
+      "source": "public/images/bsa-fleur-de-lis.png",
+      "file": "assets/thumbs/bsa-fleur-de-lis.png.webp",
+      "sha256": "a11b07ada2fa6a4c2812a60bca5fa4e80f69ac29eca57be1146d9b7f81466801",
+      "transform": "Auto-oriented, metadata stripped, fit within 400×400; WebP quality 80."
+    },
+    {
+      "source": "public/css/azimuth-tokens.css",
+      "file": "assets/azimuth/azimuth-tokens.css",
+      "sha256": "e3b1e8aa4b292352b46fd5549a08d9cd35240f783734e53f0c46c240f1ad5e1b"
+    },
+    {
+      "source": "public/css/public.css",
+      "file": "assets/azimuth/public.css",
+      "sha256": "d3f6c6df210a679131e59f2c17bc1faa73ad35933d37c17bcb8d186365cfbee8"
+    },
+    {
+      "source": "public/vendor/fonts/7cHpv4kjgoGqM7E_A8s52Hs.woff2",
+      "file": "assets/azimuth/fonts/7cHpv4kjgoGqM7E_A8s52Hs.woff2",
+      "sha256": "fef1e3c39d06f701c21120978484610a6848dc357d1ec603421927d709016b10"
+    },
+    {
+      "source": "public/vendor/fonts/7cHpv4kjgoGqM7E_Ass52Hs.woff2",
+      "file": "assets/azimuth/fonts/7cHpv4kjgoGqM7E_Ass52Hs.woff2",
+      "sha256": "122b24bc2a90b0abe189f5229768bf2e9ba641324fe2459b48850079625934f1"
+    },
+    {
+      "source": "public/vendor/fonts/7cHpv4kjgoGqM7E_DMs5.woff2",
+      "file": "assets/azimuth/fonts/7cHpv4kjgoGqM7E_DMs5.woff2",
+      "sha256": "b0a8ad37ac45f5fb22ced461576db72e44e295107aad7a9c8a7a4bad728fd03b"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E30-8s51os.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E30-8s51os.woff2",
+      "sha256": "4b52ddd4836b592df0e4832b8286956883cdc651b015126bdd18f184b7f90cc3"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E30-8s6FospT4.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E30-8s6FospT4.woff2",
+      "sha256": "d9bb523921d15e2b3fca0b22860af8b6f4a878a54c0bddd7c522588988253943"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E30-8s6VospT4.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E30-8s6VospT4.woff2",
+      "sha256": "b7f099c421968b583734bc631e6706bff8fc23908112a219f5f0e37f59b03b32"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E3_-gs51os.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E3_-gs51os.woff2",
+      "sha256": "cd759df8ef9efc98fee14307b4eb5ba27f08b1f8f2f3ad2872432e25c89907a8"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E3_-gs6FospT4.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E3_-gs6FospT4.woff2",
+      "sha256": "ba426fe513fa9e7e053ae6cf15132bb0ee3a076c634d0a02a0d221c66d74ea5e"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E3_-gs6VospT4.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E3_-gs6VospT4.woff2",
+      "sha256": "3facdf66b60778c7e64693013be7799e6686b2488dad65525b4036e211ab03e0"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E3t-4s51os.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E3t-4s51os.woff2",
+      "sha256": "2d797dd8b35dcb3413e1af9d7052b3f4f8c341a147cdcb01f4f06af80db53289"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E3t-4s6FospT4.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E3t-4s6FospT4.woff2",
+      "sha256": "73b48c8588dc2bf62ee6c47f6e5d3074dd4098e1cc3f9082752f0d5776097d66"
+    },
+    {
+      "source": "public/vendor/fonts/7cHqv4kjgoGqM7E3t-4s6VospT4.woff2",
+      "file": "assets/azimuth/fonts/7cHqv4kjgoGqM7E3t-4s6VospT4.woff2",
+      "sha256": "88c786d5fa8700a201615bc7b8ede09d209ec5d08cc3dd0a30ea1c4baff3476f"
+    },
+    {
+      "source": "public/vendor/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuQ.woff2",
+      "file": "assets/azimuth/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuQ.woff2",
+      "sha256": "3787a5a419171630e6890cfa47c4da067474d005cd0ff8dc11ec090fdc3ee2b8"
+    },
+    {
+      "source": "public/vendor/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3jWuZEC.woff2",
+      "file": "assets/azimuth/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3jWuZEC.woff2",
+      "sha256": "9d351bd9222bfab90f943850f8039aa73cdb40e0a6cfe4127308a48bef59d5f5"
+    },
+    {
+      "source": "public/vendor/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3nWuZEC.woff2",
+      "file": "assets/azimuth/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3nWuZEC.woff2",
+      "sha256": "6c554f2decc277ef760244c5ee6b5a85840862966e2ad4d02a1bdcdfefb9afa2"
+    },
+    {
+      "source": "public/vendor/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuQ.woff2",
+      "file": "assets/azimuth/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuQ.woff2",
+      "sha256": "215a93c696f442034a46fbb382958f753fda60e30490683aeea6b235fcbb2b66"
+    },
+    {
+      "source": "public/vendor/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3jWuZEC.woff2",
+      "file": "assets/azimuth/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3jWuZEC.woff2",
+      "sha256": "aef7edf54f79a5329fbca9c065b56dcec3852c680d58cf89a9ef2db6940ca4b3"
+    },
+    {
+      "source": "public/vendor/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3nWuZEC.woff2",
+      "file": "assets/azimuth/fonts/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3nWuZEC.woff2",
+      "sha256": "5598861e729ef9e8e40996cc1a4dddafa72df5981205cc929b900524e8c58890"
+    },
+    {
+      "source": "public/vendor/fonts/README.md",
+      "file": "assets/azimuth/fonts/README.md",
+      "sha256": "fc2846049f644e4406d23ce8b88cd4a1e4d3cebeec6ece3bcd3bd83725053389"
+    },
+    {
+      "source": "public/vendor/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2",
+      "file": "assets/azimuth/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2",
+      "sha256": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075"
+    },
+    {
+      "source": "public/vendor/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "file": "assets/azimuth/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+    },
+    {
+      "source": "public/vendor/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2",
+      "file": "assets/azimuth/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2",
+      "sha256": "1be3448e292fbf05ffe176fe1e43f135013d50b1e7d324ad1a558f623d3bb6f6"
+    },
+    {
+      "source": "public/vendor/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2",
+      "file": "assets/azimuth/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2",
+      "sha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956"
+    },
+    {
+      "source": "public/vendor/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2",
+      "file": "assets/azimuth/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2",
+      "sha256": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd"
+    },
+    {
+      "source": "public/vendor/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2",
+      "file": "assets/azimuth/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2",
+      "sha256": "6e9e020a25f9b56d418f2c085b1d3c09725a4da23fe693a5b463064606732190"
+    },
+    {
+      "source": "public/vendor/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2",
+      "file": "assets/azimuth/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2",
+      "sha256": "5c66f9e07e90c6d4ac4922cc68d60de26c17b1858e677fb5e603fce3952b3ff2"
+    },
+    {
+      "source": "public/vendor/fonts/barlow-OFL.txt",
+      "file": "assets/azimuth/fonts/barlow-OFL.txt",
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "source": "public/vendor/fonts/barlowcondensed-OFL.txt",
+      "file": "assets/azimuth/fonts/barlowcondensed-OFL.txt",
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    {
+      "source": "public/vendor/fonts/fonts.css",
+      "file": "assets/azimuth/fonts/fonts.css",
+      "sha256": "cb555db147cf3c68d09bab87c4ac71dc07b2373d04b228ddeff940e8ab929c37"
+    },
+    {
+      "source": "public/vendor/fonts/inter-OFL.txt",
+      "file": "assets/azimuth/fonts/inter-OFL.txt",
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "source": "public/vendor/fonts/sources.json",
+      "file": "assets/azimuth/fonts/sources.json",
+      "sha256": "7f94d3b817f2c5958194dfa52c2e65742d07b5f5e3a3b88f30da854dc7b31d6a"
+    },
+    {
+      "source": "public/vendor/fonts/sourceserif4-OFL.txt",
+      "file": "assets/azimuth/fonts/sourceserif4-OFL.txt",
+      "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+    },
+    {
+      "source": "public/vendor/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tA8QCnjU.woff2",
+      "file": "assets/azimuth/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tA8QCnjU.woff2",
+      "sha256": "1f6f86da6101d0646b247ed8d67c860f278d70f51c948c488c64a27cc3f9f843"
+    },
+    {
+      "source": "public/vendor/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tAcQCnjU.woff2",
+      "file": "assets/azimuth/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tAcQCnjU.woff2",
+      "sha256": "bc17398c9c8b2c1e63a7c79335e55897ec322987f153e5c057c11844864e96ef"
+    },
+    {
+      "source": "public/vendor/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tAsQCnjU.woff2",
+      "file": "assets/azimuth/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tAsQCnjU.woff2",
+      "sha256": "d05b8e57c5d272963ec3777e97e215aec2f8eddb06a06530d6717e9981d9d791"
+    },
+    {
+      "source": "public/vendor/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tCMQCnjU.woff2",
+      "file": "assets/azimuth/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tCMQCnjU.woff2",
+      "sha256": "18148c0920aa7272b106614f585dfa46d08d01aca5734e5c990f02e649c33aeb"
+    },
+    {
+      "source": "public/vendor/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tD8QCnjU.woff2",
+      "file": "assets/azimuth/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tD8QCnjU.woff2",
+      "sha256": "a97b9b209417c81ad387aba4265d579bac2e9c6ef5ef38008e46d1ec656aa2a0"
+    },
+    {
+      "source": "public/vendor/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tDMQC.woff2",
+      "file": "assets/azimuth/fonts/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pRl9tDMQC.woff2",
+      "sha256": "882b7c150c29f29d4f8daae6b8dcae8662aac7f28ca34b34615305154136ecfd"
+    },
+    {
+      "source": "public/vendor/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kA3r4cXk.woff2",
+      "file": "assets/azimuth/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kA3r4cXk.woff2",
+      "sha256": "41529a5b38008d9ea01e28ec18693a714a3216669ee477d83a5b9db999369625"
+    },
+    {
+      "source": "public/vendor/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kAHr4cXk.woff2",
+      "file": "assets/azimuth/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kAHr4cXk.woff2",
+      "sha256": "f423aab1098e5b0dae59d200aadbb9433e687f505425c7e73d1f65ae2b59016e"
+    },
+    {
+      "source": "public/vendor/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kAnr4cXk.woff2",
+      "file": "assets/azimuth/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kAnr4cXk.woff2",
+      "sha256": "63b54e70d3bfb018162640bfb0015be46a2ec96f3c00d4170c8a02d0ff9d5abd"
+    },
+    {
+      "source": "public/vendor/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kCXr4cXk.woff2",
+      "file": "assets/azimuth/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kCXr4cXk.woff2",
+      "sha256": "25e85aef8acff54f91ea7e85c9c2c260caf97101fdef194ed6b8b58bc34ce3eb"
+    },
+    {
+      "source": "public/vendor/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kDXr4.woff2",
+      "file": "assets/azimuth/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kDXr4.woff2",
+      "sha256": "c1df4596be5029233ed2afbb8b2f6ea20784b3fb1aa5d6b5c6519ccd85eb3dfb"
+    },
+    {
+      "source": "public/vendor/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kDnr4cXk.woff2",
+      "file": "assets/azimuth/fonts/vEFF2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6kDnr4cXk.woff2",
+      "sha256": "d84b0c5fda036126b6bb9205b144500fe08fec6d54d8bdd60645bc3e6577490b"
+    },
+    {
+      "source": "public/vendor/fontawesome/css/all.min.css",
+      "file": "assets/azimuth/fontawesome/css/all.min.css",
+      "sha256": "c22cfb6520a7fdbb738632834019acf47c78b1279462c0eb4cb83bae83ecb5a7"
+    },
+    {
+      "source": "public/vendor/fontawesome/LICENSE.txt",
+      "file": "assets/azimuth/fontawesome/LICENSE.txt",
+      "sha256": "0aa8f86525273b2efa4f40f4272a188e187704252170e979dc06879adf68d43c"
+    },
+    {
+      "source": "public/vendor/fontawesome/webfonts/fa-brands-400.ttf",
+      "file": "assets/azimuth/fontawesome/webfonts/fa-brands-400.ttf",
+      "sha256": "5656d596bc597165a42182f67b2b9f17d2ae47a9e3ef1b042b9a729739730705"
+    },
+    {
+      "source": "public/vendor/fontawesome/webfonts/fa-brands-400.woff2",
+      "file": "assets/azimuth/fontawesome/webfonts/fa-brands-400.woff2",
+      "sha256": "3a8924cd5203a28628716aedb5cef0943da4c3b44e3ffcee90ab06387b41c490"
+    },
+    {
+      "source": "public/vendor/fontawesome/webfonts/fa-regular-400.ttf",
+      "file": "assets/azimuth/fontawesome/webfonts/fa-regular-400.ttf",
+      "sha256": "5d02dc9b858e3c85a794f87e379857f4fedc4e26cf15001714a9a0e0b1d2294d"
+    },
+    {
+      "source": "public/vendor/fontawesome/webfonts/fa-regular-400.woff2",
+      "file": "assets/azimuth/fontawesome/webfonts/fa-regular-400.woff2",
+      "sha256": "2bccecf0bc7e96cd5ce4003abeb3ae9ee4a3d19158c4e6edfd2df32d2f0d5721"
+    },
+    {
+      "source": "public/vendor/fontawesome/webfonts/fa-solid-900.ttf",
+      "file": "assets/azimuth/fontawesome/webfonts/fa-solid-900.ttf",
+      "sha256": "fbbf06d7437aa30f3cd44c968380193545a8fc3eadfb7ad897bbb101eefec5a2"
+    },
+    {
+      "source": "public/vendor/fontawesome/webfonts/fa-solid-900.woff2",
+      "file": "assets/azimuth/fontawesome/webfonts/fa-solid-900.woff2",
+      "sha256": "9fc85f3a4544ab0d570c7f8f9bbb88db8d92c359b2707580ea8b07c75673eae2"
+    },
+    {
+      "source": "public/vendor/fontawesome/webfonts/fa-v4compatibility.ttf",
+      "file": "assets/azimuth/fontawesome/webfonts/fa-v4compatibility.ttf",
+      "sha256": "09663a36fc05e7190af8324b855105c5bb511ad94f94b81b34afee503279eca2"
+    },
+    {
+      "source": "public/vendor/fontawesome/webfonts/fa-v4compatibility.woff2",
+      "file": "assets/azimuth/fontawesome/webfonts/fa-v4compatibility.woff2",
+      "sha256": "4d4a2d7fd1c6684845cb174fdd7fc073bd64cb741286fb247f8b76c2b7b852c4"
+    }
+  ]
+}

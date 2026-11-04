@@ -1,0 +1,69 @@
+Scout website starter — Pack and Troop class examples
+
+Use index.html to choose an example, or customize.html to enter unit details,
+choose a library photo/Scouting logo or upload your own, and download a
+self-contained index.html with its images, fonts, and mobile navigation.
+Serve the source files over HTTP; browser modules do not run from file://.
+The downloaded page itself can be opened directly from disk.
+
+Before publishing: replace fictional content; confirm your public meeting
+details, costs, adult contact email, official unit application URL and calendar.
+Use only photos and logos you may publish and honor photo-release restrictions.
+
+The downloaded website includes a real contact form. Connect it to a hosted
+form service before exporting: see setup.html for a Formspree walkthrough.
+Create a unit-owned provider account, verify its recipient address, and paste
+the public HTTPS form endpoint into Form service address in the editor.
+Configure multiple recipients in the provider's dashboard if your plan supports
+it, or use a unit-owned group address that forwards to the adult membership team.
+The optional public backup email is displayed on the website; it does not set
+the form's recipients. Mail passwords and private API keys stay with the provider.
+
+Publish the page before testing the form. It uses native HTML POST; the service
+handles spam filtering, confirmation/error pages, and email delivery. Check
+each intended inbox and the reply address with a test from the published site.
+Automated checks use simulated submissions, not real email delivery.
+Class examples and the editor preview display disabled forms and send nothing.
+There is no member login or calendar database in the starter.
+
+Use Page sections to edit headings, descriptions, button labels and section
+images throughout the page. Your edits and image files stay in the browser tab. Save settings downloads a
+JSON file with your unit details, library choices, and uploaded images; keep it
+for your next update or the next volunteer. Load saved settings restores it.
+Uploads are limited to 8 MB / 24 megapixels and resized to fit 1600 pixels.
+Saved-image imports are checked before decoding and kept within a 5.12 MP
+combined pixel budget for the original logo/hero fields. Across all uploaded
+images the editor allows 24 megapixels and limits saved settings to 32 MB. Reloading clears unsaved work. The preview is sandboxed. Check links and real
+form delivery on the published site after exporting.
+
+For a host with a Content Security Policy, allow the chosen HTTPS provider in
+form-action. The class demo deliberately blocks form submission; do not copy
+that demonstration-only header into a live unit's hosting configuration.
+
+The Pack/Troop pages use Pack 39's actual Azimuth public-site CSS, fonts,
+components, and photography. Supplemental template rules are in template.css;
+the original public.css and azimuth-tokens.css are unmodified.
+
+library.html contains 91 reusable photos, Scouting logos, rank badges,
+leadership patches, and uniform references. It offers program/category/search
+filters and full-size image downloads. Cub Scout blue-shirt placement diagrams
+are tagged Pack only. Troop pages link to current official uniform guidance.
+Display images are resized WebP derivatives. Full-resolution JPEG downloads
+have location metadata removed while preserving the encoded picture data.
+Exports include the fonts the templates actually use.
+
+See assets/ASSET-SOURCES.txt and assets/corpus-manifest.json for provenance and
+hashes. The source CSS retains its GPL-2.0-or-later notice and included license;
+fonts and Font Awesome retain their supplied licenses. Photographs and Scouting
+marks retain their original rights and usage terms. No blanket license grants
+new rights to those images. Cadre's logo identifies the class hub only.
+No tenant/member data, credentials, or application services are included.
+The standalone toolkit is published at github.com/cadre-software/scout-unit-websites.
+Its software is GPL-2.0-or-later; asset rights remain separate as described above.
+
+WordPress patterns and a Squarespace native-section recipe are separate
+formats. This HTML is not an importable native theme for those builders.
+
+The editor cannot write to the server or publish changes. The downloaded website
+contains no editor. Only your hosting account can change the live site; protect
+that account with a unique password and two-step sign-in.

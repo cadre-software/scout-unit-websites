@@ -1,0 +1,21 @@
+/* Standalone additions only. Pack 39's public.css and tokens are unmodified. */
+.template-demo-bar{padding:14px 24px;background:var(--forest-deep);color:var(--warm-white);font-family:var(--font-ui);font-size:.85rem;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.template-demo-bar nav{display:flex;gap:20px;flex-wrap:wrap}.template-demo-bar a{color:var(--trail-gold-light);text-decoration:underline;text-underline-offset:3px}
+.template-meeting{background:var(--stone-light);padding:24px 0}.template-meeting .wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}.template-meeting h2{font-size:1.1rem;margin-bottom:8px}.template-meeting p{margin:0}
+.unit-wordmark{display:inline-flex;align-items:center;font-family:var(--font-ui);font-size:1.5rem;font-weight:700;color:var(--warm-white);text-transform:uppercase;letter-spacing:.04em;line-height:1.1}
+.site-branding .custom-logo{max-width:min(280px,55vw);object-fit:contain}.skip-link{position:fixed;top:-100px;left:16px;z-index:11000;padding:12px;background:var(--warm-white);color:var(--forest-deep)}.skip-link:focus{top:16px}
+.template-reference{margin-top:32px}.template-reference summary{font-family:var(--font-ui);font-weight:600;cursor:pointer;color:var(--forest-deep);padding:16px 0}.template-reference img{max-width:720px;width:100%;height:auto;object-fit:contain;margin:16px auto}.template-reference figcaption{font-size:.9rem;text-align:center;color:var(--bark-light)}
+.template-program-mark{max-height:190px;max-width:240px;width:auto;margin:0 auto 24px}.template-links{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--font-ui)}.template-calendar-link{margin-top:24px}.template-contact .btn{margin:16px 16px 16px 0}.template-costs{margin-top:24px}.template-costs p{max-width:65ch}
+section[id],main[id]{scroll-margin-top:120px}.template-photo-strip{display:flex;overflow-x:auto}.template-photo-strip .photo-strip__item{flex-shrink:0}.template-photo-strip:focus-visible{outline:3px solid var(--trail-gold);outline-offset:-3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--trail-gold);outline-offset:4px}[hidden]{display:none!important}
+/* Long rank names must not widen the Troop's three-column mobile band. */
+.den-badge{min-width:0}.den-badge__name{overflow-wrap:anywhere}
+.template-contact-form{max-width:720px;margin:24px 0;text-align:left}.template-contact-form fieldset{border:0;padding:0;margin:0;min-width:0}.template-contact-form textarea{resize:vertical;min-height:140px}.template-contact-form button:disabled{cursor:default;opacity:.65}.template-email-backup{font-size:.9rem}.template-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.template-contact-form input:focus-visible,.template-contact-form textarea:focus-visible{outline:2px solid var(--forest-deep);outline-offset:2px}
+@media(max-width:640px){.template-meeting .wrap{grid-template-columns:1fr;gap:16px}.template-demo-bar{padding:16px}.template-demo-bar nav{gap:16px}.unit-wordmark{font-size:1.3rem}.template-links{gap:16px}.template-reference img{max-width:100%}}
+
+.template-contact-form input,.template-contact-form textarea{scroll-margin-top:160px;border-color:var(--bark-light);font-size:1rem}
+/* Volunteer-entered copy must wrap even without spaces. */
+.hero h1,.section h2,.section h3,.section p,.template-meeting p,.site-footer p,.site-footer a,.btn{overflow-wrap:anywhere}
+
+.site-content,.site-header,.site-footer{overflow-wrap:anywhere}
