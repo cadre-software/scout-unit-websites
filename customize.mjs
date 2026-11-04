@@ -101,7 +101,7 @@ window.addEventListener('message',event=>{
  }
  sectionSelect.value=data.section;chooseSection();
  const panel=target?.closest('.image-control')||document.querySelector(`[data-section="${data.section}"]`)||document.querySelector(`[data-editor-panel="${data.section}"]`);
- const heading=panel?.querySelector('h2,h3,legend')||panel;if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});}
+ const heading=target?.closest('.image-control')?.querySelector('h3')||target?.labels?.[0]||panel?.querySelector('h2,h3,legend')||panel;if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start',behavior:'instant'});}
  show('Editing '+sectionSelect.selectedOptions[0].textContent+'. Changes stay in your local draft.');
 });
 function makeSelect(name,label,before){

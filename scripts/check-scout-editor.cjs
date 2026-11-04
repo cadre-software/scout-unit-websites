@@ -12,6 +12,15 @@ async function showEditorField(page,selector){
  if(group)await page.locator('#content-section').selectOption(group);
 }
 
+async function clickPreviewText(page,target){
+ // Center text below the preview's fixed header; assert the real hit target,
+ // then use an actual pointer click without the driver's second auto-scroll.
+ await page.locator('#preview').scrollIntoViewIfNeeded();
+ await target.evaluate(el=>el.scrollIntoView({block:'center',behavior:'instant'}));
+ const exposed=await target.evaluate(el=>{const r=el.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {ok:hit===el||el.contains(hit),target:el.outerHTML,hit:hit?.outerHTML,rect:r.toJSON()};});assert(exposed.ok,JSON.stringify(exposed));
+ const box=await target.boundingBox();await page.mouse.click(box.x+box.width/2,box.y+box.height/2);
+}
+
 (async()=>{
  await fs.mkdir(output,{recursive:true});
  const {CONTENT_SECTIONS,imageSlots,defaultContent}=await import(pathToFileURL(path.resolve('page-content.mjs')));
@@ -66,6 +75,10 @@ async function showEditorField(page,selector){
    await page.waitForFunction(()=>document.querySelector('#preview').srcdoc.includes('data-preview-section=\"contact\"'));
    const preview=page.frameLocator('#preview');
    await preview.locator('.preview-edit-button').first().waitFor();
+   await preview.locator('body').evaluate(async()=>{if(document.readyState!=='complete')await new Promise(resolve=>addEventListener('load',resolve,{once:true}));await document.fonts.ready;});
+   await preview.locator('.hero__content p').click();await page.waitForFunction(()=>document.querySelector('#content-section').value==='unit');assert.equal(await page.locator('#intro').isVisible(),true);
+   await clickPreviewText(page,preview.locator('.template-costs p').first());await page.waitForFunction(()=>document.activeElement.htmlFor==='costs');assert.equal(await page.locator('#costs').isVisible(),true);
+   await clickPreviewText(page,preview.locator('.template-meeting h2').first());await page.waitForFunction(()=>document.activeElement.htmlFor==='copy-whenHeading');assert.equal(await page.locator('#copy-whenHeading').isVisible(),true);
    await preview.locator('#family h2').click();await page.waitForFunction(()=>document.querySelector('#content-section').value==='family');
    assert.equal(await page.locator('#copy-familyTitle').isVisible(),true);
    assert.equal(await preview.locator('#family').evaluate(el=>getComputedStyle(el).outlineStyle),'solid');
