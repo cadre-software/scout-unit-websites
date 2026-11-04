@@ -19,3 +19,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero h1,.section h2,.section h3,.section p,.template-meeting p,.site-footer p,.site-footer a,.btn{overflow-wrap:anywhere}
 
 .site-content,.site-header,.site-footer{overflow-wrap:anywhere}
+/* Selection affordances exist only inside the sandboxed editor preview. */
+[data-preview-editor] [data-edit-section]:not(.site-header){position:relative}
+[data-preview-editor] [data-edit-section]{cursor:pointer;outline-offset:-3px}
+[data-preview-editor] [data-edit-section]:hover{outline:2px dashed var(--trail-gold)}
+[data-preview-editor] [data-edit-section].preview-selected{outline:3px solid var(--trail-gold)}
+[data-preview-editor] .template-meeting{padding-top:68px}
+.preview-edit-button{position:absolute;z-index:30;top:8px;right:8px;min-height:44px;max-width:calc(100% - 16px);padding:8px 12px;border:1px solid var(--forest-deep);border-radius:4px;background:var(--warm-white);color:var(--forest-deep);font:600 14px var(--font-ui);cursor:pointer}
+.preview-edit-button:hover,.preview-edit-button:focus-visible{background:var(--trail-gold-light)}

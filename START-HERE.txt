@@ -26,7 +26,8 @@ Automated checks use simulated submissions, not real email delivery.
 Class examples and the editor preview display disabled forms and send nothing.
 There is no member login or calendar database in the starter.
 
-Use Page sections to edit headings, descriptions, button labels and section
+Click a section/photo in the preview, use its Edit button, or choose a section
+to edit headings, descriptions, button labels and section
 images throughout the page. Your edits and image files stay in the browser tab. Save settings downloads a
 JSON file with your unit details, library choices, and uploaded images; keep it
 for your next update or the next volunteer. Load saved settings restores it.

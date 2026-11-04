@@ -1282,5 +1282,5 @@ export const ASSETS=[
     "usage": "Scouting marks and reference artwork retain their original terms; not covered by a software license."
   }
 ];
-export const STYLE_FILES=["assets/azimuth/fonts/fonts.css","assets/azimuth/fontawesome/css/all.min.css","assets/azimuth/azimuth-tokens.css","assets/azimuth/public.css","template.css?v=4"];
+export const STYLE_FILES=["assets/azimuth/fonts/fonts.css","assets/azimuth/fontawesome/css/all.min.css","assets/azimuth/azimuth-tokens.css","assets/azimuth/public.css","template.css?v=5"];
 export const SOURCE_REVISION="f8504cd5b277714fb6d618ef60655d7f68fe809e";

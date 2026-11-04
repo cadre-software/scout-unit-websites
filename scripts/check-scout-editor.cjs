@@ -12,6 +12,15 @@ async function showEditorField(page,selector){
  if(group)await page.locator('#content-section').selectOption(group);
 }
 
+async function clickPreviewText(page,target){
+ // Center text below the preview's fixed header; assert the real hit target,
+ // then use an actual pointer click without the driver's second auto-scroll.
+ await page.locator('#preview').scrollIntoViewIfNeeded();
+ await target.evaluate(el=>el.scrollIntoView({block:'center',behavior:'instant'}));
+ const exposed=await target.evaluate(el=>{const r=el.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {ok:hit===el||el.contains(hit),target:el.outerHTML,hit:hit?.outerHTML,rect:r.toJSON()};});assert(exposed.ok,JSON.stringify(exposed));
+ const box=await target.boundingBox();await page.mouse.click(box.x+box.width/2,box.y+box.height/2);
+}
+
 (async()=>{
  await fs.mkdir(output,{recursive:true});
  const {CONTENT_SECTIONS,imageSlots,defaultContent}=await import(pathToFileURL(path.resolve('page-content.mjs')));
@@ -47,6 +56,10 @@ async function showEditorField(page,selector){
  assert.throws(()=>stripJPEGMetadata(Buffer.from([255,216,255,225,0,50])),/Invalid/);
 
  const expansion={format:'cadre-scout-website',version:2,settings:{type:'pack',name:'Do not apply expanded images',images:Object.fromEntries(imageSlots('pack').slice(0,9).map(slot=>[slot.id,{choice:slot.choice,data:'data:image/jpeg;base64,'+noisy.toString('base64'),alt:'Synthetic noise'}]))}};
+ const previewMarkup=renderSite({type:'pack'},{preview:true,previewToken:'a'.repeat(32),previewParent:'https://editor.unit.example',previewSelected:'hero'});
+ assert(previewMarkup.includes('data-preview-editor="')&&previewMarkup.includes('preview-runtime.js'));
+ assert(!renderSite({type:'pack'},{preview:false,previewToken:'a'.repeat(32),previewParent:'https://editor.unit.example'}).includes('data-edit-section="'));
+ assert(!renderSite({type:'pack'},{preview:true,previewToken:'a'.repeat(32),previewParent:'javascript:alert(1)'}).includes('data-preview-editor="'));
  const browser=await chromium.launch();
  try{
   for(const kind of ['desktop','mobile']){
@@ -61,6 +74,37 @@ async function showEditorField(page,selector){
    assert.equal(await page.locator('#content-section').inputValue(),'links');assert.equal(await page.evaluate(()=>document.activeElement.id),'formEndpoint');
    await page.waitForFunction(()=>document.querySelector('#preview').srcdoc.includes('data-preview-section=\"contact\"'));
    const preview=page.frameLocator('#preview');
+   await preview.locator('.preview-edit-button').first().waitFor();
+   await preview.locator('body').evaluate(async()=>{if(document.readyState!=='complete')await new Promise(resolve=>addEventListener('load',resolve,{once:true}));await document.fonts.ready;});
+   await preview.locator('.hero__content p').click();await page.waitForFunction(()=>document.querySelector('#content-section').value==='unit');assert.equal(await page.locator('#intro').isVisible(),true);
+   await clickPreviewText(page,preview.locator('.template-costs p').first());await page.waitForFunction(()=>document.activeElement.htmlFor==='costs');assert.equal(await page.locator('#costs').isVisible(),true);
+   await clickPreviewText(page,preview.locator('.template-meeting h2').first());await page.waitForFunction(()=>document.activeElement.htmlFor==='copy-whenHeading');assert.equal(await page.locator('#copy-whenHeading').isVisible(),true);
+   await preview.locator('#family h2').click();await page.waitForFunction(()=>document.querySelector('#content-section').value==='family');
+   assert.equal(await page.locator('#copy-familyTitle').isVisible(),true);
+   assert.equal(await preview.locator('#family').evaluate(el=>getComputedStyle(el).outlineStyle),'solid');
+   const oldToken=await preview.locator('body').getAttribute('data-preview-editor');
+   await page.locator('#copy-familyTitle').fill('Preview-selected family title');
+   await preview.locator('#family h2').filter({hasText:'Preview-selected family title'}).waitFor();
+   await preview.locator('#outdoors .preview-edit-button').focus();await preview.locator('#outdoors .preview-edit-button').press('Enter');
+   await page.waitForFunction(()=>document.querySelector('#content-section').value==='outdoors');
+   await preview.locator('#family .split-block__image').click();await page.waitForFunction(()=>document.querySelector('#content-section').value==='family');
+   assert.equal(await page.locator('#image-family-choice').isVisible(),true);
+   const token=await preview.locator('body').getAttribute('data-preview-editor');assert.notEqual(token,oldToken);
+   await page.evaluate(()=>{window.previewMessageObservations=[];window.addEventListener('message',event=>{if(event.data?.probe)window.previewMessageObservations.push({probe:event.data.probe,section:document.querySelector('#content-section').value});});});
+   await page.evaluate(token=>window.postMessage({type:'cadre-preview-select',token,section:'calendar',field:'',probe:'wrong-source'},location.origin),token);
+   await preview.locator('body').evaluate((body,oldToken)=>parent.postMessage({type:'cadre-preview-select',token:oldToken,section:'calendar',field:'',probe:'stale'},body.dataset.previewParent),oldToken);
+   await preview.locator('body').evaluate(body=>{
+    for(const [probe,data] of Object.entries({unknown:{section:'__proto__',field:''},field:{section:'calendar',field:'name'},type:{section:'calendar',field:{}}}))parent.postMessage({type:'cadre-preview-select',token:body.dataset.previewEditor,probe,...data},body.dataset.previewParent);
+   });
+   await page.evaluate(token=>window.dispatchEvent(new MessageEvent('message',{source:document.querySelector('#preview').contentWindow,origin:location.origin,data:{type:'cadre-preview-select',token,section:'calendar',field:'',probe:'wrong-origin'}})),token);
+   await page.evaluate(()=>{const frame=document.createElement('iframe');frame.id='unrelated-preview';frame.sandbox='allow-scripts';frame.srcdoc='<body>Unrelated frame</body>';document.body.append(frame);});
+   const unrelated=page.frameLocator('#unrelated-preview');await unrelated.locator('body').waitFor();
+   await unrelated.locator('body').evaluate((body,data)=>parent.postMessage({type:'cadre-preview-select',token:data.token,section:'calendar',field:'',probe:'wrong-frame'},data.origin),{token,origin:new URL(base).origin});
+   await page.waitForFunction(()=>window.previewMessageObservations.length===7);
+   await page.locator('#unrelated-preview').evaluate(el=>el.remove());
+   assert((await page.evaluate(()=>window.previewMessageObservations)).every(item=>item.section==='family'),'forged, stale, unknown and mismatched messages are ignored');
+   assert.equal(await page.locator('#preview').getAttribute('sandbox'),'allow-scripts');
+
    await showEditorField(page,'#copy-heroTitle');await page.locator('#copy-heroTitle').fill('Welcome <friends>');await showEditorField(page,'#copy-heroAccent');await page.locator('#copy-heroAccent').fill('Adventure together');
    await page.waitForFunction(()=>document.querySelector('#preview').srcdoc.includes('Welcome &lt;friends&gt;'));
    await preview.locator('h1').filter({hasText:'Welcome <friends>'}).waitFor();
@@ -102,7 +146,7 @@ async function showEditorField(page,selector){
    await stress.goto('https://layout.unit.example/');await stress.locator('.hero p').evaluate(el=>{el.textContent='x'.repeat(600);});
    assert(await stress.locator('.hero p').evaluate(el=>el.scrollWidth<=el.clientWidth+1),'unbroken hero invitation wraps');
    assert(await stress.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1));await stress.close();
-   assert(html.includes('Our families explore'));assert(html.includes('alt="Families at our picnic"'));assert(html.includes('alt="Our outdoor adventure"'));assert(!html.includes('customize.mjs'));assert(!html.includes('id="customize"'));assert.deepEqual(writes,[],'editing has no server write requests');
+   assert(html.includes('Our families explore'));assert(html.includes('alt="Families at our picnic"'));assert(html.includes('alt="Our outdoor adventure"'));assert(!html.includes('customize.mjs'));assert(!html.includes('src="preview-runtime.js'));assert(!html.includes('data-preview-editor="'));assert(!html.includes('data-edit-section="'));assert(!html.includes('id="customize"'));assert.deepEqual(writes,[],'editing has no server write requests');
    const box=await page.locator('#content-section').boundingBox();assert(box.width>200);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1));
    const button=page.locator('a.button').first();assert.equal(await button.evaluate(el=>getComputedStyle(el).display),'inline-flex');

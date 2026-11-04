@@ -112,8 +112,9 @@ async function showEditorField(page,selector){
      await preview.locator('body').evaluate(async()=>{for(const img of document.images)img.loading='eager';await Promise.all([...document.images].map(img=>img.decode()));await document.fonts.ready;});
      assert.equal(await preview.locator('body').evaluate(()=>[...document.fonts].some(face=>face.family==='Barlow Condensed'&&face.status==='loaded')),true,'preview step numbers use the original display font');
      assert((await preview.locator('.unit-wordmark').textContent()).includes('Pack 123'));
-     const previewFrame=await (await page.locator('#preview').elementHandle()).contentFrame();
-     await Promise.all([previewFrame.waitForURL('about:srcdoc#visit',{timeout:5000}),preview.locator('.hero .button').first().click()]);
+     await preview.locator('.preview-edit-button').first().waitFor();
+     await preview.locator('.hero .button').first().click();
+     await page.waitForFunction(()=>document.querySelector('#content-section').value==='hero');
      assert.equal(await preview.locator('#visit').count(),1);
      assert.equal(await page.locator('#preview').getAttribute('sandbox'),'allow-scripts');
      // The runtime must work inside the opaque preview under the actual CSP.
