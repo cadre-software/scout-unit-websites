@@ -2,7 +2,7 @@
 const token=document.body.dataset.previewEditor,origin=document.body.dataset.previewParent;
 if(!token||!origin||parent===window)return;
 const roots=[...document.querySelectorAll('[data-edit-section]')];
-const names={unit:'Meeting information',media:'Logo and welcome photo',hero:'Welcome',about:'What we do',family:'Family adventure / youth leadership',outdoors:'Outdoor adventures',ranks:'Dens / advancement',visit:'Visiting and joining',families:'New families and uniforms',calendar:'Calendar',contact:'Contact and navigation'};
+const names={announcement:'Announcement',unit:'Meeting information',media:'Logo and welcome photo',hero:'Welcome',about:'What we do',family:'Family adventure / youth leadership',outdoors:'Outdoor adventures',ranks:'Dens / advancement',visit:'Visiting and joining',families:'New families and uniforms',calendar:'Calendar',contact:'Contact and navigation'};
 function mark(section,clicked=null){const group=section==='media'?'hero':section==='links'?'contact':section;for(const root of roots)root.classList.toggle('preview-selected',clicked?root===clicked:root.dataset.editSection===group);}
 mark(document.body.dataset.previewSelected);
 for(const root of roots){

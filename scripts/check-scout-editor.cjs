@@ -39,7 +39,7 @@ async function clickPreviewText(page,target){
   if(['calendarEmpty','uniformBody'].includes(key))continue;
   assert(rendered.includes(text.replaceAll('<','&lt;').replaceAll('>','&gt;')),key+' is rendered');
  }
- assert.equal(JSON.parse(writeSettings({...legacy,content:allText})).version,2);
+ assert.equal(JSON.parse(writeSettings({...legacy,content:allText})).version,3);
  const changedRank=renderSite({type:'pack',images:{rank0:{choice:'rank-wolf.png'}}});
  assert(changedRank.includes('den-badge__name\">Wolf</div>'));assert(!changedRank.includes('den-badge__name\">Lion</div>'));
  assert(!renderSite({type:'pack',images:{family:{choice:''}}}).includes('split-block__image\"><img src=\"assets/display/camping-cookout.jpg.webp'),'choosing no library image clears that section image');
@@ -149,7 +149,7 @@ async function clickPreviewText(page,target){
    assert(html.includes('Our families explore'));assert(html.includes('alt="Families at our picnic"'));assert(html.includes('alt="Our outdoor adventure"'));assert(!html.includes('customize.mjs'));assert(!html.includes('src="preview-runtime.js'));assert(!html.includes('data-preview-editor="'));assert(!html.includes('data-edit-section="'));assert(!html.includes('id="customize"'));assert.deepEqual(writes,[],'editing has no server write requests');
    const box=await page.locator('#content-section').boundingBox();assert(box.width>200);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1));
-   const button=page.locator('a.button').first();assert.equal(await button.evaluate(el=>getComputedStyle(el).display),'inline-flex');
+   const button=page.locator('a.button').first();assert(['inline-flex','flex'].includes(await button.evaluate(el=>getComputedStyle(el).display)));assert((await button.boundingBox()).height>=44);
    assert.equal(await button.evaluate(el=>getComputedStyle(el).textDecorationLine),'none');
    await page.evaluate(()=>window.scrollTo(0,0));
    await page.screenshot({path:path.join(output,kind+'-editor.png')});

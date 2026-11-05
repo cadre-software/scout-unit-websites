@@ -1,4 +1,4 @@
-import {STYLE_FILES,ASSETS} from './corpus.mjs?v=5';
+import {STYLE_FILES,ASSETS} from './corpus.mjs?v=6';
 const cache=new Map();
 export async function dataURL(url){
  if(!cache.has(url))cache.set(url,(async()=>{
@@ -33,10 +33,10 @@ export async function templateStyles(){
 export async function embeddedImages(html){
  const doc=new DOMParser().parseFromString(html,'text/html');
  const allowed=new Set(ASSETS.flatMap(a=>[a.src,a.thumb]));
- await Promise.all([...doc.querySelectorAll('img')].map(async image=>{
-  const src=image.getAttribute('src');if(!src||src.startsWith('data:'))return;
+ await Promise.all([...doc.querySelectorAll('img,link[rel="icon"]')].map(async image=>{
+  const attribute=image.tagName==='LINK'?'href':'src',src=image.getAttribute(attribute);if(!src||src.startsWith('data:'))return;
   if(!allowed.has(src))throw new Error('Unexpected template image.');
-  image.setAttribute('src',await dataURL(src));
+  image.setAttribute(attribute,await dataURL(src));
  }));
  return '<!doctype html>\n'+doc.documentElement.outerHTML;
 }

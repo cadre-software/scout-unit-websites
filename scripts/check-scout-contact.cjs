@@ -19,7 +19,7 @@ async function showEditorField(page,selector){
  const {readSettings}=await import(pathToFileURL(path.resolve('configuration.mjs')));
  assert.equal(httpsURL('https://user:secret@forms.unit.example/contact'),'');
  assert(!renderSite({type:'pack',formEndpoint:'javascript:alert(1)'},{demo:false}).includes('action="javascript:'));
- assert.throws(()=>readSettings({format:'cadre-scout-website',version:3,settings:{type:'pack'}}));
+ assert.throws(()=>readSettings({format:'cadre-scout-website',version:4,settings:{type:'pack'}}));
  let exported;
  const {checkImageSize,imageDimensions}=await import(pathToFileURL(path.resolve('image-limits.mjs')));
  const {ASSETS}=await import(pathToFileURL(path.resolve('corpus.mjs')));
@@ -45,7 +45,7 @@ async function showEditorField(page,selector){
    const savedPromise=page.waitForEvent('download');await page.locator('#save-settings').click();const saved=await savedPromise;
    const savedFile=path.join(output,kind+'-settings.json');await saved.saveAs(savedFile);const settings=JSON.parse(await fs.readFile(savedFile,'utf8'));
    assert.equal(settings.settings.name,'Pack <127> & Friends');assert(settings.settings.logo.startsWith('data:image/png;'));
-   await page.reload();await page.waitForFunction(()=>!document.querySelector('#download').disabled);assert.equal(await page.locator('#name').inputValue(),'Pack 123');
+   await page.waitForFunction(()=>document.querySelector('#draft-status').textContent.startsWith('Draft saved'));await page.reload();await page.waitForFunction(()=>!document.querySelector('#download').disabled);assert.equal(await page.locator('#name').inputValue(),'Pack <127> & Friends');await showEditorField(page,'#name');await page.locator('#name').fill('Temporary edit before import');
    await page.locator('#load-settings').setInputFiles(savedFile);await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('Settings loaded'));
    assert.equal(await page.locator('#name').inputValue(),'Pack <127> & Friends');assert.equal(await page.locator('#formEndpoint').inputValue(),endpoint);
    assert.equal(await page.locator('#email').inputValue(),'');assert.equal(await page.locator('#photoChoice').inputValue(),'camping-cookout.jpg');assert.equal(await page.locator('#reviewed').isChecked(),false);

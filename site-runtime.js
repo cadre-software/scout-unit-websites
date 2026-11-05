@@ -1,4 +1,10 @@
 (()=>{
+const announcement=document.querySelector('[data-announcement-expires]');
+if(announcement){
+ const expires=announcement.dataset.announcementExpires;let timer;
+ const refresh=()=>{clearTimeout(timer);const now=new Date(),today=String(now.getFullYear()).padStart(4,'0')+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');announcement.hidden=!/^\d{4}-\d{2}-\d{2}$/.test(expires)||today>expires;if(!announcement.hidden){const midnight=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1);timer=setTimeout(refresh,+midnight-+now);}};
+ refresh();addEventListener('pageshow',refresh);document.addEventListener('visibilitychange',refresh);
+}
 const header=document.querySelector('.site-header'),menu=document.querySelector('.main-navigation'),toggle=document.querySelector('.menu-toggle');
 if(!header||!menu||!toggle)return;
 const mobile=matchMedia('(max-width:640px)');

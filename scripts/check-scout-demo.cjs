@@ -106,7 +106,7 @@ async function showEditorField(page,selector){
      await page.locator('#asset-program').selectOption('');await page.locator('#asset-group').selectOption('');
     }
     if(file==='customize.html'){
-     await page.waitForFunction(()=>document.querySelector('#preview').srcdoc.includes('<style>'));
+     await page.waitForFunction(()=>!document.querySelector('#download').disabled);
      for(const hidden of await page.locator('[hidden]').all())assert.equal(await hidden.isHidden(),true);
      const preview=page.frameLocator('#preview');
      await preview.locator('body').evaluate(async()=>{for(const img of document.images)img.loading='eager';await Promise.all([...document.images].map(img=>img.decode()));await document.fonts.ready;});
@@ -154,6 +154,7 @@ async function showEditorField(page,selector){
      assert(html.includes('Troop &lt;127&gt; &amp; Friends'));assert(html.includes('https://example.org/apply'));
      assert(html.includes('data:font/')||html.includes('data:application/'));
      assert(html.includes(`<script>${SITE_RUNTIME}</script>`));assert.equal((html.match(/<script/g)||[]).length,1);assert(!html.includes('<aside class="template-demo-bar"'));assert(!html.includes('Sample visit'));
+     await page.waitForFunction(()=>document.querySelector('#draft-status').textContent.startsWith('Draft saved'));
      const standalone=await context.newPage();const remote=[];standalone.on('request',r=>{if(/^https?:/.test(r.url()))remote.push(r.url())});await context.setOffline(true);await standalone.goto(pathToFileURL(path.join(output,name+'-export.html')).href);
      assert.equal(await standalone.locator('h1').innerText(),'THE ADVENTURE\nNEVER ENDS');
      assert.equal(await standalone.locator('.unit-wordmark').textContent(),'Troop <127> & Friends');
@@ -164,20 +165,20 @@ async function showEditorField(page,selector){
      assert.deepEqual(remote,[],'export needs no network resources');
      if(name==='mobile')await mobileMenu(standalone);
      await geometry(standalone);await standalone.close();await context.setOffline(false);
-     await page.reload();await page.waitForFunction(()=>document.querySelector('#preview').srcdoc.includes('<style>'));
-     assert.equal(await page.locator('#name').inputValue(),'Pack 123');
+     await page.reload();await page.waitForFunction(()=>!document.querySelector('#download').disabled);
+     assert.equal(await page.locator('#name').inputValue(),'Troop <127> & Friends','reload resumes the saved device draft');
      assert.equal(await page.locator('#photo-file').inputValue(),'');
     }
     await page.screenshot({path:path.join(output,`${name}-${file.replace('.html','')}.png`),fullPage:true});
    }
    if(name==='desktop'){
-    const race=await context.newPage();
+    const imageRaceContext=await browser.newContext();const race=await imageRaceContext.newPage();
     await race.addInitScript(()=>{
      const decode=window.createImageBitmap.bind(window);window.pendingDecodes=[];
      window.createImageBitmap=async(...args)=>{const bitmap=await decode(...args);return new Promise(resolve=>window.pendingDecodes.push(()=>resolve(bitmap)));};
     });
     await race.goto(base+'customize.html');
-    await race.waitForFunction(()=>document.querySelector('#preview').srcdoc.includes('<style>'));
+    await race.waitForFunction(()=>!document.querySelector('#download').disabled);
     await showEditorField(race,'#logo-file');await race.locator('#logo-file').setInputFiles({name:'logo.png',mimeType:'image/png',buffer:pixel});
     await race.waitForFunction(()=>window.pendingDecodes.length===1);
     await race.locator('#clear-logo').click();
@@ -194,20 +195,20 @@ async function showEditorField(page,selector){
     await race.evaluate(()=>window.pendingDecodes.shift()());
     await race.waitForFunction(()=>!document.querySelector('#download').disabled);
     assert.equal(await race.frameLocator('#preview').locator('.identity img').getAttribute('src'),newest,'an older decode must not replace a newer selection');
-    await race.close();
+    await imageRaceContext.close();
     const chosen=await context.newPage();await chosen.goto(base+'customize.html?type=troop&photoChoice=platform%2Fphotos%2Fcanyon-hike.jpg&logoChoice=bsa-fleur-de-lis-color.png');
-    await chosen.waitForFunction(()=>document.querySelector('#preview').srcdoc.includes('<style>'));
+    await chosen.waitForFunction(()=>!document.querySelector('#download').disabled);
     assert.equal(await chosen.locator('#photoChoice').inputValue(),'platform/photos/canyon-hike.jpg');
     assert.equal(await chosen.locator('#logoChoice').inputValue(),'bsa-fleur-de-lis-color.png');
     assert((await chosen.frameLocator('#preview').locator('.hero__bg img').getAttribute('src')).endsWith('canyon-hike.jpg.webp'));
-    const defaultPack=await context.newPage();await defaultPack.goto(base+'customize.html');await defaultPack.waitForFunction(()=>!document.querySelector('#download').disabled);await showEditorField(defaultPack,'#formEndpoint');await defaultPack.locator('#formEndpoint').fill('https://forms.unit.example/contact');await defaultPack.locator('#reviewed').check();
+    const defaultPackContext=await browser.newContext();const defaultPack=await defaultPackContext.newPage();await defaultPack.goto(base+'customize.html');await defaultPack.waitForFunction(()=>!document.querySelector('#download').disabled);await showEditorField(defaultPack,'#formEndpoint');await defaultPack.locator('#formEndpoint').fill('https://forms.unit.example/contact');await defaultPack.locator('#reviewed').check();
     const packDownload=defaultPack.waitForEvent('download');await defaultPack.locator('#download').click();const packFile=await packDownload;const savedPack=path.join(output,'default-pack-export.html');await packFile.saveAs(savedPack);
     assert((await fs.stat(savedPack)).size<5*1024*1024,'default Pack export must stay under 5 MiB with its fonts and images');
     const defaultOffline=await context.newPage();await context.setOffline(true);await defaultOffline.goto(pathToFileURL(savedPack).href);await defaultOffline.evaluate(async()=>{for(const img of document.images)img.loading='eager';await Promise.all([...document.images].map(img=>img.decode()));await document.fonts.ready;});
     assert.equal(await defaultOffline.locator('img[src^="data:"]').count(),await defaultOffline.locator('img').count());
     assert.equal(await defaultOffline.evaluate(()=>[...document.fonts].some(face=>face.family==='Font Awesome 6 Free'&&face.status==='loaded')),true);
     assert.equal(await defaultOffline.evaluate(()=>[...document.fonts].some(face=>face.family==='Barlow Condensed'&&face.status==='loaded')),true,'offline step numbers use the original display font');
-    await defaultOffline.locator('summary').click();await geometry(defaultOffline);await defaultOffline.screenshot({path:path.join(output,'offline-pack.png'),fullPage:true});await defaultOffline.close();await context.setOffline(false);await defaultPack.close();
+    await defaultOffline.locator('summary').click();await geometry(defaultOffline);await defaultOffline.screenshot({path:path.join(output,'offline-pack.png'),fullPage:true});await defaultOffline.close();await context.setOffline(false);await defaultPackContext.close();
     const broken='**/assets/display/platform/photos/canyon-hike.jpg.webp';await chosen.route(broken,route=>route.abort());
     await showEditorField(chosen,'#formEndpoint');await chosen.locator('#formEndpoint').fill('https://forms.unit.example/contact');await chosen.locator('#reviewed').check();await chosen.locator('#download').click();
     await chosen.waitForFunction(()=>document.querySelector('#status').textContent.includes('could not be included'));
