@@ -1,5 +1,11 @@
 // Fixed trusted behavior; user content never enters this JavaScript.
 export const SITE_RUNTIME=`(()=>{
+const announcement=document.querySelector('[data-announcement-expires]');
+if(announcement){
+ const expires=announcement.dataset.announcementExpires;let timer;
+ const refresh=()=>{clearTimeout(timer);const now=new Date(),today=String(now.getFullYear()).padStart(4,'0')+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');announcement.hidden=!/^\\d{4}-\\d{2}-\\d{2}$/.test(expires)||today>expires;if(!announcement.hidden){const midnight=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1);timer=setTimeout(refresh,+midnight-+now);}};
+ refresh();addEventListener('pageshow',refresh);document.addEventListener('visibilitychange',refresh);
+}
 const header=document.querySelector('.site-header'),menu=document.querySelector('.main-navigation'),toggle=document.querySelector('.menu-toggle');
 if(!header||!menu||!toggle)return;
 const mobile=matchMedia('(max-width:640px)');
@@ -28,7 +34,7 @@ export const PREVIEW_RUNTIME=`(()=>{
 const token=document.body.dataset.previewEditor,origin=document.body.dataset.previewParent;
 if(!token||!origin||parent===window)return;
 const roots=[...document.querySelectorAll('[data-edit-section]')];
-const names={unit:'Meeting information',media:'Logo and welcome photo',hero:'Welcome',about:'What we do',family:'Family adventure / youth leadership',outdoors:'Outdoor adventures',ranks:'Dens / advancement',visit:'Visiting and joining',families:'New families and uniforms',calendar:'Calendar',contact:'Contact and navigation'};
+const names={announcement:'Announcement',unit:'Meeting information',media:'Logo and welcome photo',hero:'Welcome',about:'What we do',family:'Family adventure / youth leadership',outdoors:'Outdoor adventures',ranks:'Dens / advancement',visit:'Visiting and joining',families:'New families and uniforms',calendar:'Calendar',contact:'Contact and navigation'};
 function mark(section,clicked=null){const group=section==='media'?'hero':section==='links'?'contact':section;for(const root of roots)root.classList.toggle('preview-selected',clicked?root===clicked:root.dataset.editSection===group);}
 mark(document.body.dataset.previewSelected);
 for(const root of roots){

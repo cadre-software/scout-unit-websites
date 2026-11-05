@@ -27,3 +27,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 [data-preview-editor] .template-meeting{padding-top:68px}
 .preview-edit-button{position:absolute;z-index:30;top:8px;right:8px;min-height:44px;max-width:calc(100% - 16px);padding:8px 12px;border:1px solid var(--forest-deep);border-radius:4px;background:var(--warm-white);color:var(--forest-deep);font:600 14px var(--font-ui);cursor:pointer}
 .preview-edit-button:hover,.preview-edit-button:focus-visible{background:var(--trail-gold-light)}
+
+.template-announcement{background:var(--trail-gold-light);padding:32px 0;overflow-wrap:anywhere}.template-announcement h2{font-size:1.5rem;margin-bottom:8px}.template-announcement p{max-width:65ch;white-space:pre-line}.template-announcement .btn{margin-top:8px}.template-meeting .template-directions{display:inline-block;padding:8px 0;text-decoration:underline}.template-meeting p+p{margin-top:8px}[data-preview-editor] .template-announcement{padding-top:68px}
+
+[data-preview-editor] .hero>.preview-edit-button{top:128px}.template-announcement{scroll-margin-top:120px}

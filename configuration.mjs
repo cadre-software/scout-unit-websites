@@ -1,19 +1,27 @@
 // Copyright 2026 Cadre Software. SPDX-License-Identifier: GPL-2.0-or-later
-import {ASSETS} from './corpus.mjs?v=5';
-import {CONTENT_SECTIONS,CONTENT_LIMIT,imageSlots} from './page-content.mjs?v=5';
+import {ASSETS} from './corpus.mjs?v=6';
+import {CONTENT_SECTIONS,CONTENT_LIMIT,imageSlots} from './page-content.mjs?v=6';
+import {OPTIONAL_SECTIONS,validDate} from './publishing.mjs?v=6';
 
 // Public website settings only. Delivery recipients and credentials belong
 // in the form provider's dashboard and are never part of this file format.
-const limits={name:200,town:200,meeting:200,place:200,email:254,intro:600,costs:600,application:2048,calendar:2048,council:2048,formEndpoint:2048,photoAlt:200};
+const limits={name:200,town:200,meeting:200,place:200,address:200,entrance:600,email:254,intro:600,costs:600,application:2048,calendar:2048,council:2048,formEndpoint:2048,photoAlt:200,announcementTitle:200,announcementBody:600,announcementURL:2048,announcementButton:100,announcementExpires:10};
 export const SETTINGS_MAX_BYTES=32*1024*1024;
 export function readSettings(value){
- if(!value||value.format!=='cadre-scout-website'||![1,2].includes(value.version)||!value.settings||!['pack','troop'].includes(value.settings.type))throw new Error('Choose a settings file saved by this website editor.');
+ if(!value||value.format!=='cadre-scout-website'||![1,2,3].includes(value.version)||!value.settings||!['pack','troop'].includes(value.settings.type))throw new Error('Choose a settings file saved by this website editor.');
  const source=value.settings,result={type:source.type};
  for(const [key,max] of Object.entries(limits)){
   const text=source[key]??'';
   if(typeof text!=='string'||text.length>max)throw new Error('A saved setting is too long or has an invalid format.');
   result[key]=text;
  }
+ if(source.sections!==undefined&&(!source.sections||typeof source.sections!=='object'||Array.isArray(source.sections)))throw new Error('Invalid saved section visibility.');
+ result.sections={};
+ for(const id of OPTIONAL_SECTIONS){
+  const visible=source.sections?.[id]===undefined?true:source.sections[id];if(typeof visible!=='boolean')throw new Error('Invalid saved section visibility.');result.sections[id]=visible;
+ }
+ result.announcementEnabled=source.announcementEnabled===undefined?false:source.announcementEnabled;
+ if(typeof result.announcementEnabled!=='boolean'||(result.announcementExpires&&!validDate(result.announcementExpires)))throw new Error('Invalid saved announcement.');
  for(const [key,group] of [['logoChoice','Scouting emblems'],['photoChoice','Photos']]){
   const id=source[key]??'';
   if(typeof id!=='string'||(id&&!ASSETS.some(a=>a.id===id&&a.group===group&&a.unitTypes.includes(result.type))))throw new Error('A saved library image is unavailable for this program.');
@@ -43,7 +51,7 @@ export function readSettings(value){
  return result;
 }
 export function writeSettings(settings){
- const value={format:'cadre-scout-website',version:2,settings};
+ const value={format:'cadre-scout-website',version:3,settings};
  const text=JSON.stringify({...value,settings:readSettings(value)},null,2)+'\n';
  if(new TextEncoder().encode(text).byteLength>SETTINGS_MAX_BYTES)throw new Error('These settings exceed 32 MB. Use smaller uploaded images before saving.');
  return text;
