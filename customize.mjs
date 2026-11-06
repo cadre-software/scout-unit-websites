@@ -1,12 +1,13 @@
 // Copyright 2026 Cadre Software. SPDX-License-Identifier: GPL-2.0-or-later
-import {CONTENT_SECTIONS,defaultContent,imageSlots} from './page-content.mjs?v=6';
-import {defaults,renderSite,validEmail,httpsURL} from './template.mjs?v=6';
-import {ASSETS} from './corpus.mjs?v=6';
-import {templateStyles,embeddedImages} from './export-assets.mjs?v=6';
-import {readSettings,writeSettings,SETTINGS_MAX_BYTES} from './configuration.mjs?v=6';
-import {checkImageSize,SAVED_IMAGE_PIXELS,ImageInputError,imageDimensions} from './image-limits.mjs?v=6';
-import {OPTIONAL_SECTIONS,sectionVisible,validDate,HOSTS,websiteDownload} from './publishing.mjs?v=6';
-import {readDraft,writeDraft,eraseDraft,DraftConflictError} from './drafts.mjs?v=6';
+import {CONTENT_SECTIONS,defaultContent,imageSlots} from './page-content.mjs?v=7';
+import {defaults,renderSite,validEmail,httpsURL} from './template.mjs?v=7';
+import {ASSETS} from './corpus.mjs?v=7';
+import {templateStyles,embeddedImages} from './export-assets.mjs?v=7';
+import {readSettings,writeSettings,SETTINGS_MAX_BYTES} from './configuration.mjs?v=7';
+import {checkImageSize,SAVED_IMAGE_PIXELS,ImageInputError,imageDimensions} from './image-limits.mjs?v=7';
+import {OPTIONAL_SECTIONS,sectionVisible,validDate,HOSTS,websiteDownload} from './publishing.mjs?v=7';
+import {builderDownload} from './builder-downloads.mjs?v=7';
+import {readDraft,writeDraft,eraseDraft,DraftConflictError} from './drafts.mjs?v=7';
 const form=document.querySelector('#customize'),frame=document.querySelector('#preview'),status=document.querySelector('#status'),download=document.querySelector('#download');
 const params=new URLSearchParams(location.search),type=params.get('type')==='troop'?'troop':'pack';
 const media={logo:'',photo:'',images:{}},generation={logo:0,photo:0};
@@ -89,6 +90,7 @@ function checkImageBudget(settings){
  if(pixels>24_000_000||characters>24*1024*1024)throw new ImageInputError('Your uploaded images exceed the total limit. Use smaller images or library images before continuing.');
 }
 
+const builderSelected=()=>Boolean(HOSTS[document.querySelector('#download-host').value]?.builder);
 function update(persist=true,delay=0){
  form.elements.announcementTitle.required=document.querySelector('#announcementEnabled').checked;
  reviewReadiness();if(persist)scheduleDraft();
@@ -97,7 +99,7 @@ function update(persist=true,delay=0){
 }
 function renderPreview(){
  previewToken=[...crypto.getRandomValues(new Uint8Array(16))].map(n=>n.toString(16).padStart(2,'0')).join('');
- frame.srcdoc=renderSite(values(),{demo:false,css,preview:true,previewToken,previewParent:location.origin,previewSelected:sectionSelect.value,previewSection:({families:'new-families',links:'contact',announcement:'unit-announcement'}[sectionSelect.value]||sectionSelect.value),runtimeURL:new URL('site-runtime.js?v=6',location.href).href,previewRuntimeURL:new URL('preview-runtime.js?v=6',location.href).href});
+ frame.srcdoc=renderSite(values(),{demo:false,css,preview:true,previewToken,previewParent:location.origin,previewSelected:sectionSelect.value,previewSection:({families:'new-families',links:'contact',announcement:'unit-announcement'}[sectionSelect.value]||sectionSelect.value),runtimeURL:new URL('site-runtime.js?v=7',location.href).href,previewRuntimeURL:new URL('preview-runtime.js?v=7',location.href).href});
 }
 window.addEventListener('message',event=>{
  const data=event.data;
@@ -196,7 +198,8 @@ function reviewReadiness(){
  const c=values(),list=document.querySelector('#review-items');list.replaceChildren();
  const add=(text,section,id)=>{const item=document.createElement('li');item.textContent=text;if(section){const button=document.createElement('button');button.type='button';button.className='review-edit';button.textContent='Edit';button.addEventListener('click',()=>{selectSection(section);document.getElementById(id)?.focus();});item.append(' ',button);}list.append(item);};
  for(const key of ['name','town','meeting','place','email'])if(c[key]===defaults[currentType][key])add('Replace the example '+({name:'unit name',town:'community',meeting:'meeting time',place:'meeting place',email:'backup email'}[key])+'.',key==='email'?'links':'unit',key);
- if(!httpsURL(c.formEndpoint))add('Add your verified form service address.','links','formEndpoint');
+ if(builderSelected())add('Add and test your platform’s native contact form before publishing.');
+ else if(!httpsURL(c.formEndpoint))add('Add your verified form service address.','links','formEndpoint');
  for(const [key,label,section] of [['application','application','visit'],['calendar','public calendar','calendar'],['council','council','contact']])if(sectionVisible(c,section)&&!c[key])add('Optional: add your '+label+' link.','links',key);
  const missing=imageSlots(currentType).filter(slot=>sectionVisible(c,slot.section)&&c.images[slot.id]?.data&&!c.images[slot.id].hidden&&!c.images[slot.id].alt.trim());
  for(const slot of missing)add('Describe the uploaded '+slot.label.toLowerCase()+'.',slot.section,'image-'+slot.id+'-alt');
@@ -209,7 +212,7 @@ function reviewReadiness(){
  add('After publishing: open every public link and confirm a test message arrives in every intended inbox.');
 }
 const hostSelect=document.querySelector('#download-host');
-function hostingInstructions(){const host=HOSTS[hostSelect.value],link=document.querySelector('#host-documentation');document.querySelector('#download-instructions').textContent=host.instructions;link.hidden=!host.docs;if(host.docs)link.href=host.docs;else link.removeAttribute('href');}
+function hostingInstructions(){const host=HOSTS[hostSelect.value],link=document.querySelector('#host-documentation');form.elements.formEndpoint.required=!host.builder;download.textContent=host.builder?'Download '+(hostSelect.value==='wordpress'?'WordPress package':'Squarespace recipe'):'Download website';document.querySelector('#builder-download-note').hidden=!host.builder;reviewReadiness();document.querySelector('#download-instructions').textContent=host.instructions;link.hidden=!host.docs;if(host.docs)link.href=host.docs;else link.removeAttribute('href');}
 hostSelect.addEventListener('change',hostingInstructions);hostingInstructions();
 const viewport=document.querySelector('.preview-viewport');
 for(const kind of ['fit','desktop','phone'])document.querySelector('#preview-'+kind).addEventListener('click',()=>{for(const mode of ['phone','desktop'])viewport.classList.toggle(mode,kind===mode);for(const button of ['fit','desktop','phone'])document.querySelector('#preview-'+button).setAttribute('aria-pressed',String(button===kind));document.querySelector('#preview-size-help').textContent=kind==='desktop'?'Desktop uses a wide page. Scroll sideways inside the preview if needed.':'Fit follows the available space. Phone shows a narrow layout.';});
@@ -257,10 +260,10 @@ for(const key of ['logo','photo']){
 }
 form.addEventListener('submit',async event=>{
  event.preventDefault();if(loading||exporting||!css||!form.reportValidity())return;
- const c=values();
+ const c=values(),host=hostSelect.value;
  if(c.email&&!validEmail(c.email)){show('Enter a valid adult contact email.',true);selectSection('links');form.elements.email.focus();return;}
  for(const key of ['application','calendar','council','formEndpoint'])if(c[key]&&!httpsURL(c[key])){show('Use a complete https:// address without a username or password.',true);selectSection('links');form.elements[key].focus();return;}
- if(!httpsURL(c.formEndpoint)){show('Add your form service’s HTTPS form address before downloading the website.',true);selectSection('links');form.elements.formEndpoint.focus();return;}
+ if(!builderSelected()&&!httpsURL(c.formEndpoint)){show('Add your form service’s HTTPS form address before downloading the website.',true);selectSection('links');form.elements.formEndpoint.focus();return;}
  if(c.announcementEnabled&&c.announcementURL&&!httpsURL(c.announcementURL)){show('Use a complete HTTPS announcement button link.',true);selectSection('announcement');form.elements.announcementURL.focus();return;}
  if(c.announcementExpires&&!validDate(c.announcementExpires)){show('Choose a valid announcement date.',true);selectSection('announcement');form.elements.announcementExpires.focus();return;}
  for(const slot of imageSlots(currentType))if(sectionVisible(c,slot.section)&&c.images[slot.id]?.data&&!c.images[slot.id].hidden&&!c.images[slot.id].alt.trim()){selectSection(slot.section);show('Describe the uploaded image before downloading.',true);document.querySelector(`#image-${slot.id}-alt`).focus();return;}
@@ -268,8 +271,8 @@ form.addEventListener('submit',async event=>{
  exporting=true;busy();show('Including your selected photos, graphics, and fonts…');
  try{
   const html=await embeddedImages(renderSite(c,{demo:false,css}));
-  const result=websiteDownload(html,hostSelect.value);saveFile(result.blob,result.file);
-  show('Downloaded '+result.file+'. '+HOSTS[hostSelect.value].instructions+' Save a settings backup for future edits.');
+  const result=HOSTS[host].builder?await builderDownload(html,host,{name:c.name}):websiteDownload(html,host);saveFile(result.blob,result.file);
+  show('Downloaded '+result.file+'. '+HOSTS[host].instructions+' Save a settings backup for future edits.');
  }catch(error){show(error.message.startsWith('Cloudflare')||error.message.startsWith('GitHub')||error.message.startsWith('This website')?error.message:'A template image could not be included. Check your connection and try again.',true);}
  finally{exporting=false;busy();}
 });

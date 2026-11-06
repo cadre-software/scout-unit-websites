@@ -1,8 +1,8 @@
 // Copyright 2026 Cadre Software. SPDX-License-Identifier: GPL-2.0-or-later
-import {defaultContent,imageSlots} from './page-content.mjs?v=6';
-import {ASSETS,STYLE_FILES} from './corpus.mjs?v=6';
-import {SITE_RUNTIME} from './runtime.mjs?v=6';
-import {sectionVisible,validDate} from './publishing.mjs?v=6';
+import {defaultContent,imageSlots} from './page-content.mjs?v=7';
+import {ASSETS,STYLE_FILES} from './corpus.mjs?v=7';
+import {SITE_RUNTIME} from './runtime.mjs?v=7';
+import {sectionVisible,validDate} from './publishing.mjs?v=7';
 const byId=new Map(ASSETS.map(a=>[a.id,a]));
 export const defaults={
  pack:{type:'pack',name:'Pack 123',town:'Exampletown',meeting:'Second Thursday · 6:30 p.m.',place:'Example Community Center',email:'join@example.org',intro:'Outdoor adventures, new friendships, and family time. Come see what Cub Scouting looks like in our community.',costs:'Ask our membership team about current registration, unit dues, and activity costs.',photoChoice:'hero-mountain.jpg'},
@@ -12,7 +12,7 @@ export function escapeHTML(value){return String(value??'').replace(/[&<>"']/g,ch
 export function httpsURL(value){if(!value)return '';try{const u=new URL(String(value));return u.protocol==='https:'&&!u.username&&!u.password?u.href:'';}catch{return '';}}
 export function validEmail(value){return /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9.-]*[A-Za-z0-9])?\.[A-Za-z]{2,}$/.test(String(value));}
 const raster=value=>/^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/.test(value||'')?value:'';
-export function renderSite(input,{demo=true,css='',preview=false,runtimeURL='site-runtime.js?v=6',previewSection='',previewToken='',previewParent='',previewSelected='',previewRuntimeURL='preview-runtime.js?v=6'}={}){
+export function renderSite(input,{demo=true,css='',preview=false,runtimeURL='site-runtime.js?v=7',previewSection='',previewToken='',previewParent='',previewSelected='',previewRuntimeURL='preview-runtime.js?v=7'}={}){
  const type=input.type==='troop'?'troop':'pack',c={...defaults[type],...input,type},e=escapeHTML,troop=type==='troop',program=troop?'Scouts BSA':'Cub Scouts';
  const copy={...defaultContent(type),...c.content},t=key=>e(copy[key]);
  const shown=id=>sectionVisible(c,id==='new-families'?'families':id),visitTarget=shown('visit')?'#visit':'#contact';

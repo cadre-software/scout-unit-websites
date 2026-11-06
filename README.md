@@ -22,7 +22,7 @@ You do not need Git, Node.js or this repository to use the hosted editor.
    images. Add descriptions for uploaded images. Images can also be hidden.
    **Sections to show** removes optional sections and their navigation links
    while retaining their content. Use the Phone and Desktop preview buttons.
-4. Create a unit-owned hosted form (the guide uses Formspree), verify the
+4. For a static host, create a unit-owned hosted form (the guide uses Formspree), verify the
    receiving inbox and paste the public HTTPS endpoint into **Form service
    address**. Set recipients in the form provider’s dashboard. For several
    leaders, use supported recipient routing or a unit-owned group inbox.
@@ -34,10 +34,16 @@ You do not need Git, Node.js or this repository to use the hosted editor.
 6. Review **Before you download**, choose your host and **Download website**.
    Cloudflare Pages gets a ZIP to upload directly. Netlify gets a ZIP to unzip
    into a folder before dragging that folder into Drop. GitHub Pages and another
-   host get `index.html`. Each ZIP contains only index.html at its top level;
+   host get `index.html`. Each static-host ZIP contains only index.html at its top level;
    the page contains its displayed images, fonts and mobile navigation.
+   **WordPress** gets a ZIP with an editable `pattern.json`, selected image files,
+   and a guide. **Squarespace** gets a ZIP with a guided recipe, copy and images.
+   Unzip either builder package and open `START-HERE.html`. Upload the images and
+   add a native contact form in your platform. These packages use your theme’s
+   styling and require setup; the preview shows the static version.
    Settings backups are never included in an upload ZIP.
-7. Follow the selected host’s upload instructions. Test the form from the published
+7. Follow the selected platform or host’s instructions. For builders, make later
+   edits in that platform; exports do not synchronize with existing pages. Test the form from the published
    address and check every intended inbox and the reply address.
 
 The public backup email is separate from the form recipients. No mail password

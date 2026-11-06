@@ -29,5 +29,6 @@ node scripts/check-scout-demo.cjs "http://127.0.0.1:$port/"
 node scripts/check-scout-contact.cjs "http://127.0.0.1:$port/"
 node scripts/check-scout-editor.cjs "http://127.0.0.1:$port/"
 node scripts/check-scout-publishing.cjs "http://127.0.0.1:$port/"
+node scripts/check-scout-builders.cjs "http://127.0.0.1:$port/"
 
 verify_release

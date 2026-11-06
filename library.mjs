@@ -1,5 +1,5 @@
-import {ASSETS} from './corpus.mjs?v=6';
-import {escapeHTML as e} from './template.mjs?v=6';
+import {ASSETS} from './corpus.mjs?v=7';
+import {escapeHTML as e} from './template.mjs?v=7';
 const list=document.querySelector('#asset-list'),program=document.querySelector('#asset-program'),group=document.querySelector('#asset-group'),search=document.querySelector('#asset-search'),status=document.querySelector('#asset-count');
 for(const label of new Set(ASSETS.map(a=>a.group)))group.add(new Option(label,label));
 function render(){
