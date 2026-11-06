@@ -1,5 +1,5 @@
 // Copyright 2026 Cadre Software. SPDX-License-Identifier: GPL-2.0-or-later
-import {ASSETS} from './corpus.mjs?v=6';
+import {ASSETS} from './corpus.mjs?v=7';
 // Section schema shared by the editor, renderer and portable settings format.
 // Plain text only: HTML, scripts and arbitrary asset URLs are never accepted.
 export const CONTENT_SECTIONS=[

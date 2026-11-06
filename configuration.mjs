@@ -1,7 +1,7 @@
 // Copyright 2026 Cadre Software. SPDX-License-Identifier: GPL-2.0-or-later
-import {ASSETS} from './corpus.mjs?v=6';
-import {CONTENT_SECTIONS,CONTENT_LIMIT,imageSlots} from './page-content.mjs?v=6';
-import {OPTIONAL_SECTIONS,validDate} from './publishing.mjs?v=6';
+import {ASSETS} from './corpus.mjs?v=7';
+import {CONTENT_SECTIONS,CONTENT_LIMIT,imageSlots} from './page-content.mjs?v=7';
+import {OPTIONAL_SECTIONS,validDate} from './publishing.mjs?v=7';
 
 // Public website settings only. Delivery recipients and credentials belong
 // in the form provider's dashboard and are never part of this file format.

@@ -2,7 +2,7 @@
 
 Choose your host in the editor before downloading. **Cloudflare Pages** gets a
 ZIP to upload; **Netlify Drop** gets a ZIP to unzip into a folder; **GitHub Pages**
-and **another host** get a self-contained **index.html**. Each editor ZIP contains
+and **another host** get a self-contained **index.html**. Each static-host editor ZIP contains
 only index.html at the top level, without your settings backup or editor.
 A static host serves the page to visitors; your unit’s form service handles contact messages. You can
 start with the host’s free web address and connect a unit-owned domain later.
@@ -85,7 +85,8 @@ Publish the editor’s **index.html**, either directly or inside its host-specif
 ZIP, for a finished unit site. The GitHub toolkit release ZIP
 contains the entire editing toolkit and examples; uploading it unchanged shows
 the toolkit’s example chooser. WordPress and Squarespace use their own editors:
-this HTML download is not a native theme for either builder.
+choose the new WordPress pattern or Squarespace recipe package instead.
+These are not complete themes. See the builder instructions below.
 
 ## Updating the same website
 
@@ -94,3 +95,52 @@ words, announcement, links or photos, save a new settings backup and download
 for the same host. Upload the replacement to the existing hosting project.
 An announcement’s expiration hides it automatically using the visitor’s local
 clock; changing its message requires another download and upload.
+
+## WordPress: import editable blocks
+
+Choose **WordPress / pattern and images**, unzip the package, and open
+`START-HERE.html`. In a block-theme site, go to **Appearance → Editor →
+Patterns → My Patterns → Add Pattern → Import from JSON** and select
+`pattern.json`. Other themes may expose pattern management through the block
+editor’s options. Insert the imported pattern into a new page; set that page
+as the homepage if desired.
+
+The pattern uses native Group, Heading, Paragraph, Button and Image blocks.
+Your words, links and enabled sections carry over. Image blocks are empty
+placeholders: upload the included image files to Media Library and select the
+matching files using the illustrated section guide. Add your unit logo through
+your theme’s site-branding controls if it should appear in the header.
+Configure a supported native Form block or form plugin and test all recipient
+inboxes. The static page’s hosted-form endpoint is not wired into WordPress.
+
+Your theme controls appearance; this is an editable content pattern, not an
+exact copy of the static design or an installable theme. Remove the contact-form
+setup reminder before publishing. Native navigation and section anchors need
+a final review. [Official pattern import instructions](https://wordpress.com/support/export-import-patterns/).
+
+## Squarespace: follow the page recipe
+
+Choose **Squarespace / guided recipe**, unzip the package, and open
+`START-HERE.html`. Recreate the ordered sections in Squarespace 7.1 with Text,
+Image and Button blocks. The guide includes your actual copy, button links,
+image files and descriptions, and section anchors. `content.txt` is a plain-text
+copy list; `reference.html` is a non-submitting layout reference.
+
+Add a native Form block for adult name, reply email and message. Set its Email
+Notification / storage recipient to the intended adult unit inbox; verify delivery
+and Reply To from the published page. [Official Form block instructions](https://support.squarespace.com/hc/en-us/articles/206566737-Form-blocks).
+
+Squarespace does not import this ZIP as a template. Your site’s fonts and layout
+apply, and a volunteer needs to assemble the sections. This route uses native
+editing without requiring custom code or an HTML embed.
+
+## Builder updates and announcements
+
+Make future edits in WordPress or Squarespace. Re-downloading does not synchronize
+with those platforms and can duplicate or replace manual changes if re-imported.
+Keep the editor’s settings backup separately if you want to use it again.
+
+Builder announcements do not carry over the static site’s automatic expiration.
+Schedule removal in the platform if supported, or set a reminder to remove them
+manually. An announcement already past its end date is omitted from a new
+builder package. Keep the native form recipient access current at handoff.
